@@ -15,6 +15,12 @@
 		C010D4701C8DA04D00441E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C010D46E1C8DA04D00441E94 /* LaunchScreen.storyboard */; };
 		C010D47B1C8DA04D00441E94 /* CWBSBDJTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D47A1C8DA04D00441E94 /* CWBSBDJTests.m */; };
 		C010D4861C8DA04D00441E94 /* CWBSBDJUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D4851C8DA04D00441E94 /* CWBSBDJUITests.m */; };
+		C099A3B41CA6706E003F06A0 /* CWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3B31CA6706E003F06A0 /* CWTabBarController.m */; };
+		C099A3B71CA6B6A6003F06A0 /* CWEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3B61CA6B6A6003F06A0 /* CWEssenceViewController.m */; };
+		C099A3BA1CA6B6F5003F06A0 /* CWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3B91CA6B6F5003F06A0 /* CWMeViewController.m */; };
+		C099A3BD1CA6B734003F06A0 /* CWFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3BC1CA6B734003F06A0 /* CWFriendTrendViewController.m */; };
+		C099A3C01CA6B750003F06A0 /* CWNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3BF1CA6B750003F06A0 /* CWNewViewController.m */; };
+		C099A3C31CA6C081003F06A0 /* CWTabar.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3C21CA6C081003F06A0 /* CWTabar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,18 @@
 		C010D4811C8DA04D00441E94 /* CWBSBDJUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWBSBDJUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010D4851C8DA04D00441E94 /* CWBSBDJUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWBSBDJUITests.m; sourceTree = "<group>"; };
 		C010D4871C8DA04D00441E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C099A3B21CA6706E003F06A0 /* CWTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTabBarController.h; sourceTree = "<group>"; };
+		C099A3B31CA6706E003F06A0 /* CWTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTabBarController.m; sourceTree = "<group>"; };
+		C099A3B51CA6B6A6003F06A0 /* CWEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWEssenceViewController.h; sourceTree = "<group>"; };
+		C099A3B61CA6B6A6003F06A0 /* CWEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWEssenceViewController.m; sourceTree = "<group>"; };
+		C099A3B81CA6B6F5003F06A0 /* CWMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMeViewController.h; sourceTree = "<group>"; };
+		C099A3B91CA6B6F5003F06A0 /* CWMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMeViewController.m; sourceTree = "<group>"; };
+		C099A3BB1CA6B734003F06A0 /* CWFriendTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFriendTrendViewController.h; sourceTree = "<group>"; };
+		C099A3BC1CA6B734003F06A0 /* CWFriendTrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFriendTrendViewController.m; sourceTree = "<group>"; };
+		C099A3BE1CA6B750003F06A0 /* CWNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWNewViewController.h; sourceTree = "<group>"; };
+		C099A3BF1CA6B750003F06A0 /* CWNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWNewViewController.m; sourceTree = "<group>"; };
+		C099A3C11CA6C081003F06A0 /* CWTabar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTabar.h; sourceTree = "<group>"; };
+		C099A3C21CA6C081003F06A0 /* CWTabar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTabar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +119,18 @@
 		C010D45F1C8DA04D00441E94 /* CWBSBDJ */ = {
 			isa = PBXGroup;
 			children = (
+				C099A3B21CA6706E003F06A0 /* CWTabBarController.h */,
+				C099A3B31CA6706E003F06A0 /* CWTabBarController.m */,
+				C099A3B51CA6B6A6003F06A0 /* CWEssenceViewController.h */,
+				C099A3B61CA6B6A6003F06A0 /* CWEssenceViewController.m */,
+				C099A3B81CA6B6F5003F06A0 /* CWMeViewController.h */,
+				C099A3B91CA6B6F5003F06A0 /* CWMeViewController.m */,
+				C099A3BB1CA6B734003F06A0 /* CWFriendTrendViewController.h */,
+				C099A3BC1CA6B734003F06A0 /* CWFriendTrendViewController.m */,
+				C099A3BE1CA6B750003F06A0 /* CWNewViewController.h */,
+				C099A3BF1CA6B750003F06A0 /* CWNewViewController.m */,
+				C099A3C11CA6C081003F06A0 /* CWTabar.h */,
+				C099A3C21CA6C081003F06A0 /* CWTabar.m */,
 				C010D4631C8DA04D00441E94 /* AppDelegate.h */,
 				C010D4641C8DA04D00441E94 /* AppDelegate.m */,
 				C010D4661C8DA04D00441E94 /* ViewController.h */,
@@ -202,6 +232,7 @@
 		C010D4551C8DA04D00441E94 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CW;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = cw;
 				TargetAttributes = {
@@ -274,7 +305,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C010D4681C8DA04D00441E94 /* ViewController.m in Sources */,
+				C099A3B41CA6706E003F06A0 /* CWTabBarController.m in Sources */,
+				C099A3B71CA6B6A6003F06A0 /* CWEssenceViewController.m in Sources */,
+				C099A3C01CA6B750003F06A0 /* CWNewViewController.m in Sources */,
+				C099A3BD1CA6B734003F06A0 /* CWFriendTrendViewController.m in Sources */,
+				C099A3C31CA6C081003F06A0 /* CWTabar.m in Sources */,
 				C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */,
+				C099A3BA1CA6B6F5003F06A0 /* CWMeViewController.m in Sources */,
 				C010D4621C8DA04D00441E94 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +538,7 @@
 				C010D48C1C8DA04D00441E94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C010D48D1C8DA04D00441E94 /* Build configuration list for PBXNativeTarget "CWBSBDJTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +547,7 @@
 				C010D48F1C8DA04D00441E94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C010D4901C8DA04D00441E94 /* Build configuration list for PBXNativeTarget "CWBSBDJUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +556,7 @@
 				C010D4921C8DA04D00441E94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
