@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  CWBSBDJ
+//
+//  Created by ChenWei on 16/3/27.
+//  Copyright © 2016年 cw. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG  // 开发调度阶段
+#define CWLog(...) NSLog(__VA_ARGS__)
+#else       // 打包发布阶段
+#define  CWLog(...)
+#endif
+
+#define CWLogFunc CWLog(@"方法名 = %s,lineNumber = %zd, fileName = %s", __PRETTY_FUNCTION__, __LINE__, __FILE__)
+
+/** 颜色 */
+#define CWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define CWColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define CWRandomColor CWColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+#endif /* PrefixHeader_pch */

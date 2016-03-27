@@ -69,6 +69,7 @@
 		C099A3BF1CA6B750003F06A0 /* CWNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWNewViewController.m; sourceTree = "<group>"; };
 		C099A3C11CA6C081003F06A0 /* CWTabar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTabar.h; sourceTree = "<group>"; };
 		C099A3C21CA6C081003F06A0 /* CWTabar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTabar.m; sourceTree = "<group>"; };
+		C099A3C41CA78811003F06A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +137,7 @@
 				C010D4661C8DA04D00441E94 /* ViewController.h */,
 				C010D4671C8DA04D00441E94 /* ViewController.m */,
 				C010D4691C8DA04D00441E94 /* Main.storyboard */,
+				C099A3C41CA78811003F06A0 /* PrefixHeader.pch */,
 				C010D46C1C8DA04D00441E94 /* Assets.xcassets */,
 				C010D46E1C8DA04D00441E94 /* LaunchScreen.storyboard */,
 				C010D4711C8DA04D00441E94 /* Info.plist */,
@@ -452,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "/Users/cw/Desktop/笔记整理及练习/百思不得姐-四期/CWBSBDJ/CWBSBDJ/PrefixHeader.pch";
 				INFOPLIST_FILE = CWBSBDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chenwei.CWBSBDJ;

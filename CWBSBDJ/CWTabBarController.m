@@ -13,7 +13,6 @@
 #import "CWFriendTrendViewController.h"
 #import "CWTabar.h"
 
-
 @interface CWTabBarController ()
 
 @end
@@ -29,10 +28,7 @@
     // 2.设置tabBar
     [self setupTabBar];
     
-    // 设置tabBar文字属性(下面有另一种方法）
-//    NSDictionary *dict = @{NSForegroundColorAttributeName: [UIColor redColor]};
-//    UITabBarItem *item = [UITabBarItem appearance];
-//    [item setTitleTextAttributes:dict forState:UIControlStateSelected];
+    CWLogFunc;
 }
 
 - (void)setupTabBar {
@@ -63,10 +59,6 @@
     [self setupViewController:[[CWFriendTrendViewController alloc] init] title:@"关注" imageName:@"tabBar_friendTrends_icon" selectImageName:@"tabBar_friendTrends_click_icon"];
 }
 
-#define CWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
-#define CWGColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
-#define CWRandomColor CWColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
-
 /**
  *  添加一个子控制器
  *
@@ -90,13 +82,9 @@
     [nav.tabBarItem setSelectedImage:[UIImage imageNamed:selectImageName]];
     
     // 4.设置【tabBar选中状态】文字颜色
-    /// 法一：
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    dict[NSForegroundColorAttributeName] = [UIColor purpleColor];
+    dict[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
     // 用vc不行，要用tabBar的直接子控制器才行。
-//    [nav.tabBarItem setTitleTextAttributes:dict forState:UIControlStateSelected];
-    
-    /// 法二：
-    vc.tabBarController.tabBar.tintColor = [UIColor darkGrayColor];
+    [nav.tabBarItem setTitleTextAttributes:dict forState:UIControlStateSelected];
 }
 @end
