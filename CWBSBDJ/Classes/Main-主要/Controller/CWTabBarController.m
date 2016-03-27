@@ -27,18 +27,14 @@
     
     // 2.设置tabBar
     [self setupTabBar];
-    
-    CWLogFunc;
+
 }
 
+/** 设置tabBar */
 - (void)setupTabBar {
     CWTabar *tabBar = [[CWTabar alloc] init];
     [self setValue:tabBar forKey:@"tabBar"];
     }
-
-- (void)viewDidAppear:(BOOL)animated {
-    NSLog(@"%@", self.tabBar.subviews);
-}
 
 /**
  *  添加所有子控制器
