@@ -12,6 +12,7 @@
 #import "CWMeViewController.h"
 #import "CWFriendTrendViewController.h"
 #import "CWTabar.h"
+#import "CWNavigationController.h"
 
 @interface CWTabBarController ()
 
@@ -40,6 +41,13 @@
  *  添加所有子控制器
  */
 - (void)setupAllChildVCs {
+    
+    // 4.添加【关注】控制器
+    [self setupViewController:[[CWFriendTrendViewController alloc] init] title:@"关注" imageName:@"tabBar_friendTrends_icon" selectImageName:@"tabBar_friendTrends_click_icon"];
+    
+    // 3.添加【我】控制器
+    [self setupViewController:[[CWMeViewController alloc] init] title:@"我" imageName:@"tabBar_me_icon" selectImageName:@"tabBar_me_click_icon"];
+    
     // 1.添加【精华】控制器
     CWEssenceViewController *essenceVC = [[CWEssenceViewController alloc] init];
     [self setupViewController:essenceVC title:@"精华" imageName:@"tabBar_essence_icon" selectImageName:@"tabBar_essence_click_icon"];
@@ -47,12 +55,9 @@
     
      // 2.添加【新帖】控制器
     [self setupViewController:[[CWNewViewController alloc] init] title:@"新帖" imageName:@"tabBar_new_icon" selectImageName:@"tabBar_new_click_icon"];
+   
     
-    // 3.添加【我】控制器
-    [self setupViewController:[[CWMeViewController alloc] init] title:@"我" imageName:@"tabBar_me_icon" selectImageName:@"tabBar_me_click_icon"];
-    
-    // 4.添加【关注】控制器
-    [self setupViewController:[[CWFriendTrendViewController alloc] init] title:@"关注" imageName:@"tabBar_friendTrends_icon" selectImageName:@"tabBar_friendTrends_click_icon"];
+
 }
 
 /**
@@ -65,8 +70,8 @@
  */
 - (void)setupViewController:(UIViewController *)vc title:(NSString *)title imageName:(NSString *)imageName selectImageName:(NSString *)selectImageName {
     // 1.包装导航控制器
-    vc.view.backgroundColor = CWRandomColor;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.view.backgroundColor = CWCommonBgColor;
+    CWNavigationController *nav = [[CWNavigationController alloc] initWithRootViewController:vc];
    
     // 2.加入到tabBar的子控制器数组
     [self addChildViewController:nav];

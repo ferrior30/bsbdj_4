@@ -7,6 +7,7 @@
 //
 
 #import "CWMeViewController.h"
+#import "CWSettingViewController.h"
 
 @interface CWMeViewController ()
 
@@ -52,6 +53,11 @@
 #pragma mark - 监听
 /** 监听【设置】按钮 */
 - (void)mineSettingIconClick {
+    CWSettingViewController *settingVC = [[CWSettingViewController alloc] init];
+    settingVC.view.backgroundColor = CWRandomColor;
+    
+    [self.navigationController pushViewController:settingVC animated:YES];
+    
     CWLogFunc;
 }
 
