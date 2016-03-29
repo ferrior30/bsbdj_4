@@ -25,6 +25,8 @@
 		C099A3FE1CA80FE6003F06A0 /* CWFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C099A3FD1CA80FE6003F06A0 /* CWFriendTrendViewController.xib */; };
 		C099A4011CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A4001CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m */; };
 		C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A4031CA8BFC1003F06A0 /* UIView+CWFrame.m */; };
+		C099A4071CA914B6003F06A0 /* CWFastLoginRegisterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A4061CA914B6003F06A0 /* CWFastLoginRegisterButton.m */; };
+		C099A40D1CA95314003F06A0 /* CWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A40C1CA95314003F06A0 /* CWTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,10 @@
 		C099A4001CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+CWExtention.m"; sourceTree = "<group>"; };
 		C099A4021CA8BFC0003F06A0 /* UIView+CWFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CWFrame.h"; sourceTree = "<group>"; };
 		C099A4031CA8BFC1003F06A0 /* UIView+CWFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CWFrame.m"; sourceTree = "<group>"; };
+		C099A4051CA914B6003F06A0 /* CWFastLoginRegisterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFastLoginRegisterButton.h; sourceTree = "<group>"; };
+		C099A4061CA914B6003F06A0 /* CWFastLoginRegisterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFastLoginRegisterButton.m; sourceTree = "<group>"; };
+		C099A40B1CA95314003F06A0 /* CWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTextField.h; sourceTree = "<group>"; };
+		C099A40C1CA95314003F06A0 /* CWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +253,10 @@
 		C099A3D11CA7D373003F06A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C099A4051CA914B6003F06A0 /* CWFastLoginRegisterButton.h */,
+				C099A4061CA914B6003F06A0 /* CWFastLoginRegisterButton.m */,
+				C099A40B1CA95314003F06A0 /* CWTextField.h */,
+				C099A40C1CA95314003F06A0 /* CWTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -538,8 +548,10 @@
 				C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */,
 				C099A4011CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m in Sources */,
 				C099A3F01CA7D373003F06A0 /* CWMeViewController.m in Sources */,
+				C099A4071CA914B6003F06A0 /* CWFastLoginRegisterButton.m in Sources */,
 				C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */,
 				C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */,
+				C099A40D1CA95314003F06A0 /* CWTextField.m in Sources */,
 				C099A3F11CA7D373003F06A0 /* CWNewViewController.m in Sources */,
 				C099A3F71CA7EBA0003F06A0 /* CWNavigationController.m in Sources */,
 				C099A3F41CA7D676003F06A0 /* CWSettingViewController.m in Sources */,

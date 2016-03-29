@@ -7,6 +7,7 @@
 //
 
 #import "CWLoginRegisterViewController.h"
+#import "CWFastLoginRegisterButton.h"
 
 @interface CWLoginRegisterViewController ()
 /** 根据是否有帐号切换界面的button */
@@ -20,7 +21,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,8 +28,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - 监听
+/** 设置状态栏样式 */
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
+#pragma mark - 监听
 /** 退出当前界面 */
 - (IBAction)exit {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -37,7 +41,7 @@
 
 /** 切换登陆和注册界面 */
 - (IBAction)switchLoginRegister:(UIButton *)button {
-    // 1.反转按钮的选中状态
+    // 1.设置按钮的选中状态
     button.selected = !button.isSelected;
     
     // 2.修改约束
@@ -47,6 +51,20 @@
     [UIView animateWithDuration:0.25 animations:^{
             [self.view layoutIfNeeded];
     }];
+    
+    [self.view endEditing:YES];
+}
+
+- (IBAction)qqLogin:(CWFastLoginRegisterButton *)sender {
+    CWLog(@"%@", NSStringFromCGRect(sender.frame));
+    
+//    CWLog(@"%@", NSStringFromCGRect(sender.titleLabel.frame));
+    CWLog(@"%@", NSStringFromCGRect(sender.frame));
+}
+
+/** 退下键盘 */
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
 }
 
 @end
