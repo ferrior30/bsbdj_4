@@ -8,6 +8,7 @@
 
 #import "CWTextField.h"
 #import <UIKit/NSAttributedString.h>
+#import "NSObject+CWRuntime.h"
 
 @implementation CWTextField
 -(void)awakeFromNib {
@@ -20,6 +21,7 @@
     [self addTarget:self action:@selector(editingDidBegin) forControlEvents:UIControlEventEditingDidBegin];
     
     [self addTarget:self action:@selector(editingDidEnd) forControlEvents:UIControlEventEditingDidEnd];
+    
 }
 
 #pragma mark - 监听

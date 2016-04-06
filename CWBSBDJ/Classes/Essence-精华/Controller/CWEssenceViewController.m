@@ -7,6 +7,7 @@
 //
 
 #import "CWEssenceViewController.h"
+#import "CWRecommandTagViewController.h"
 
 @interface CWEssenceViewController ()
 
@@ -40,11 +41,16 @@
     [self.navigationItem setLeftBarButtonItem:btnItem];
 }
 
+
+#pragma mark - 弹出关注标签界面
 /**
  *  监听：导航栏左边按钮的点击
  */
 - (void)MainTagSubIconClick {
-    CWLogFunc;
+    
+    CWRecommandTagViewController *RecommandTagVC = [[CWRecommandTagViewController alloc] init];
+    
+    [self.navigationController pushViewController:RecommandTagVC animated:YES];
 }
 
 @end

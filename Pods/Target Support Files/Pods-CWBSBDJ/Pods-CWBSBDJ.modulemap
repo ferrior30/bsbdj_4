@@ -1,0 +1,6 @@
+framework module Pods_CWBSBDJ {
+  umbrella header "Pods-CWBSBDJ-umbrella.h"
+
+  export *
+  module * { export * }
+}
