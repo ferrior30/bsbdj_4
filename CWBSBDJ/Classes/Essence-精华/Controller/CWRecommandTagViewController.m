@@ -17,6 +17,7 @@
 /** cell的重用标识 */
 static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
 @interface CWRecommandTagViewController ()
+/** 网络请求管理者 */
 @property (weak, nonatomic) AFHTTPSessionManager *manager;
 @end
 

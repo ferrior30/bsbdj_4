@@ -10,6 +10,7 @@
 #import "CWRecommandTag.h"
 #import "UIImageView+WebCache.h"
 #import "UIImage+CWCircleImage.h"
+#import "UIImageView+CWExtension.h"
 
 /**
 @property (nonatomic, copy) NSString *theme_name;
@@ -41,14 +42,15 @@
     // 头像
     NSURL *url = [NSURL URLWithString:recommandTag.image_list];
     
-//    [self.imageListImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+//    [self.imageListImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        image = nil;
+//        if (image == nil) return ;
+//        
+//        self.imageListImageView.image = [image circleImage];
+//    }];
     
-    [self.imageListImageView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        image = nil;
-        if (image == nil) return ;
-        UIImage *circleImage = [image circleImage];
-        self.imageListImageView.image = circleImage;
-    }];
+    [self.imageListImageView cw_setCircleIconWithURL:url];
+//    [self.imageListImageView cw_setSquareIconWithURL:url];
     
     // 主题文字
     self.themeNameLabel.text = recommandTag.theme_name;
