@@ -56,29 +56,24 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
     NSDictionary *params = @{@"a": @"tag_recommend",
                              @"action": @"sub",
                              @"c": @"topic"};
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    
-        // 发送请求
-        [self.manager GET:CWRequestURL parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
-            
-        } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) { // 请求成功
-            // 字典数组转模型数组
-            weakSelf.recommandTags = [CWRecommandTag mj_objectArrayWithKeyValuesArray:responseObject];
-            
-            // 隐藏弹框
-            [SVProgressHUD dismiss];
-            
-            // 刷新表格
-            [weakSelf.tableView reloadData];
-        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) { // 请求失败
-            if (error.code == NSURLErrorCancelled) return ;
-            
-            // 显示【错误信息】弹框
-            [SVProgressHUD showErrorWithStatus:@"获取标签数据失败" ];
-        }];
-//    });
-    
-    
+    // 发送请求
+    [self.manager GET:CWRequestURL parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) { // 请求成功
+        // 字典数组转模型数组
+        weakSelf.recommandTags = [CWRecommandTag mj_objectArrayWithKeyValuesArray:responseObject];
+        
+        // 隐藏弹框
+        [SVProgressHUD dismiss];
+        
+        // 刷新表格
+        [weakSelf.tableView reloadData];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) { // 请求失败
+        if (error.code == NSURLErrorCancelled) return ;
+        
+        // 显示【错误信息】弹框
+        [SVProgressHUD showErrorWithStatus:@"获取标签数据失败" ];
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

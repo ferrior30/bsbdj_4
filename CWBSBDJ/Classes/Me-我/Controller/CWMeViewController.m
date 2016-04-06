@@ -8,6 +8,11 @@
 
 #import "CWMeViewController.h"
 #import "CWSettingViewController.h"
+#import "CWMeCell.h"
+#import "UIView+CWFrame.h"
+
+/** 【我的】cell征用标识 */
+static NSString * const CWMeCellID= @"CWMeCellID";
 
 @interface CWMeViewController ()
 
@@ -17,9 +22,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    // 2.设置tableView
+    [self setupTableView];
     
     // 1.设置导航栏
     [self setupNav];
+    
+}
+/**
+ *  设置tableView
+ */
+- (void)setupTableView {
+    
+    [self.tableView registerClass:[CWMeCell class] forCellReuseIdentifier:CWMeCellID];
+    
+    self.tableView.backgroundColor = CWCommonBgColor;
+    
+    self.tableView.sectionFooterHeight = CWMargin;
+    
+//    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    
+    
+    // 设置footView
+    UIView *footView = [[UIView alloc] init];
+    footView.height = 50;
+    footView.backgroundColor = [UIColor redColor];
+    self.tableView.tableFooterView = footView;
+    
 }
 
 /**
@@ -28,8 +58,6 @@
 - (void)setupNav {
     // 1.设置中间title
     self.navigationItem.title = @"我的";
-//    UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
-//    [self.navigationItem setTitleView:imageV];
     
     // 2.设置右边图标
     UIButton *btn = [[UIButton alloc] init];
@@ -65,5 +93,54 @@
 - (void)mineMoonIconClick {
     CWLogFunc;
 }
+
+#pragma mark - tableView数据源方法
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CWMeCell *cell = [tableView dequeueReusableCellWithIdentifier:CWMeCellID];
+    
+    if (cell == nil) {
+        cell = [[CWMeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CWMeCellID];
+    }
+    
+    if (indexPath.section == 0) {
+        cell.textLabel.text = @"登录/注册";
+        cell.imageView.image = [UIImage imageNamed:@"publish-audio"];
+    } else {
+        cell.textLabel.text = @"离线下载";
+        cell.imageView.image = nil;
+    }
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CWLog(@"%f", tableView.sectionHeaderHeight);
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *v = [[UIView alloc] init];
+    v.backgroundColor = [UIColor blueColor];
+//    return  [[UIView alloc] init];
+    return  v;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return CWMargin;
+    }else return 0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return [[UIView alloc] init];
+}
+
 
 @end

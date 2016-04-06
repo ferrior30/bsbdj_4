@@ -15,12 +15,12 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #ifdef DEBUG  // 开发调度阶段
-#define CWLog(...) NSLog(__VA_ARGS__)
+#define CWLog(...) NSLog(__VA_ARGS__);
 #else       // 打包发布阶段
 #define  CWLog(...)
 #endif
 
-#define CWLogFunc CWLog(@"方法名 = %s,lineNumber = %zd, fileName = %s", __PRETTY_FUNCTION__, __LINE__, __FILE__)
+#define CWLogFunc CWLog(@"方法名 = %s,lineNumber = %zd, fileName = %s", __PRETTY_FUNCTION__, __LINE__, __FILE__);
 
 /** 颜色 */
 #define CWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]

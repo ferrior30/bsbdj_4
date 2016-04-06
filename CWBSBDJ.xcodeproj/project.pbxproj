@@ -20,6 +20,7 @@
 		C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7991CB4AD5A004CE729 /* NSObject+CWRuntime.m */; };
 		C07FF79D1CB4B365004CE729 /* CWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF79C1CB4B365004CE729 /* CWConst.m */; };
 		C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7A21CB4F751004CE729 /* UIImageView+CWExtension.m */; };
+		C07FF7A61CB50953004CE729 /* CWMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7A51CB50953004CE729 /* CWMeCell.m */; };
 		C099A3EC1CA7D373003F06A0 /* CWEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3C91CA7D373003F06A0 /* CWEssenceViewController.m */; };
 		C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3CF1CA7D373003F06A0 /* CWFriendTrendViewController.m */; };
 		C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3D51CA7D373003F06A0 /* CWTabBarController.m */; };
@@ -86,6 +87,8 @@
 		C07FF79C1CB4B365004CE729 /* CWConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWConst.m; sourceTree = "<group>"; };
 		C07FF7A11CB4F751004CE729 /* UIImageView+CWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CWExtension.h"; sourceTree = "<group>"; };
 		C07FF7A21CB4F751004CE729 /* UIImageView+CWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CWExtension.m"; sourceTree = "<group>"; };
+		C07FF7A41CB50953004CE729 /* CWMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMeCell.h; sourceTree = "<group>"; };
+		C07FF7A51CB50953004CE729 /* CWMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMeCell.m; sourceTree = "<group>"; };
 		C099A3C81CA7D373003F06A0 /* CWEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWEssenceViewController.h; sourceTree = "<group>"; };
 		C099A3C91CA7D373003F06A0 /* CWEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWEssenceViewController.m; sourceTree = "<group>"; };
 		C099A3CE1CA7D373003F06A0 /* CWFriendTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFriendTrendViewController.h; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 		C099A3DF1CA7D373003F06A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C07FF7A41CB50953004CE729 /* CWMeCell.h */,
+				C07FF7A51CB50953004CE729 /* CWMeCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -671,6 +676,7 @@
 				C099A40D1CA95314003F06A0 /* CWTextField.m in Sources */,
 				C07FF79D1CB4B365004CE729 /* CWConst.m in Sources */,
 				C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */,
+				C07FF7A61CB50953004CE729 /* CWMeCell.m in Sources */,
 				C099A3F11CA7D373003F06A0 /* CWNewViewController.m in Sources */,
 				C099A3F71CA7EBA0003F06A0 /* CWNavigationController.m in Sources */,
 				C099A3F41CA7D676003F06A0 /* CWSettingViewController.m in Sources */,
@@ -751,7 +757,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -788,7 +794,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

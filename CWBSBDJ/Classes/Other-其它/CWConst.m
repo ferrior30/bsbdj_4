@@ -9,5 +9,7 @@
 #import "CWConst.h"
 /** 请求路径 */
 //#define XMGRequestURL @"http://api.budejie.com/api/api_open.php"
-
 NSString * const CWRequestURL = @"http://api.budejie.com/api/api_open.php";
+
+/** 统一间隙 */
+CGFloat const CWMargin = 10;
