@@ -12,6 +12,7 @@
 #import "MJExtension.h"
 #import "CWRecommandTag.h"
 #import "SVProgressHUD.h"
+#import "CWHTTPSessionManager.h"
 
 
 /** cell的重用标识 */
@@ -55,7 +56,7 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
     // 请求参数
     NSDictionary *params = @{@"a": @"tag_recommend",
                              @"action": @"sub",
-                             @"c": @"topic"};
+                             @"c": @"topic0"};
     // 发送请求
     [self.manager GET:CWRequestURL parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         

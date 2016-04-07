@@ -21,6 +21,10 @@
 		C07FF79D1CB4B365004CE729 /* CWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF79C1CB4B365004CE729 /* CWConst.m */; };
 		C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7A21CB4F751004CE729 /* UIImageView+CWExtension.m */; };
 		C07FF7A61CB50953004CE729 /* CWMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7A51CB50953004CE729 /* CWMeCell.m */; };
+		C07FF7A91CB5EDDF004CE729 /* CWMeSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7A81CB5EDDE004CE729 /* CWMeSquare.m */; };
+		C07FF7AC1CB5EF01004CE729 /* CWMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7AB1CB5EF01004CE729 /* CWMeSquareButton.m */; };
+		C07FF7AF1CB5F00F004CE729 /* CWMeFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7AE1CB5F00F004CE729 /* CWMeFootView.m */; };
+		C07FF7B21CB5FF96004CE729 /* CWHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7B11CB5FF96004CE729 /* CWHTTPSessionManager.m */; };
 		C099A3EC1CA7D373003F06A0 /* CWEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3C91CA7D373003F06A0 /* CWEssenceViewController.m */; };
 		C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3CF1CA7D373003F06A0 /* CWFriendTrendViewController.m */; };
 		C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3D51CA7D373003F06A0 /* CWTabBarController.m */; };
@@ -89,6 +93,14 @@
 		C07FF7A21CB4F751004CE729 /* UIImageView+CWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CWExtension.m"; sourceTree = "<group>"; };
 		C07FF7A41CB50953004CE729 /* CWMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMeCell.h; sourceTree = "<group>"; };
 		C07FF7A51CB50953004CE729 /* CWMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMeCell.m; sourceTree = "<group>"; };
+		C07FF7A71CB5EDDE004CE729 /* CWMeSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMeSquare.h; sourceTree = "<group>"; };
+		C07FF7A81CB5EDDE004CE729 /* CWMeSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMeSquare.m; sourceTree = "<group>"; };
+		C07FF7AA1CB5EF01004CE729 /* CWMeSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMeSquareButton.h; sourceTree = "<group>"; };
+		C07FF7AB1CB5EF01004CE729 /* CWMeSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMeSquareButton.m; sourceTree = "<group>"; };
+		C07FF7AD1CB5F00F004CE729 /* CWMeFootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWMeFootView.h; sourceTree = "<group>"; };
+		C07FF7AE1CB5F00F004CE729 /* CWMeFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMeFootView.m; sourceTree = "<group>"; };
+		C07FF7B01CB5FF96004CE729 /* CWHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHTTPSessionManager.h; sourceTree = "<group>"; };
+		C07FF7B11CB5FF96004CE729 /* CWHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHTTPSessionManager.m; sourceTree = "<group>"; };
 		C099A3C81CA7D373003F06A0 /* CWEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWEssenceViewController.h; sourceTree = "<group>"; };
 		C099A3C91CA7D373003F06A0 /* CWEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWEssenceViewController.m; sourceTree = "<group>"; };
 		C099A3CE1CA7D373003F06A0 /* CWFriendTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFriendTrendViewController.h; sourceTree = "<group>"; };
@@ -379,6 +391,8 @@
 		C099A3DE1CA7D373003F06A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C07FF7A71CB5EDDE004CE729 /* CWMeSquare.h */,
+				C07FF7A81CB5EDDE004CE729 /* CWMeSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -386,8 +400,12 @@
 		C099A3DF1CA7D373003F06A0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C07FF7AA1CB5EF01004CE729 /* CWMeSquareButton.h */,
+				C07FF7AB1CB5EF01004CE729 /* CWMeSquareButton.m */,
 				C07FF7A41CB50953004CE729 /* CWMeCell.h */,
 				C07FF7A51CB50953004CE729 /* CWMeCell.m */,
+				C07FF7AD1CB5F00F004CE729 /* CWMeFootView.h */,
+				C07FF7AE1CB5F00F004CE729 /* CWMeFootView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,6 +453,8 @@
 				C099A3EA1CA7D373003F06A0 /* PrefixHeader.pch */,
 				C07FF79B1CB4B365004CE729 /* CWConst.h */,
 				C07FF79C1CB4B365004CE729 /* CWConst.m */,
+				C07FF7B01CB5FF96004CE729 /* CWHTTPSessionManager.h */,
+				C07FF7B11CB5FF96004CE729 /* CWHTTPSessionManager.m */,
 			);
 			path = "Other-其它";
 			sourceTree = "<group>";
@@ -664,17 +684,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */,
+				C07FF7AC1CB5EF01004CE729 /* CWMeSquareButton.m in Sources */,
 				C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */,
 				C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */,
 				C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */,
 				C099A4011CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m in Sources */,
 				C04917301CAA31EE00BC6600 /* CWRecommandTagViewController.m in Sources */,
 				C099A3F01CA7D373003F06A0 /* CWMeViewController.m in Sources */,
+				C07FF7AF1CB5F00F004CE729 /* CWMeFootView.m in Sources */,
 				C099A4071CA914B6003F06A0 /* CWFastLoginRegisterButton.m in Sources */,
 				C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */,
+				C07FF7B21CB5FF96004CE729 /* CWHTTPSessionManager.m in Sources */,
 				C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */,
 				C099A40D1CA95314003F06A0 /* CWTextField.m in Sources */,
 				C07FF79D1CB4B365004CE729 /* CWConst.m in Sources */,
+				C07FF7A91CB5EDDF004CE729 /* CWMeSquare.m in Sources */,
 				C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */,
 				C07FF7A61CB50953004CE729 /* CWMeCell.m in Sources */,
 				C099A3F11CA7D373003F06A0 /* CWNewViewController.m in Sources */,

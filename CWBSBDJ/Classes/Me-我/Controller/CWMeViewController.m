@@ -10,6 +10,8 @@
 #import "CWSettingViewController.h"
 #import "CWMeCell.h"
 #import "UIView+CWFrame.h"
+#import "CWMeFootView.h"
+#import "AFNetworking.h"
 
 /** 【我的】cell征用标识 */
 static NSString * const CWMeCellID= @"CWMeCellID";
@@ -19,7 +21,7 @@ static NSString * const CWMeCellID= @"CWMeCellID";
 @end
 
 @implementation CWMeViewController
-
+#pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
    
@@ -28,7 +30,6 @@ static NSString * const CWMeCellID= @"CWMeCellID";
     
     // 1.设置导航栏
     [self setupNav];
-    
 }
 /**
  *  设置tableView
@@ -41,12 +42,8 @@ static NSString * const CWMeCellID= @"CWMeCellID";
     
     self.tableView.sectionFooterHeight = CWMargin;
     
-//    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0);
-    
-    
     // 设置footView
-    UIView *footView = [[UIView alloc] init];
-    footView.height = 50;
+    CWMeFootView *footView = [[CWMeFootView alloc] init];
     footView.backgroundColor = [UIColor redColor];
     self.tableView.tableFooterView = footView;
     
