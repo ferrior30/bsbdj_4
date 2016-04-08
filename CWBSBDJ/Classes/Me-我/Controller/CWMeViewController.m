@@ -44,7 +44,7 @@ static NSString * const CWMeCellID= @"CWMeCellID";
     
     // 设置footView
     CWMeFootView *footView = [[CWMeFootView alloc] init];
-    footView.backgroundColor = [UIColor redColor];
+    footView.frame = CGRectMake(footView.frame.origin.x, footView.frame.origin.y, footView.frame.size.width, 1700);
     self.tableView.tableFooterView = footView;
     
 }

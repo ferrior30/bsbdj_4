@@ -56,7 +56,7 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
     // 请求参数
     NSDictionary *params = @{@"a": @"tag_recommend",
                              @"action": @"sub",
-                             @"c": @"topic0"};
+                             @"c": @"topic"};
     // 发送请求
     [self.manager GET:CWRequestURL parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         

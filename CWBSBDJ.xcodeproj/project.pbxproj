@@ -40,6 +40,8 @@
 		C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A4031CA8BFC1003F06A0 /* UIView+CWFrame.m */; };
 		C099A4071CA914B6003F06A0 /* CWFastLoginRegisterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A4061CA914B6003F06A0 /* CWFastLoginRegisterButton.m */; };
 		C099A40D1CA95314003F06A0 /* CWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A40C1CA95314003F06A0 /* CWTextField.m */; };
+		C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A76B861CB75FEA00BA7C98 /* CWWebViewController.m */; };
+		C0A76B891CB7604800BA7C98 /* CWWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0A76B881CB7604800BA7C98 /* CWWebViewController.xib */; };
 		D75CE4EB6E415AA8635CE8FC /* Pods_CWBSBDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1EFD93FFC2B0456990BD89 /* Pods_CWBSBDJ.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +132,9 @@
 		C099A4061CA914B6003F06A0 /* CWFastLoginRegisterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFastLoginRegisterButton.m; sourceTree = "<group>"; };
 		C099A40B1CA95314003F06A0 /* CWTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTextField.h; sourceTree = "<group>"; };
 		C099A40C1CA95314003F06A0 /* CWTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTextField.m; sourceTree = "<group>"; };
+		C0A76B851CB75FEA00BA7C98 /* CWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWebViewController.h; sourceTree = "<group>"; };
+		C0A76B861CB75FEA00BA7C98 /* CWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWebViewController.m; sourceTree = "<group>"; };
+		C0A76B881CB7604800BA7C98 /* CWWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWWebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,6 +389,9 @@
 				C099A3DD1CA7D373003F06A0 /* CWMeViewController.m */,
 				C099A3F21CA7D676003F06A0 /* CWSettingViewController.h */,
 				C099A3F31CA7D676003F06A0 /* CWSettingViewController.m */,
+				C0A76B851CB75FEA00BA7C98 /* CWWebViewController.h */,
+				C0A76B861CB75FEA00BA7C98 /* CWWebViewController.m */,
+				C0A76B881CB7604800BA7C98 /* CWWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -611,6 +619,7 @@
 				C099A3FE1CA80FE6003F06A0 /* CWFriendTrendViewController.xib in Resources */,
 				C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */,
 				C099A3FC1CA80EC2003F06A0 /* CWLoginRegisterViewController.xib in Resources */,
+				C0A76B891CB7604800BA7C98 /* CWWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +695,7 @@
 				C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */,
 				C07FF7AC1CB5EF01004CE729 /* CWMeSquareButton.m in Sources */,
 				C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */,
+				C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */,
 				C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */,
 				C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */,
 				C099A4011CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m in Sources */,

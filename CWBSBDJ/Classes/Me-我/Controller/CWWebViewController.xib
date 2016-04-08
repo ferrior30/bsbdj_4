@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CWWebViewController">
+            <connections>
+                <outlet property="goBackBtn" destination="yin-EL-tQ2" id="HlI-SH-mQJ"/>
+                <outlet property="goForwordBtn" destination="SHa-zh-4YK" id="NnH-HP-qQQ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="guB-Xd-d4T"/>
+                <outlet property="webView" destination="5hJ-rw-1uY" id="Sfe-IJ-SIf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hJ-rw-1uY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="h6z-30-lpB"/>
+                    </connections>
+                </webView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H8h-1t-vc5">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem enabled="NO" title="前进" id="SHa-zh-4YK">
+                            <connections>
+                                <action selector="goForward:" destination="-1" id="a0T-ro-sIK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" title="返回" id="yin-EL-tQ2">
+                            <connections>
+                                <action selector="goBack:" destination="-1" id="2Tr-Da-ehf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem enabled="NO" style="plain" systemItem="flexibleSpace" id="Qar-Q1-cC1"/>
+                        <barButtonItem title="刷新" id="ALL-kO-W9m">
+                            <connections>
+                                <action selector="reFresh:" destination="-1" id="jyc-az-XrP"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="H8h-1t-vc5" secondAttribute="trailing" id="Fhl-DE-gcD"/>
+                <constraint firstItem="5hJ-rw-1uY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ijh-zL-CxD"/>
+                <constraint firstItem="5hJ-rw-1uY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="O27-mV-iBB"/>
+                <constraint firstItem="H8h-1t-vc5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vqn-Ra-eJT"/>
+                <constraint firstAttribute="bottom" secondItem="H8h-1t-vc5" secondAttribute="bottom" id="h6a-Z5-N98"/>
+                <constraint firstItem="H8h-1t-vc5" firstAttribute="top" secondItem="5hJ-rw-1uY" secondAttribute="bottom" id="mdl-Nb-PkB"/>
+                <constraint firstAttribute="trailing" secondItem="5hJ-rw-1uY" secondAttribute="trailing" id="oF1-Nm-fHj"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+</document>
