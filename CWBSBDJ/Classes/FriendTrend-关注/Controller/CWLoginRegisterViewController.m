@@ -56,10 +56,7 @@
 }
 
 - (IBAction)qqLogin:(CWFastLoginRegisterButton *)sender {
-    CWLog(@"%@", NSStringFromCGRect(sender.frame));
-    
-//    CWLog(@"%@", NSStringFromCGRect(sender.titleLabel.frame));
-    CWLog(@"%@", NSStringFromCGRect(sender.frame));
+    CWLogFunc;
 }
 
 /** 退下键盘 */

@@ -7,6 +7,13 @@
 //
 
 #import "CWSettingViewController.h"
+#import "CWClearCacheCell.h"
+#import "CWSettingCell.h"
+
+/** cell重用标识 */
+static NSString * const CWMeClearCacheCellReuseID = @"CWMeClearCacheCellReuseID";
+static NSString * const CWMeSettingCellReuseID = @"CWMeSettingCellReuseID";
+
 
 @interface CWSettingViewController () <UITableViewDataSource>
 
@@ -17,29 +24,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"resized"];
+    // 背景颜色
+    self.view.backgroundColor = CWCommonBgColor;
+    // 注册cell
+    [self.tableView registerClass:[CWClearCacheCell class] forCellReuseIdentifier:CWMeClearCacheCellReuseID];
+    [self.tableView registerClass:[CWSettingCell class] forCellReuseIdentifier:CWMeSettingCellReuseID];
     
+    // 设置导航栏
     [self setupNav];
     
+    // 设置tableView
+    [self setupTableView];
+    
+}
+
+- (void)setupTableView {
+//    self.tableView.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
+    CWLog(@"%@", NSStringFromCGRect(self.tableView.bounds));
 }
 
 - (void)setupNav {
     // 1.设置标题
     self.navigationItem.title = @"设置";
-    
-//    // 2.设置返回按钮
-//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [btn setTitle:@"返回" forState:UIControlStateNormal];
-//    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//    [btn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-//    
-//    [btn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-//    [btn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
-//    [btn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-//    [btn sizeToFit];
-//    
-//    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-//    self.navigationItem.leftBarButtonItem = backBarButtonItem;
 }
 
 #pragma makr - 监听
@@ -50,66 +56,57 @@
 
 
 #pragma mark - Table view data source
-
+/** 返回section中的row数 */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    if (section == 0) {
+        return 1;
+    }else {
+        return 4;
+    }
+}
+
+/**
+ * 返回tableView的section数
+ */
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"resized" forIndexPath:indexPath];
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier"];
+    if (indexPath.section == 0) { // 第0组section
+        CWClearCacheCell *cell = [tableView dequeueReusableCellWithIdentifier:CWMeClearCacheCellReuseID forIndexPath:indexPath];
+        return cell;
+    }else { // 第1组section
+        CWSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:CWMeSettingCellReuseID forIndexPath:indexPath];
+        cell.textLabel.text = [NSString stringWithFormat:@"设置%zd", indexPath.row];
+        return cell;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 10;
+    }
+    return 20;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return [[UIView alloc] init];
+}
+
+#pragma mark - 代理方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//    CWLog(@"%@", NSStringFromCGRect(cell.frame));
+    if (indexPath.section == 0) { // 清理
+        [self clearCache];
+    }
     
-//    if (cell == nil) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseIdentifier"];
-//    }
+}
+
+#pragma mark- 内部方法
+- (void)clearCache {
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%zd", indexPath.row];
-    
-    return cell;
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

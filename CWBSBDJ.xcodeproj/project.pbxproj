@@ -42,6 +42,10 @@
 		C099A40D1CA95314003F06A0 /* CWTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A40C1CA95314003F06A0 /* CWTextField.m */; };
 		C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A76B861CB75FEA00BA7C98 /* CWWebViewController.m */; };
 		C0A76B891CB7604800BA7C98 /* CWWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0A76B881CB7604800BA7C98 /* CWWebViewController.xib */; };
+		C0B19E541CB88B3C00839D0B /* NSString+FileSize.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B19E531CB88B3C00839D0B /* NSString+FileSize.m */; };
+		C0B19E571CB88EB800839D0B /* CWClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B19E561CB88EB800839D0B /* CWClearCacheCell.m */; };
+		C0B19E591CB88F2800839D0B /* CWClearCacheCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0B19E581CB88F2800839D0B /* CWClearCacheCell.xib */; };
+		C0B19E5C1CB8926B00839D0B /* CWSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B19E5B1CB8926B00839D0B /* CWSettingCell.m */; };
 		D75CE4EB6E415AA8635CE8FC /* Pods_CWBSBDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1EFD93FFC2B0456990BD89 /* Pods_CWBSBDJ.framework */; };
 /* End PBXBuildFile section */
 
@@ -135,6 +139,13 @@
 		C0A76B851CB75FEA00BA7C98 /* CWWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWebViewController.h; sourceTree = "<group>"; };
 		C0A76B861CB75FEA00BA7C98 /* CWWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWebViewController.m; sourceTree = "<group>"; };
 		C0A76B881CB7604800BA7C98 /* CWWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWWebViewController.xib; sourceTree = "<group>"; };
+		C0B19E521CB88B3C00839D0B /* NSString+FileSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FileSize.h"; sourceTree = "<group>"; };
+		C0B19E531CB88B3C00839D0B /* NSString+FileSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FileSize.m"; sourceTree = "<group>"; };
+		C0B19E551CB88EB800839D0B /* CWClearCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWClearCacheCell.h; sourceTree = "<group>"; };
+		C0B19E561CB88EB800839D0B /* CWClearCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWClearCacheCell.m; sourceTree = "<group>"; };
+		C0B19E581CB88F2800839D0B /* CWClearCacheCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWClearCacheCell.xib; sourceTree = "<group>"; };
+		C0B19E5A1CB8926B00839D0B /* CWSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWSettingCell.h; sourceTree = "<group>"; };
+		C0B19E5B1CB8926B00839D0B /* CWSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWSettingCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +425,11 @@
 				C07FF7A51CB50953004CE729 /* CWMeCell.m */,
 				C07FF7AD1CB5F00F004CE729 /* CWMeFootView.h */,
 				C07FF7AE1CB5F00F004CE729 /* CWMeFootView.m */,
+				C0B19E551CB88EB800839D0B /* CWClearCacheCell.h */,
+				C0B19E561CB88EB800839D0B /* CWClearCacheCell.m */,
+				C0B19E581CB88F2800839D0B /* CWClearCacheCell.xib */,
+				C0B19E5A1CB8926B00839D0B /* CWSettingCell.h */,
+				C0B19E5B1CB8926B00839D0B /* CWSettingCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -470,6 +486,8 @@
 		C099A3E71CA7D373003F06A0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C0B19E521CB88B3C00839D0B /* NSString+FileSize.h */,
+				C0B19E531CB88B3C00839D0B /* NSString+FileSize.m */,
 				C099A3FF1CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.h */,
 				C099A4001CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m */,
 				C099A4021CA8BFC0003F06A0 /* UIView+CWFrame.h */,
@@ -619,6 +637,7 @@
 				C099A3FE1CA80FE6003F06A0 /* CWFriendTrendViewController.xib in Resources */,
 				C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */,
 				C099A3FC1CA80EC2003F06A0 /* CWLoginRegisterViewController.xib in Resources */,
+				C0B19E591CB88F2800839D0B /* CWClearCacheCell.xib in Resources */,
 				C0A76B891CB7604800BA7C98 /* CWWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +722,7 @@
 				C099A3F01CA7D373003F06A0 /* CWMeViewController.m in Sources */,
 				C07FF7AF1CB5F00F004CE729 /* CWMeFootView.m in Sources */,
 				C099A4071CA914B6003F06A0 /* CWFastLoginRegisterButton.m in Sources */,
+				C0B19E5C1CB8926B00839D0B /* CWSettingCell.m in Sources */,
 				C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */,
 				C07FF7B21CB5FF96004CE729 /* CWHTTPSessionManager.m in Sources */,
 				C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */,
@@ -712,12 +732,14 @@
 				C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */,
 				C07FF7A61CB50953004CE729 /* CWMeCell.m in Sources */,
 				C099A3F11CA7D373003F06A0 /* CWNewViewController.m in Sources */,
+				C0B19E571CB88EB800839D0B /* CWClearCacheCell.m in Sources */,
 				C099A3F71CA7EBA0003F06A0 /* CWNavigationController.m in Sources */,
 				C099A3F41CA7D676003F06A0 /* CWSettingViewController.m in Sources */,
 				C010D4621C8DA04D00441E94 /* main.m in Sources */,
 				C099A3FB1CA80EC2003F06A0 /* CWLoginRegisterViewController.m in Sources */,
 				C049173F1CACD86D00BC6600 /* UIImage+CWCircleImage.m in Sources */,
 				C099A3EF1CA7D373003F06A0 /* CWTabar.m in Sources */,
+				C0B19E541CB88B3C00839D0B /* NSString+FileSize.m in Sources */,
 				C099A3EC1CA7D373003F06A0 /* CWEssenceViewController.m in Sources */,
 				C04917391CAA372D00BC6600 /* CWRecommandTag.m in Sources */,
 			);

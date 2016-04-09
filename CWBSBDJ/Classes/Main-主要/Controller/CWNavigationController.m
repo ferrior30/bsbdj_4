@@ -61,7 +61,6 @@
 
 #pragma mark-
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
-    CWLog(@"f");
     return self.childViewControllers.count > 1;
 }
 

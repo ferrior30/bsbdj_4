@@ -79,7 +79,6 @@ static NSString * const CWMeCellID= @"CWMeCellID";
 /** 监听【设置】按钮 */
 - (void)mineSettingIconClick {
     CWSettingViewController *settingVC = [[CWSettingViewController alloc] init];
-    settingVC.view.backgroundColor = CWRandomColor;
     
     [self.navigationController pushViewController:settingVC animated:YES];
     
@@ -118,9 +117,6 @@ static NSString * const CWMeCellID= @"CWMeCellID";
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    CWLog(@"%f", tableView.sectionHeaderHeight);
-}
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *v = [[UIView alloc] init];

@@ -21,9 +21,6 @@
         self.backgroundColor = CWCommonBgColor;
         // 请求数据
         [self loadMeSquares];
-        CWLogFunc;
-//        // 初始化子控件
-//        [self setupUI];
     }
     
     return self;
@@ -34,7 +31,7 @@
  */
 - (void)layoutSubviews {
     [super layoutSubviews];
-//    CWLog(@"frame %@", NSStringFromCGRect(self.frame));
+
 //    // 按钮的宽度和高度
 //    CGFloat w = self.width / 4;
 //    CGFloat H = w;
