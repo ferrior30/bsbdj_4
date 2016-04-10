@@ -27,7 +27,8 @@ static NSString * const CWMeSettingCellReuseID = @"CWMeSettingCellReuseID";
     // 背景颜色
     self.view.backgroundColor = CWCommonBgColor;
     // 注册cell
-    [self.tableView registerClass:[CWClearCacheCell class] forCellReuseIdentifier:CWMeClearCacheCellReuseID];
+//    [self.tableView registerClass:[CWClearCacheCell class] forCellReuseIdentifier:CWMeClearCacheCellReuseID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CWClearCacheCell" bundle:nil] forCellReuseIdentifier:CWMeClearCacheCellReuseID];
     [self.tableView registerClass:[CWSettingCell class] forCellReuseIdentifier:CWMeSettingCellReuseID];
     
     // 设置导航栏
@@ -75,6 +76,7 @@ static NSString * const CWMeSettingCellReuseID = @"CWMeSettingCellReuseID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) { // 第0组section
         CWClearCacheCell *cell = [tableView dequeueReusableCellWithIdentifier:CWMeClearCacheCellReuseID forIndexPath:indexPath];
+        
         return cell;
     }else { // 第1组section
         CWSettingCell *cell = [tableView dequeueReusableCellWithIdentifier:CWMeSettingCellReuseID forIndexPath:indexPath];
@@ -96,17 +98,11 @@ static NSString * const CWMeSettingCellReuseID = @"CWMeSettingCellReuseID";
 
 #pragma mark - 代理方法
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//    CWLog(@"%@", NSStringFromCGRect(cell.frame));
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    CWLog(@"%@", NSStringFromCGRect(cell.frame));
     if (indexPath.section == 0) { // 清理
-        [self clearCache];
+//        [self clearCache];
     }
     
 }
-
-#pragma mark- 内部方法
-- (void)clearCache {
-    
-}
-
 @end
