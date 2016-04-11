@@ -26,11 +26,19 @@ static NSString * const CWMeCellID= @"CWMeCellID";
     [super viewDidLoad];
    
     // 2.设置tableView
+    // 此处添加会出现问题： 此控制器没有显示在窗口上时，也会去请求数据，去显示SVProgressHUD
     [self setupTableView];
     
     // 1.设置导航栏
     [self setupNav];
+    CWLog(@"%s", __FUNCTION__);
 }
+
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear: animated];
+//    
+//    [self setupTableView];
+//}
 /**
  *  设置tableView
  */

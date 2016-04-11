@@ -22,6 +22,9 @@
 
 #define CWLogFunc CWLog(@"方法名 = %s,lineNumber = %zd, fileName = %s", __PRETTY_FUNCTION__, __LINE__, __FILE__);
 
+/** 将Json数据以plist文件的形式写入到桌面 */
+#define CWWriteToPlist(obj, filename) [obj writeToFile:[NSString stringWithFormat:@"/Users/cw/Desktop/%@.plist", filename] atomically:YES];
+
 /** 颜色 */
 #define CWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 #define CWColorA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]

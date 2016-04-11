@@ -19,6 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 0. 背景颜色
+    self.view.backgroundColor = CWCommonBgColor;
+    
     // 1.设置导航栏
     [self setupNav];
 }

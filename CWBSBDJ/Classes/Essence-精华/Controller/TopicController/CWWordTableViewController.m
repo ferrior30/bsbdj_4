@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 背景颜色
+    self.view.backgroundColor = CWCommonBgColor;
+    
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];

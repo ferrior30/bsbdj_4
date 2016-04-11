@@ -15,4 +15,12 @@
     
     return manager;
 }
+
++ (instancetype)shareManager {
+    return [self manager];
+}
+
++ (instancetype)defaultManager {
+    return [self manager];
+}
 @end

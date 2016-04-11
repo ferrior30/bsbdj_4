@@ -13,6 +13,8 @@
 		C00A881F1CBB6BF4008B6465 /* CWVoiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A881E1CBB6BF4008B6465 /* CWVoiceTableViewController.m */; };
 		C00A88221CBB6C24008B6465 /* CWPictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88211CBB6C24008B6465 /* CWPictureTableViewController.m */; };
 		C00A88251CBB6C4C008B6465 /* CWWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88241CBB6C4C008B6465 /* CWWordTableViewController.m */; };
+		C00A88281CBBB6D9008B6465 /* CWTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88271CBBB6D9008B6465 /* CWTopic.m */; };
+		C00A882B1CBBBA53008B6465 /* CWAllTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A882A1CBBBA53008B6465 /* CWAllTopicCell.m */; };
 		C010D4621C8DA04D00441E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D4611C8DA04D00441E94 /* main.m */; };
 		C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D4641C8DA04D00441E94 /* AppDelegate.m */; };
 		C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C010D46C1C8DA04D00441E94 /* Assets.xcassets */; };
@@ -88,6 +90,10 @@
 		C00A88211CBB6C24008B6465 /* CWPictureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPictureTableViewController.m; sourceTree = "<group>"; };
 		C00A88231CBB6C4C008B6465 /* CWWordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWordTableViewController.h; sourceTree = "<group>"; };
 		C00A88241CBB6C4C008B6465 /* CWWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWordTableViewController.m; sourceTree = "<group>"; };
+		C00A88261CBBB6D9008B6465 /* CWTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopic.h; sourceTree = "<group>"; };
+		C00A88271CBBB6D9008B6465 /* CWTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopic.m; sourceTree = "<group>"; };
+		C00A88291CBBBA53008B6465 /* CWAllTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAllTopicCell.h; sourceTree = "<group>"; };
+		C00A882A1CBBBA53008B6465 /* CWAllTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAllTopicCell.m; sourceTree = "<group>"; };
 		C010D45D1C8DA04D00441E94 /* CWBSBDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWBSBDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010D4611C8DA04D00441E94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C010D4631C8DA04D00441E94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -339,6 +345,8 @@
 				C04917341CAA32EF00BC6600 /* CWRecommandTagCell.xib */,
 				C00A88131CBB2A38008B6465 /* CWTitleButton.h */,
 				C00A88141CBB2A38008B6465 /* CWTitleButton.m */,
+				C00A88291CBBBA53008B6465 /* CWAllTopicCell.h */,
+				C00A882A1CBBBA53008B6465 /* CWAllTopicCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -550,6 +558,8 @@
 		C099A3E91CA7D373003F06A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C00A88261CBBB6D9008B6465 /* CWTopic.h */,
+				C00A88271CBBB6D9008B6465 /* CWTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -751,6 +761,7 @@
 			files = (
 				C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */,
 				C07FF7AC1CB5EF01004CE729 /* CWMeSquareButton.m in Sources */,
+				C00A882B1CBBBA53008B6465 /* CWAllTopicCell.m in Sources */,
 				C00A88151CBB2A38008B6465 /* CWTitleButton.m in Sources */,
 				C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */,
 				C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */,
@@ -784,6 +795,7 @@
 				C00A88191CBB5727008B6465 /* CWAllTopicTableViewController.m in Sources */,
 				C099A3EF1CA7D373003F06A0 /* CWTabar.m in Sources */,
 				C0B19E541CB88B3C00839D0B /* NSString+FileSize.m in Sources */,
+				C00A88281CBBB6D9008B6465 /* CWTopic.m in Sources */,
 				C099A3EC1CA7D373003F06A0 /* CWEssenceViewController.m in Sources */,
 				C04917391CAA372D00BC6600 /* CWRecommandTag.m in Sources */,
 			);
@@ -907,7 +919,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "/Users/cw/Desktop/笔记整理及练习/百思不得姐-四期/CWBSBDJ/CWBSBDJ/Classes/Other-其它/PrefixHeader.pch";
 				INFOPLIST_FILE = CWBSBDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -922,7 +934,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "/Users/cw/Desktop/笔记整理及练习/百思不得姐-四期/CWBSBDJ/CWBSBDJ/Classes/Other-其它/PrefixHeader.pch";
 				INFOPLIST_FILE = CWBSBDJ/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chenwei.CWBSBDJ;
