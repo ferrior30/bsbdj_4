@@ -41,13 +41,14 @@
  *  添加所有子控制器
  */
 - (void)setupAllChildVCs {
+    // 1.添加【精华】控制器
+    CWEssenceViewController *essenceVC = [[CWEssenceViewController alloc] init];
+    [self setupViewController:essenceVC title:@"精华" imageName:@"tabBar_essence_icon" selectImageName:@"tabBar_essence_click_icon"];
     
     // 3.添加【我】控制器
     [self setupViewController:[[CWMeViewController alloc] init] title:@"我" imageName:@"tabBar_me_icon" selectImageName:@"tabBar_me_click_icon"];
     
-    // 1.添加【精华】控制器
-    CWEssenceViewController *essenceVC = [[CWEssenceViewController alloc] init];
-    [self setupViewController:essenceVC title:@"精华" imageName:@"tabBar_essence_icon" selectImageName:@"tabBar_essence_click_icon"];
+   
     
     // 4.添加【关注】控制器
     [self setupViewController:[[CWFriendTrendViewController alloc] init] title:@"关注" imageName:@"tabBar_friendTrends_icon" selectImageName:@"tabBar_friendTrends_click_icon"];

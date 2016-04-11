@@ -27,7 +27,7 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vky-r0-J8t">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vky-r0-J8t">
                         <rect key="frame" x="296" y="22" width="51" height="25"/>
                         <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
                             <color key="titleColor" red="1" green="0.13896907550000001" blue="0.1127750144" alpha="1" colorSpace="calibratedRGB"/>

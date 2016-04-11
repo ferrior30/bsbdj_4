@@ -8,23 +8,98 @@
 
 #import "CWEssenceViewController.h"
 #import "CWRecommandTagViewController.h"
+#import "CWTitleButton.h"
+#import "UIView+CWFrame.h"
+#import "CWAllTopicTableViewController.h"
+#import "CWVideoTableViewController.h"
+#import "CWVoiceTableViewController.h"
+#import "CWPictureTableViewController.h"
+#import "CWWordTableViewController.h"
 
 @interface CWEssenceViewController ()
-
+/** 记录当前选中的title按钮 */
+@property (weak, nonatomic) UIButton *selectTitleBtn;
+/** 指示器 */
+@property (weak, nonatomic) UIView *indicateView;
+/** 存放所有的子控制器的view */
+@property (weak, nonatomic) UIScrollView *scrollView;
 @end
 
 @implementation CWEssenceViewController
 
+#pragma mark - 初始化
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // 1.设置导航栏
     [self setupNav];
+
+    
+    // 2.添加子控制器
+    [self setupchildViewControllers];
+    
+    // 3.添加scrollViw（注：要放在标题buttons前面添加）
+    [self setupScrollView];
+    
+    // 4.添加标题buttons
+    [self setupTitleButtons];
+
 }
 
-/**
- *  设置导航栏
- */
+/** 添加scrollView */
+- (void)setupScrollView {
+    UIScrollView *scrollView = [[UIScrollView alloc] init];
+    [self.view addSubview:scrollView];
+    self.scrollView = scrollView;
+   
+    // scrollView的frame和contentSize
+    scrollView.frame = CGRectMake(0, 0, self.view.width * self.childViewControllers.count, self.view.height);
+    scrollView.contentSize = self.view.bounds.size;
+    
+    // scrollView的背景颜色
+    scrollView.backgroundColor = CWCommonBgColor;
+   
+    // 取消自动调整scrollView的contentSize。
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    // 添加子控件
+    for (NSInteger i = 0; i < self.childViewControllers.count; i++) {
+        UITableViewController *childVC = self.childViewControllers[i];
+    
+        childVC.tableView.frame = CGRectMake(self.view.width * i, 0, self.view.width, self.view.height);
+        
+        childVC.tableView.contentInset = UIEdgeInsetsMake(104, 0, 49, 0);
+        
+        [self.scrollView addSubview:childVC.view];
+    }
+}
+
+/** 添加子控制器 */
+- (void)setupchildViewControllers {
+    // 全部
+    CWAllTopicTableViewController *allTopicViewtroller = [[CWAllTopicTableViewController alloc] init];
+    allTopicViewtroller.view.backgroundColor = CWRandomColor;
+    [self addChildViewController:allTopicViewtroller];
+    
+    // 视频
+    CWVideoTableViewController *videoTopicViewtroller = [[CWVideoTableViewController alloc] init];
+    [self addChildViewController:videoTopicViewtroller];
+    
+    // 声音
+    CWVoiceTableViewController *voiceTopicViewtroller = [[CWVoiceTableViewController alloc] init];
+    [self addChildViewController:voiceTopicViewtroller];
+    
+    // 图片
+    CWPictureTableViewController *pictureTopicViewtroller = [[CWPictureTableViewController alloc] init];
+    [self addChildViewController:pictureTopicViewtroller];
+    
+    // 文字
+    CWWordTableViewController *wordTopicViewtroller = [[CWWordTableViewController alloc] init];
+    [self addChildViewController:wordTopicViewtroller];
+    
+}
+
+/** 设置导航栏 */
 - (void)setupNav {
     // 1.设置中间title
     UIImageView *imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
@@ -41,8 +116,90 @@
     [self.navigationItem setLeftBarButtonItem:btnItem];
 }
 
+/** 添加标题buttons */
+- (void)setupTitleButtons {
+    // 1.btnView：用来添加buttons。
+    UIView *btnView = [[UIView alloc] init];
+    btnView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.2];
+    CGFloat viewHeight = 40;
+    btnView.frame = CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, viewHeight);
 
-#pragma mark - 弹出关注标签界面
+    [self.view addSubview:btnView];
+    
+    // 2.添加子控件buttons
+    /// 标题文字数组
+    NSArray *titleArray = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
+    CGFloat btnW = [UIScreen mainScreen].bounds.size.width / 5;
+    CGFloat btnH = viewHeight;
+    CGFloat x = 0;
+    CGFloat y = 0;
+    for (NSInteger i = 0; i < 5; ++i) {
+        CWTitleButton *btn = [[CWTitleButton alloc] init];
+        
+        //设置frame
+        x = btnW * i;
+        btn.frame = CGRectMake(x, y, btnW, btnH);
+        
+        // 设置按钮文字
+        [btn setTitle:titleArray[i] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateSelected];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        
+        // 设置tag
+        btn.tag = i;
+        
+        // 监听点击事件
+        [btn addTarget:self action:@selector(buttonDidClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+        // 添加到父控件中
+        [btnView addSubview:btn];
+    }
+    
+    // 默认选中第一个titleButton,并记录下来
+    ((UIButton *)btnView.subviews.firstObject).selected = YES;
+    self.selectTitleBtn = btnView.subviews.firstObject;
+    
+    // 3. 添加indicateView
+    UIView *indicateView = [[UIView alloc] init];
+    self.indicateView = indicateView;
+    indicateView.backgroundColor = [self.selectTitleBtn titleColorForState:UIControlStateSelected];
+    
+    // 计算titleLabel的宽度
+    [self.selectTitleBtn.titleLabel sizeToFit];
+    
+    indicateView.width = self.selectTitleBtn.titleLabel.bounds.size.width;
+    indicateView.height = 1;
+    indicateView.center = CGPointMake(self.selectTitleBtn.center.x, btnView.frame.size.height - 1);
+
+    [btnView addSubview:indicateView];
+}
+
+#pragma mark - 监听事件
+/** 监听标题button的点击 */
+- (void)buttonDidClick:(UIButton *)button {
+    if (self.selectTitleBtn == button) return;
+    
+    // 切换按钮的选中状态
+    button.selected =  YES;
+    self.selectTitleBtn.selected = NO;
+    
+
+    
+    // 滚动indicateView的位置
+    [UIView animateWithDuration:0.25 animations:^{
+        self.indicateView.width = button.titleLabel.width;
+         self.indicateView.centerX = self.selectTitleBtn.centerX;
+    }];
+    
+    // 滚动scrollView的位置
+    [UIView animateWithDuration:0.25 animations:^{
+        self.scrollView.contentOffset = CGPointMake(self.view.width * button.tag , 0);
+    }];
+    
+    // 记录当前选中的button
+    self.selectTitleBtn = button;
+}
 /**
  *  监听：导航栏左边按钮的点击
  */
@@ -51,6 +208,10 @@
     CWRecommandTagViewController *RecommandTagVC = [[CWRecommandTagViewController alloc] init];
     
     [self.navigationController pushViewController:RecommandTagVC animated:YES];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CWLog(@"%@", NSStringFromCGRect(self.childViewControllers.firstObject.view.frame) );
 }
 
 @end
