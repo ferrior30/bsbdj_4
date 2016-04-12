@@ -7,7 +7,43 @@
 //
 
 #import "CWTopic.h"
+#import "NSDate+CWExtension.h"
 
 @implementation CWTopic
-
+/** 处理日期字符串 */
+- (NSString *)created_at {
+    // 根据字符串生成帖子的创建日期
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSDate *createdAtDate = [fmt dateFromString:_created_at];
+    
+ 
+    
+    if ([createdAtDate isThisYear]) { // 今年
+        if ([createdAtDate isToday]) { // 今天
+            // 当前时间
+            NSDate *nowDate = [NSDate date];
+            // 日历对象
+            NSCalendar *calendar = [NSCalendar currentCalendar];
+            
+            NSCalendarUnit unit = NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+            NSDateComponents *cmps = [calendar components:unit fromDate:createdAtDate toDate:nowDate options:0];
+            if (cmps.hour >= 1) {
+                return [NSString stringWithFormat:@"%ld小时前",cmps.hour];
+            }else if (cmps.minute >= 1) {
+                return [NSString stringWithFormat:@"%ld分钟前", cmps.minute];
+            }else {
+                return @"刚刚";
+            }
+        }else if ([createdAtDate isYesterday]) { // 昨天
+            fmt.dateFormat = @"昨天 HH:mm:ss";
+            return [fmt stringFromDate:createdAtDate];
+        }else {
+            fmt.dateFormat = @"MM-dd HH:mm:ss";
+            return [fmt stringFromDate:createdAtDate];
+        }
+    }else { // 非今年
+        return  _created_at;
+    }
+}
 @end

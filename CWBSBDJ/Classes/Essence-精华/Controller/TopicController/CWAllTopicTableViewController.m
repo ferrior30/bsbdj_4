@@ -46,7 +46,8 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
     
     // 请求参数
     NSDictionary *dict = @{@"a": @"list",
-                           @"c": @"data"};
+                           @"c": @"data"
+                          };
     
     __weak typeof(self) weakSelf = self;
     [[CWHTTPSessionManager manager] GET:CWRequestURL parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {

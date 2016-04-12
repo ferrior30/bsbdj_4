@@ -9,9 +9,21 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>NSDate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>C00A88391CBCAE55008B6465</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C010D45C1C8DA04D00441E94</key>
 		<dict>
 			<key>primary</key>

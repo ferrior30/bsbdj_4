@@ -16,6 +16,7 @@
 		C00A882B1CBBBA53008B6465 /* CWAllTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A882A1CBBBA53008B6465 /* CWAllTopicCell.m */; };
 		C00A882D1CBBD42A008B6465 /* CWAllTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00A882C1CBBD42A008B6465 /* CWAllTopicCell.xib */; };
 		C00A88321CBBDB74008B6465 /* CWTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88311CBBDB74008B6465 /* CWTopic.m */; };
+		C00A88351CBC992F008B6465 /* NSDate+CWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88341CBC992F008B6465 /* NSDate+CWExtension.m */; };
 		C010D4621C8DA04D00441E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D4611C8DA04D00441E94 /* main.m */; };
 		C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D4641C8DA04D00441E94 /* AppDelegate.m */; };
 		C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C010D46C1C8DA04D00441E94 /* Assets.xcassets */; };
@@ -75,6 +76,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C00A88381CBCAE55008B6465 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4062D9BA8BC7BD0837FFCB89 /* Pods-CWBSBDJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWBSBDJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWBSBDJ/Pods-CWBSBDJ.debug.xcconfig"; sourceTree = "<group>"; };
 		71C039388C31243C86E03200 /* Pods-CWBSBDJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWBSBDJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWBSBDJ/Pods-CWBSBDJ.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +109,9 @@
 		C00A882C1CBBD42A008B6465 /* CWAllTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWAllTopicCell.xib; sourceTree = "<group>"; };
 		C00A88301CBBDB74008B6465 /* CWTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopic.h; sourceTree = "<group>"; };
 		C00A88311CBBDB74008B6465 /* CWTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopic.m; sourceTree = "<group>"; };
+		C00A88331CBC992F008B6465 /* NSDate+CWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CWExtension.h"; sourceTree = "<group>"; };
+		C00A88341CBC992F008B6465 /* NSDate+CWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CWExtension.m"; sourceTree = "<group>"; };
+		C00A883A1CBCAE55008B6465 /* NSDate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSDate; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010D45D1C8DA04D00441E94 /* CWBSBDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWBSBDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010D4611C8DA04D00441E94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C010D4631C8DA04D00441E94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -175,6 +191,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C00A88371CBCAE55008B6465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C010D45A1C8DA04D00441E94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -252,6 +275,7 @@
 				C010D45D1C8DA04D00441E94 /* CWBSBDJ.app */,
 				C010D4761C8DA04D00441E94 /* CWBSBDJTests.xctest */,
 				C010D4811C8DA04D00441E94 /* CWBSBDJUITests.xctest */,
+				C00A883A1CBCAE55008B6465 /* NSDate */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -549,6 +573,8 @@
 				C07FF7A21CB4F751004CE729 /* UIImageView+CWExtension.m */,
 				C07FF7981CB4AD5A004CE729 /* NSObject+CWRuntime.h */,
 				C07FF7991CB4AD5A004CE729 /* NSObject+CWRuntime.m */,
+				C00A88331CBC992F008B6465 /* NSDate+CWExtension.h */,
+				C00A88341CBC992F008B6465 /* NSDate+CWExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -577,6 +603,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C00A88391CBCAE55008B6465 /* NSDate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00A883E1CBCAE55008B6465 /* Build configuration list for PBXNativeTarget "NSDate" */;
+			buildPhases = (
+				C00A88361CBCAE55008B6465 /* Sources */,
+				C00A88371CBCAE55008B6465 /* Frameworks */,
+				C00A88381CBCAE55008B6465 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSDate;
+			productName = NSDate;
+			productReference = C00A883A1CBCAE55008B6465 /* NSDate */;
+			productType = "com.apple.product-type.tool";
+		};
 		C010D45C1C8DA04D00441E94 /* CWBSBDJ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C010D48A1C8DA04D00441E94 /* Build configuration list for PBXNativeTarget "CWBSBDJ" */;
@@ -643,6 +686,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CW;
 				TargetAttributes = {
+					C00A88391CBCAE55008B6465 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					C010D45C1C8DA04D00441E94 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 6K9K557VQC;
@@ -675,6 +721,7 @@
 				C010D45C1C8DA04D00441E94 /* CWBSBDJ */,
 				C010D4751C8DA04D00441E94 /* CWBSBDJTests */,
 				C010D4801C8DA04D00441E94 /* CWBSBDJUITests */,
+				C00A88391CBCAE55008B6465 /* NSDate */,
 			);
 		};
 /* End PBXProject section */
@@ -759,6 +806,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C00A88361CBCAE55008B6465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C010D4591C8DA04D00441E94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -771,6 +825,7 @@
 				C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */,
 				C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */,
 				C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */,
+				C00A88351CBC992F008B6465 /* NSDate+CWExtension.m in Sources */,
 				C099A4011CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m in Sources */,
 				C04917301CAA31EE00BC6600 /* CWRecommandTagViewController.m in Sources */,
 				C099A3F01CA7D373003F06A0 /* CWMeViewController.m in Sources */,
@@ -837,6 +892,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		C00A883F1CBCAE55008B6465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C00A88401CBCAE55008B6465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		C010D4881C8DA04D00441E94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -998,6 +1075,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C00A883E1CBCAE55008B6465 /* Build configuration list for PBXNativeTarget "NSDate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00A883F1CBCAE55008B6465 /* Debug */,
+				C00A88401CBCAE55008B6465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C010D4581C8DA04D00441E94 /* Build configuration list for PBXProject "CWBSBDJ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
