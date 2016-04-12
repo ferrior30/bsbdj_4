@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CWTopic;
 
 @interface CWAllTopicCell : UITableViewCell
-
+@property (strong, nonatomic) CWTopic *topic;
 @end

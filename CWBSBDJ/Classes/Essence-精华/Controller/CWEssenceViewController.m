@@ -77,18 +77,6 @@
     childVC.tableView.scrollIndicatorInsets = childVC.tableView.contentInset;
     childVC.tableView.frame = CGRectMake(0, 0, self.view.width, self.view.height);
     [self.scrollView addSubview:childVC.view];
-    
-    // 2.给scrollView添加子控件
-//    for (NSInteger i = 0; i < self.childViewControllers.count; i++) {
-//        UITableViewController *childVC = self.childViewControllers[i];
-//    
-//        childVC.tableView.frame = CGRectMake(self.view.width * i, 0, self.view.width, self.view.height);
-//        
-//        childVC.tableView.contentInset = UIEdgeInsetsMake(104, 0, 49, 0);
-//        childVC.tableView.scrollIndicatorInsets = childVC.tableView.contentInset;
-//        
-//        [self.scrollView addSubview:childVC.view];
-//    }
 }
 
 /** 添加子控制器 */
@@ -198,7 +186,7 @@
 }
 
 #pragma mark - 监听事件
-/** 监听标题button的点击 */
+/** 监听标题button的点击: 1.滚动indicateView 2.添加scrollView的子控制器的view,并滚动到界面上 */
 - (void)buttonDidClick:(UIButton *)button {
     if (self.selectTitleBtn == button) return;
     
@@ -223,9 +211,6 @@
     }
     
     // 滚动scrollView
-//    [UIView animateWithDuration:0.25 animations:^{
-//        self.scrollView.contentOffset = CGPointMake(self.view.width * button.tag , 0);
-//    }];
     [self.scrollView setContentOffset:CGPointMake(self.view.width * button.tag , self.scrollView.contentOffset.y) animated:YES];
     
     // 记录当前选中的button
@@ -250,7 +235,5 @@
     NSInteger index = (NSInteger)scrollView.contentOffset.x / scrollView.width;
     [self buttonDidClick:self.titleView.subviews[index]];
 }
-
-
 
 @end

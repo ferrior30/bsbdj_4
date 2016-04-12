@@ -11,6 +11,9 @@
 #import "SVProgressHUD.h"
 #import "CWTopic.h"
 #import "MJExtension.h"
+#import "CWAllTopicCell.h"
+
+static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
 
 @interface CWAllTopicTableViewController ()
 /** 存放【所有帖子】的模型数组 */
@@ -27,7 +30,10 @@
     
      self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CWAllTopicCell" bundle:nil] forCellReuseIdentifier:CWAllTopicCellReuseID];
+    
+    // cell 高度
+    self.tableView.rowHeight = 150;
     
     // 请求数据
     [self loadTopic];
@@ -53,7 +59,7 @@
         [SVProgressHUD dismiss];
         
         // 重载tableView数据
-        [self.tableView reloadData];
+        [weakSelf.tableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载数据出错"];
@@ -65,29 +71,18 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 50;
+    return self.allTopics.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    CWAllTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:CWAllTopicCellReuseID forIndexPath:indexPath];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%zd", indexPath.row];
+    // 传递模型
+    cell.topic = self.allTopics[indexPath.row];
     
     return cell;
 }
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 @end
