@@ -49,6 +49,9 @@
                             <constraint firstAttribute="height" constant="20" id="r8J-40-Sjm"/>
                         </constraints>
                         <state key="normal" title="..." image="cellmorebtnnormal"/>
+                        <connections>
+                            <action selector="moreClick" destination="18p-cm-9aI" eventType="touchUpInside" id="R24-rT-LTA"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJF-yV-e8m" userLabel="底部工具条">
                         <rect key="frame" x="0.0" y="118" width="375" height="35"/>
@@ -168,9 +171,13 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="caibutton" destination="atG-lE-qdS" id="PQx-MR-vrr"/>
+                <outlet property="commentButton" destination="3hD-9h-x7W" id="jj3-0c-E3x"/>
                 <outlet property="createdAt" destination="VEH-Av-pOg" id="uSc-ly-Efw"/>
+                <outlet property="dingButton" destination="xlB-S4-DnS" id="ho4-bM-VKq"/>
                 <outlet property="nameLabel" destination="7rw-pW-sAc" id="vrR-mJ-LC7"/>
                 <outlet property="profileImageView" destination="3ot-tJ-vaI" id="4RX-TM-FvA"/>
+                <outlet property="shareButton" destination="5MN-Sg-Vm5" id="rxk-pi-ngZ"/>
                 <outlet property="text_label" destination="hXf-TD-Byf" id="jlR-dU-881"/>
             </connections>
             <point key="canvasLocation" x="762.5" y="41"/>

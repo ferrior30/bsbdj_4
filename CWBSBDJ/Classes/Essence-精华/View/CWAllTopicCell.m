@@ -40,6 +40,15 @@
 @property (weak, nonatomic) IBOutlet UILabel *createdAt;
 /** 帖子文字内容label */
 @property (weak, nonatomic) IBOutlet UILabel *text_label;
+
+/** ding */
+@property (weak, nonatomic) IBOutlet UIButton *dingButton;
+/** cai */
+@property (weak, nonatomic) IBOutlet UIButton *caibutton;
+/** 分享 */
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+/** 评论 */
+@property (weak, nonatomic) IBOutlet UIButton *commentButton;
 @end
 
 @implementation CWAllTopicCell
@@ -47,7 +56,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
-    
+    self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -72,6 +81,59 @@
     
     // 正文
     self.text_label.text = topic.text;
+    
+    // 设置底部工具条上按钮数字
+    [self setButton:self.dingButton number:topic.ding title:@"顶"];
+    [self setButton:self.caibutton number:topic.cai title:@"踩"];
+    [self setButton:self.shareButton number:topic.repost title:@"分享"];
+    [self setButton:self.commentButton number:topic.comment title:@"评论"];
+
+}
+
+/**
+ *  设置底部工具条里button的title
+ *
+ *  @param button 按钮
+ *  @param number 数字
+ *  @param title  数字为0时的title
+ */
+- (void)setButton:(UIButton *)button number:(NSInteger)number title:(NSString *)title {
+    if (number <= 0 ) {
+        [button setTitle:title forState:UIControlStateNormal];
+    }else if (number > 10000) {
+        [button setTitle:[NSString stringWithFormat:@"%.2f", number / 10000.0] forState:UIControlStateNormal];
+    }else {
+        [button setTitle:[NSString stringWithFormat:@"%ld", number] forState:UIControlStateNormal];
+    }
+}
+
+- (void)setFrame:(CGRect)frame {
+    
+    frame.origin.y += CWMargin;
+    frame.size.height -= CWMargin;
+    
+    [super setFrame:frame];
+}
+
+/**
+ *  监听点击：弹出其它选项
+ */
+- (IBAction)moreClick {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        CWLog(@"%s",__FUNCTION__);
+    }]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        CWLog(@"收藏 %s",__FUNCTION__);
+    }]];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        CWLog(@"举报 %s",__FUNCTION__);
+    }]];
+    
+    [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
 }
 
 @end
