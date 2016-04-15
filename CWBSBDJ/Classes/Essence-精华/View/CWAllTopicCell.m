@@ -8,28 +8,9 @@
 
 #import "CWAllTopicCell.h"
 #import "CWTopic.h"
-#import "UIImageView+WebCache.h"
 #import "UIImageView+CWExtension.h"
-
-
-///**
-//
-//@property (nonatomic, copy) NSString *name;
-///** 用户的头像 */
-//@property (nonatomic, copy) NSString *profile_image;
-///** 帖子的文字内容 */
-//@property (nonatomic, copy) NSString *text;
-///** 帖子审核通过的时间 */
-//@property (nonatomic, copy) NSString *created_at;
-///** 顶数量 */
-//@property (nonatomic, assign) NSInteger ding;
-///** 踩数量 */
-//@property (nonatomic, assign) NSInteger cai;
-///** 转发\分享数量 */
-//@property (nonatomic, assign) NSInteger repost;
-///** 评论数量 */
-//@property (nonatomic, assign) NSInteger comment;
-// */
+#import "CWComment.h"
+#import "CWUser.h"
 
 @interface CWAllTopicCell()
 /** 用户头像imageView */
@@ -49,6 +30,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 /** 评论 */
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+/** 最新评论整体 */
+@property (weak, nonatomic) IBOutlet UIView *hotCommentView;
+/** 最热评论内容 */
+@property (weak, nonatomic) IBOutlet UILabel *hotCommentLabel;
+
+/** 中间控件 */
+/** 图片控件 */
+@property (weak, nonatomic) UIView *centerPictureView;
+
 @end
 
 @implementation CWAllTopicCell
@@ -69,25 +59,39 @@
 - (void)setTopic:(CWTopic *)topic {
     _topic = topic;
     
-    // 设置头像
+    // 1.设置头像
     NSURL *url = [NSURL URLWithString:topic.profile_image];
     [self.profileImageView cw_setCircleIconWithURL:url];
     
-    // 昵称
+    // 2.昵称
     self.nameLabel.text = topic.name;
     
-    // 时间
+    //3. 时间
     self.createdAt.text = topic.created_at;
     
-    // 正文
+    // 4.正文
     self.text_label.text = topic.text;
     
-    // 设置底部工具条上按钮数字
+    // 5.设置底部工具条上按钮数字
     [self setButton:self.dingButton number:topic.ding title:@"顶"];
     [self setButton:self.caibutton number:topic.cai title:@"踩"];
     [self setButton:self.shareButton number:topic.repost title:@"分享"];
     [self setButton:self.commentButton number:topic.comment title:@"评论"];
-
+    
+    // 6.最热评论
+    if (topic.top_cmt.count) { // 有最热评论
+        self.hotCommentView.hidden = NO;
+        
+        CWComment *comment = topic.top_cmt.firstObject;
+        
+        self.hotCommentLabel.text = [NSString stringWithFormat:@"%@: %@", comment.user.username, comment.content];
+    }else { // 没有最热评论
+        // 隐藏最热评论控件
+        self.hotCommentView.hidden = YES;
+    }
+    
+    // 7.gif图片
+//    self.
 }
 
 /**

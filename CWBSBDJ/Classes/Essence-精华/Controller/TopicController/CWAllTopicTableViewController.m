@@ -49,7 +49,7 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
 - (void)setupTableView {
     self.view.backgroundColor = CWCommonBgColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight = 150;
+    self.tableView.rowHeight = 200;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CWAllTopicCell" bundle:nil] forCellReuseIdentifier:CWAllTopicCellReuseID];
 }
@@ -119,6 +119,9 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
         // 将JSON字典数组转成Topic模型数组
         NSArray *moreTopics = [CWTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
        
+        //
+        CWWriteToPlist(responseObject, @"hot");
+        
         // 更新maxtime
         weakSelf.maxtime = responseObject[@"info"][@"maxtime"];
        
@@ -136,7 +139,6 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
         [weakSelf.tableView.mj_footer endRefreshing];
     }];
 }
-
 
 #pragma mark - Table view data source
 

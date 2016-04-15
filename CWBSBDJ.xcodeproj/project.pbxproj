@@ -22,11 +22,15 @@
 		C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C010D46C1C8DA04D00441E94 /* Assets.xcassets */; };
 		C010D47B1C8DA04D00441E94 /* CWBSBDJTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D47A1C8DA04D00441E94 /* CWBSBDJTests.m */; };
 		C010D4861C8DA04D00441E94 /* CWBSBDJUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D4851C8DA04D00441E94 /* CWBSBDJUITests.m */; };
+		C0226A8A1CBF5CB100B85BAC /* CWUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0226A891CBF5CB100B85BAC /* CWUser.m */; };
+		C0226A8D1CBF5D1000B85BAC /* CWComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C0226A8C1CBF5D1000B85BAC /* CWComment.m */; };
 		C04917301CAA31EE00BC6600 /* CWRecommandTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C049172E1CAA31EE00BC6600 /* CWRecommandTagViewController.m */; };
 		C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C04917331CAA32EF00BC6600 /* CWRecommandTagCell.m */; };
 		C04917361CAA32EF00BC6600 /* CWRecommandTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04917341CAA32EF00BC6600 /* CWRecommandTagCell.xib */; };
 		C04917391CAA372D00BC6600 /* CWRecommandTag.m in Sources */ = {isa = PBXBuildFile; fileRef = C04917381CAA372D00BC6600 /* CWRecommandTag.m */; };
 		C049173F1CACD86D00BC6600 /* UIImage+CWCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C049173E1CACD86D00BC6600 /* UIImage+CWCircleImage.m */; };
+		C04F6C681CBF73E4005F10F1 /* CWTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C04F6C671CBF73E4005F10F1 /* CWTopicPictureView.m */; };
+		C04F6C6A1CBF73F4005F10F1 /* CWTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04F6C691CBF73F4005F10F1 /* CWTopicPictureView.xib */; };
 		C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7991CB4AD5A004CE729 /* NSObject+CWRuntime.m */; };
 		C07FF79D1CB4B365004CE729 /* CWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF79C1CB4B365004CE729 /* CWConst.m */; };
 		C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7A21CB4F751004CE729 /* UIImageView+CWExtension.m */; };
@@ -124,6 +128,10 @@
 		C010D4811C8DA04D00441E94 /* CWBSBDJUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWBSBDJUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010D4851C8DA04D00441E94 /* CWBSBDJUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWBSBDJUITests.m; sourceTree = "<group>"; };
 		C010D4871C8DA04D00441E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0226A881CBF5CB100B85BAC /* CWUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWUser.h; sourceTree = "<group>"; };
+		C0226A891CBF5CB100B85BAC /* CWUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUser.m; sourceTree = "<group>"; };
+		C0226A8B1CBF5D1000B85BAC /* CWComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWComment.h; sourceTree = "<group>"; };
+		C0226A8C1CBF5D1000B85BAC /* CWComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWComment.m; sourceTree = "<group>"; };
 		C049172D1CAA31EE00BC6600 /* CWRecommandTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommandTagViewController.h; sourceTree = "<group>"; };
 		C049172E1CAA31EE00BC6600 /* CWRecommandTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRecommandTagViewController.m; sourceTree = "<group>"; };
 		C04917321CAA32EF00BC6600 /* CWRecommandTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommandTagCell.h; sourceTree = "<group>"; };
@@ -133,6 +141,9 @@
 		C04917381CAA372D00BC6600 /* CWRecommandTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRecommandTag.m; sourceTree = "<group>"; };
 		C049173D1CACD86D00BC6600 /* UIImage+CWCircleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CWCircleImage.h"; sourceTree = "<group>"; };
 		C049173E1CACD86D00BC6600 /* UIImage+CWCircleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CWCircleImage.m"; sourceTree = "<group>"; };
+		C04F6C661CBF73E4005F10F1 /* CWTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopicPictureView.h; sourceTree = "<group>"; };
+		C04F6C671CBF73E4005F10F1 /* CWTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopicPictureView.m; sourceTree = "<group>"; };
+		C04F6C691CBF73F4005F10F1 /* CWTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWTopicPictureView.xib; sourceTree = "<group>"; };
 		C07FF7981CB4AD5A004CE729 /* NSObject+CWRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CWRuntime.h"; sourceTree = "<group>"; };
 		C07FF7991CB4AD5A004CE729 /* NSObject+CWRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CWRuntime.m"; sourceTree = "<group>"; };
 		C07FF79B1CB4B365004CE729 /* CWConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWConst.h; sourceTree = "<group>"; };
@@ -357,6 +368,10 @@
 		C099A3CA1CA7D373003F06A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C0226A881CBF5CB100B85BAC /* CWUser.h */,
+				C0226A891CBF5CB100B85BAC /* CWUser.m */,
+				C0226A8B1CBF5D1000B85BAC /* CWComment.h */,
+				C0226A8C1CBF5D1000B85BAC /* CWComment.m */,
 				C00A88301CBBDB74008B6465 /* CWTopic.h */,
 				C00A88311CBBDB74008B6465 /* CWTopic.m */,
 				C04917371CAA372D00BC6600 /* CWRecommandTag.h */,
@@ -376,6 +391,9 @@
 				C00A88291CBBBA53008B6465 /* CWAllTopicCell.h */,
 				C00A882A1CBBBA53008B6465 /* CWAllTopicCell.m */,
 				C00A882C1CBBD42A008B6465 /* CWAllTopicCell.xib */,
+				C04F6C661CBF73E4005F10F1 /* CWTopicPictureView.h */,
+				C04F6C671CBF73E4005F10F1 /* CWTopicPictureView.m */,
+				C04F6C691CBF73F4005F10F1 /* CWTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -734,6 +752,7 @@
 				C04917361CAA32EF00BC6600 /* CWRecommandTagCell.xib in Resources */,
 				C099A3FE1CA80FE6003F06A0 /* CWFriendTrendViewController.xib in Resources */,
 				C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */,
+				C04F6C6A1CBF73F4005F10F1 /* CWTopicPictureView.xib in Resources */,
 				C099A3FC1CA80EC2003F06A0 /* CWLoginRegisterViewController.xib in Resources */,
 				C0B19E591CB88F2800839D0B /* CWClearCacheCell.xib in Resources */,
 				C00A882D1CBBD42A008B6465 /* CWAllTopicCell.xib in Resources */,
@@ -817,12 +836,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04F6C681CBF73E4005F10F1 /* CWTopicPictureView.m in Sources */,
 				C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */,
 				C07FF7AC1CB5EF01004CE729 /* CWMeSquareButton.m in Sources */,
 				C00A882B1CBBBA53008B6465 /* CWAllTopicCell.m in Sources */,
 				C00A88151CBB2A38008B6465 /* CWTitleButton.m in Sources */,
 				C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */,
 				C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */,
+				C0226A8A1CBF5CB100B85BAC /* CWUser.m in Sources */,
+				C0226A8D1CBF5D1000B85BAC /* CWComment.m in Sources */,
 				C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */,
 				C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */,
 				C00A88351CBC992F008B6465 /* NSDate+CWExtension.m in Sources */,
@@ -1082,6 +1104,7 @@
 				C00A88401CBCAE55008B6465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C010D4581C8DA04D00441E94 /* Build configuration list for PBXProject "CWBSBDJ" */ = {
 			isa = XCConfigurationList;

@@ -8,8 +8,28 @@
 
 #import "CWTopic.h"
 #import "NSDate+CWExtension.h"
+#import "MJExtension.h"
+#import "CWComment.h"
 
 @implementation CWTopic
+#pragma mark - MJExtension
+/** 声明模型数组里放什么属性 */
++ (NSDictionary *)mj_objectClassInArray {
+    return @{
+             @"top_cmt" : [CWComment class],
+             };
+}
+
+/** 模型中属性对应JSON字典的key */
+//+ (NSDictionary *)mj_replacedKeyFromPropertyName {
+//    return @{
+//             @"small_image" : @"image0",
+//              @"middle_image" : @"image2",
+//              @"large_image" : @"image1",
+//             };
+//}
+
+#pragma mark - 数据处理
 /** 处理日期字符串 */
 - (NSString *)created_at {
     // 根据字符串生成帖子的创建日期

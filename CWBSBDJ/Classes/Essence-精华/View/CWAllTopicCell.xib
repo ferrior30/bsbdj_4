@@ -7,11 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="228" id="18p-cm-9aI" customClass="CWAllTopicCell">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="154"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="289" id="18p-cm-9aI" customClass="CWAllTopicCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="215"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="18p-cm-9aI" id="5gB-vx-6lf">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="153.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="214.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3ot-tJ-vaI" userLabel="头像">
@@ -24,13 +24,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rw-pW-sAc">
                         <rect key="frame" x="55" y="10" width="28" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEH-Av-pOg">
                         <rect key="frame" x="55" y="30" width="24" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正文" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXf-TD-Byf">
@@ -39,7 +39,7 @@
                             <constraint firstAttribute="height" constant="30" id="F91-nd-tL6"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKc-ST-bh9">
@@ -54,7 +54,7 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJF-yV-e8m" userLabel="底部工具条">
-                        <rect key="frame" x="0.0" y="118" width="375" height="35"/>
+                        <rect key="frame" x="0.0" y="179.5" width="375" height="35"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zh9-3i-V4x" userLabel="顶部分隔线">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -152,10 +152,38 @@
                             <constraint firstItem="3hD-9h-x7W" firstAttribute="leading" secondItem="5MN-Sg-Vm5" secondAttribute="trailing" id="trh-D7-23J"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcu-7e-PFC" userLabel="最热评论">
+                        <rect key="frame" x="10" y="95" width="355" height="84.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsS-1l-9IH" userLabel="最热评论标题">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" text="地地地地地地地地地地地地地地地地" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5B-EH-Jlw" userLabel="最热评论内容">
+                                <rect key="frame" x="0.0" y="18" width="355" height="66.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72974480170362166" blue="0.52802420334183764" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="F5B-EH-Jlw" secondAttribute="bottom" id="14w-Bm-pmQ"/>
+                            <constraint firstItem="wsS-1l-9IH" firstAttribute="top" secondItem="hcu-7e-PFC" secondAttribute="top" id="28M-AT-LRd"/>
+                            <constraint firstItem="F5B-EH-Jlw" firstAttribute="top" secondItem="wsS-1l-9IH" secondAttribute="bottom" id="OAk-7c-SjE"/>
+                            <constraint firstItem="wsS-1l-9IH" firstAttribute="leading" secondItem="hcu-7e-PFC" secondAttribute="leading" id="WxX-8a-sLv"/>
+                            <constraint firstAttribute="trailing" secondItem="F5B-EH-Jlw" secondAttribute="trailing" id="vI4-hR-BaN"/>
+                            <constraint firstItem="F5B-EH-Jlw" firstAttribute="leading" secondItem="hcu-7e-PFC" secondAttribute="leading" id="weR-Wq-v0S"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hXf-TD-Byf" firstAttribute="leading" secondItem="5gB-vx-6lf" secondAttribute="leading" constant="10" id="2Zg-YS-Z8H"/>
+                    <constraint firstItem="hcu-7e-PFC" firstAttribute="leading" secondItem="5gB-vx-6lf" secondAttribute="leading" constant="10" id="60V-Uk-AWJ"/>
                     <constraint firstItem="7rw-pW-sAc" firstAttribute="leading" secondItem="3ot-tJ-vaI" secondAttribute="trailing" constant="10" id="97m-uX-qsO"/>
+                    <constraint firstItem="qJF-yV-e8m" firstAttribute="top" secondItem="hcu-7e-PFC" secondAttribute="bottom" id="CEn-Ep-L0K"/>
                     <constraint firstItem="VEH-Av-pOg" firstAttribute="bottom" secondItem="3ot-tJ-vaI" secondAttribute="bottom" id="EyY-Bi-Fm9"/>
                     <constraint firstItem="EKc-ST-bh9" firstAttribute="centerY" secondItem="3ot-tJ-vaI" secondAttribute="centerY" id="GIE-Oa-0Cs"/>
                     <constraint firstItem="qJF-yV-e8m" firstAttribute="leading" secondItem="5gB-vx-6lf" secondAttribute="leading" id="SIo-3b-Epm"/>
@@ -167,6 +195,8 @@
                     <constraint firstAttribute="bottom" secondItem="qJF-yV-e8m" secondAttribute="bottom" id="khc-Wf-Jjb"/>
                     <constraint firstItem="3ot-tJ-vaI" firstAttribute="top" secondItem="5gB-vx-6lf" secondAttribute="top" constant="10" id="lQJ-bL-Bg5"/>
                     <constraint firstItem="7rw-pW-sAc" firstAttribute="top" secondItem="3ot-tJ-vaI" secondAttribute="top" id="lzV-97-AKJ"/>
+                    <constraint firstItem="hcu-7e-PFC" firstAttribute="top" secondItem="hXf-TD-Byf" secondAttribute="bottom" constant="10" id="nok-ci-pGG"/>
+                    <constraint firstAttribute="trailing" secondItem="hcu-7e-PFC" secondAttribute="trailing" constant="10" id="oa6-Zc-fCU"/>
                     <constraint firstItem="VEH-Av-pOg" firstAttribute="leading" secondItem="7rw-pW-sAc" secondAttribute="leading" id="wDN-Bg-34M"/>
                 </constraints>
             </tableViewCellContentView>
@@ -175,12 +205,14 @@
                 <outlet property="commentButton" destination="3hD-9h-x7W" id="jj3-0c-E3x"/>
                 <outlet property="createdAt" destination="VEH-Av-pOg" id="uSc-ly-Efw"/>
                 <outlet property="dingButton" destination="xlB-S4-DnS" id="ho4-bM-VKq"/>
+                <outlet property="hotCommentLabel" destination="F5B-EH-Jlw" id="59D-r4-TVz"/>
+                <outlet property="hotCommentView" destination="hcu-7e-PFC" id="R26-Ba-QGv"/>
                 <outlet property="nameLabel" destination="7rw-pW-sAc" id="vrR-mJ-LC7"/>
                 <outlet property="profileImageView" destination="3ot-tJ-vaI" id="4RX-TM-FvA"/>
                 <outlet property="shareButton" destination="5MN-Sg-Vm5" id="rxk-pi-ngZ"/>
                 <outlet property="text_label" destination="hXf-TD-Byf" id="jlR-dU-881"/>
             </connections>
-            <point key="canvasLocation" x="762.5" y="41"/>
+            <point key="canvasLocation" x="762.5" y="71.5"/>
         </tableViewCell>
     </objects>
     <resources>

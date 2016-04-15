@@ -70,8 +70,7 @@
  */
 - (void)setupViewController:(UIViewController *)vc title:(NSString *)title imageName:(NSString *)imageName selectImageName:(NSString *)selectImageName {
     // 1.包装导航控制器
-#warning 下面这句设置背景颜色会导致不在屏幕上的view也会创建，导致控制器的懒加载特性失效了。最好是放在view的内部设置（viewDidLoad方法中）。
-//    vc.view.backgroundColor = CWCommonBgColor;
+//    vc.view.backgroundColor = CWCommonBgColor; 下面这句设置背景颜色会导致不在屏幕上的view也会创建，导致控制器的懒加载特性失效了。最好是放在view的内部设置（viewDidLoad方法中）。
     CWNavigationController *nav = [[CWNavigationController alloc] initWithRootViewController:vc];
    
     // 2.加入到tabBar的子控制器数组

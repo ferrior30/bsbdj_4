@@ -8,8 +8,32 @@
 
 #import <Foundation/Foundation.h>
 
-@interface CWTopic : NSObject
+/** 枚举：帖子类型 */
+//enum CWTopicType {
+//    CWTopicTypeAllTopic,
+//    CWTopicTypeVideo,
+//    CWTopicTypeVoice,
+//    CWTopicTypePicture,
+//    CWTopicTypeWord
+//};
+typedef NS_ENUM(NSInteger, CWTopicType){
+    /** 全部 */
+    CWTopicTypeAllTopic = 1,
+   
+    /** 视频 */
+    CWTopicTypeVideo = 41,
+    
+    /** 声音 */
+    CWTopicTypeVoice = 31,
+    
+    /** 图片 */
+    CWTopicTypePicture = 10,
+    
+    /** 段子 */
+    CWTopicTypeWord = 29
+};
 
+@interface CWTopic : NSObject
 // 用户 -- 发帖者
 /** 用户的名字 */
 @property (nonatomic, copy) NSString *name;
@@ -27,5 +51,30 @@
 @property (nonatomic, assign) NSInteger repost;
 /** 评论数量 */
 @property (nonatomic, assign) NSInteger comment;
+/** 最热评论 */
+@property (copy, nonatomic) NSArray *top_cmt;
+/** 帖子类型 */
+//@property (assign, nonatomic) enum CWTopicType topicType;
+@property (assign, nonatomic) CWTopicType topicType;
 
-@end
+/** 图片的宽度 */
+@property (nonatomic, assign) CGFloat width;
+/** 图片的高度 */
+@property (nonatomic, assign) CGFloat height;
+/** 小图 */
+@property (nonatomic, copy) NSString *small_image;
+/** 中图 */
+@property (nonatomic, copy) NSString *middle_image;
+/** 大图 */
+@property (nonatomic, copy) NSString *large_image;
+/** 是否为动态图 */
+@property (nonatomic, assign) BOOL is_gif;
+
+/* 辅助属性 */
+/** 中间控件的frame */
+@property (assign, nonatomic) CGRect centerPictureViweFrame;
+/** cell的高度 */
+@property (assign, nonatomic) CGFloat cellHeight;
+/** 是否是大图 */
+@property (assign, nonatomic) BOOL isBigPicture;
+
