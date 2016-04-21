@@ -5,12 +5,24 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CWTopicPictureView"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CWTopicPictureView">
             <rect key="frame" x="0.0" y="0.0" width="400" height="231"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyQ-lV-35w">
+                    <rect key="frame" x="0.0" y="187" width="400" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ITU-aF-Zh1"/>
+                    </constraints>
+                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                    <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
+                    <connections>
+                        <action selector="seeBigPictureButtonClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="x0V-Mz-lbg"/>
+                    </connections>
+                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="Z8m-DK-rMd" userLabel="gif标识">
                     <rect key="frame" x="0.0" y="0.0" width="31" height="31"/>
                     <constraints>
@@ -18,15 +30,7 @@
                         <constraint firstAttribute="width" constant="31" id="hxS-Ym-7Ah"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyQ-lV-35w">
-                    <rect key="frame" x="0.0" y="187" width="400" height="44"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="44" id="ITU-aF-Zh1"/>
-                    </constraints>
-                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="点击查看大图" image="see-big-picture" backgroundImage="see-big-picture-background"/>
-                </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nFB-vd-BTz" userLabel="图片">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nFB-vd-BTz" userLabel="图片">
                     <rect key="frame" x="0.0" y="0.0" width="400" height="231"/>
                 </imageView>
             </subviews>
@@ -46,7 +50,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="gifImageView" destination="Z8m-DK-rMd" id="ecY-K1-hRL"/>
-                <outlet property="imageView" destination="nFB-vd-BTz" id="9Tz-In-I0p"/>
+                <outlet property="pictureImageView" destination="nFB-vd-BTz" id="ZHe-cg-UPG"/>
                 <outlet property="seeBigPictureButton" destination="oyQ-lV-35w" id="Plc-9j-P6t"/>
             </connections>
             <point key="canvasLocation" x="243" y="300.5"/>

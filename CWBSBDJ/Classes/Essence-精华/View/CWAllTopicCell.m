@@ -11,6 +11,7 @@
 #import "UIImageView+CWExtension.h"
 #import "CWComment.h"
 #import "CWUser.h"
+#import "CWTopicPictureView.h"
 
 @interface CWAllTopicCell()
 /** 用户头像imageView */
@@ -37,16 +38,28 @@
 
 /** 中间控件 */
 /** 图片控件 */
-@property (weak, nonatomic) UIView *centerPictureView;
+@property (weak, nonatomic) CWTopicPictureView *centerPictureView;
 
 @end
 
 @implementation CWAllTopicCell
 
+#pragma mark - 懒加载
+/** 图片控件 */
+- (CWTopicPictureView *)centerPictureView {
+    if (_centerPictureView == nil) {
+        _centerPictureView = [CWTopicPictureView picture];
+        [self.contentView addSubview:_centerPictureView];
+    }
+    return _centerPictureView;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     
     self.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+    
+    //
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -90,8 +103,20 @@
         self.hotCommentView.hidden = YES;
     }
     
-    // 7.gif图片
-//    self.
+    // 7. 中间控件
+    if (topic.type == CWTopicTypePicture) { // 图片控件
+        self.centerPictureView.hidden = NO;
+        self.centerPictureView.frame = topic.centerPictureViweFrame;
+        self.centerPictureView.topic = topic;
+        
+//        self.centerPictureView.topic = topic;
+    }else if (topic.type == CWTopicTypeVideo) { // 视频
+        self.centerPictureView.hidden = YES;
+    }else if (topic.type == CWTopicTypeVoice){
+        self.centerPictureView.hidden = YES;
+    }else { // 文字
+        self.centerPictureView.hidden = YES;
+    }
 }
 
 /**

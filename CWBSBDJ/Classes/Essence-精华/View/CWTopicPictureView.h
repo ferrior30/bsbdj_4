@@ -12,4 +12,5 @@
 @interface CWTopicPictureView : UIView
 /** Topic模型 */
 @property (strong, nonatomic) CWTopic *topic;
++ (instancetype)picture;
 @end

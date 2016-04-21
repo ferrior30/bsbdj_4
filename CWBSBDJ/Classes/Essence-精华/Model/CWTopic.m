@@ -10,6 +10,7 @@
 #import "NSDate+CWExtension.h"
 #import "MJExtension.h"
 #import "CWComment.h"
+#import "CWUser.h"
 
 @implementation CWTopic
 #pragma mark - MJExtension
@@ -21,13 +22,13 @@
 }
 
 /** 模型中属性对应JSON字典的key */
-//+ (NSDictionary *)mj_replacedKeyFromPropertyName {
-//    return @{
-//             @"small_image" : @"image0",
-//              @"middle_image" : @"image2",
-//              @"large_image" : @"image1",
-//             };
-//}
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{
+             @"small_image" : @"image0",
+              @"middle_image" : @"image2",
+              @"large_image" : @"image1",
+             };
+}
 
 #pragma mark - 数据处理
 /** 处理日期字符串 */
@@ -65,5 +66,93 @@
     }else { // 非今年
         return  _created_at;
     }
+}
+
+//- (CGRect)centerPictureViweFrame {
+//    // 中间控件的x值
+//    CGFloat centerViewX = CWMargin;
+//    
+//    // text_label的frame
+//    // y值（头像高度35+topMargin 10 + bottomMargin 10)
+//    CGFloat textY = 55;
+//    // 最大宽度
+//    CGFloat textMaxW = [UIScreen mainScreen].bounds.size.width - 2 * CWMargin;
+//    // 高度
+//    CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(textMaxW, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15]} context:nil].size.height;
+//    
+//    // 中间控件的y值
+//    CGFloat centerViewY = textY + textH + CWMargin;
+//    
+//    // 中间控件的宽度
+//    CGFloat centerViewW = textMaxW;
+//    
+//    // 中间控件的高度
+//    CGFloat centerViewH = self.height * centerViewW / self.width;
+//    
+//    // 是否是大图
+//    if (centerViewH >= [UIScreen mainScreen].bounds.size.height) {
+//        self.isBigPicture = YES;
+//        centerViewH = 200;
+//    }else {
+//        self.isBigPicture = NO;
+//    }
+//   
+//    return CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
+//}
+
+- (CGFloat)cellHeight {
+    // 如果先前已经计算过了，就直接返回
+    if (_cellHeight) return _cellHeight;
+    
+    // text_label的y值
+    CGFloat textY = 55;
+    // 最大宽度
+    CGFloat textMaxW = [UIScreen mainScreen].bounds.size.width - 2 * CWMargin;
+    // 高度
+    CGFloat textH = [self.text boundingRectWithSize:CGSizeMake(textMaxW, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:15]} context:nil].size.height;
+    
+    _cellHeight = textY + textH + CWMargin;
+    
+    // 有中间内容
+    if (self.type != CWTopicTypeWord) { // 有中间内容
+        // 中间控件的x值
+        CGFloat centerViewX = CWMargin;
+        // 中间控件的y值
+        CGFloat centerViewY = textY + textH + CWMargin;
+        // 中间控件的宽度
+        CGFloat centerViewW = textMaxW;
+        // 中间控件的高度
+        CGFloat centerViewH = self.height * centerViewW / self.width;
+        
+        // 是否是大图
+        if (centerViewH >= [UIScreen mainScreen].bounds.size.height) {
+            self.isBigPicture = YES;
+            centerViewH = 200;
+        }else {
+            self.isBigPicture = NO;
+        }
+        
+         // 中间内容的frame
+        _centerPictureViweFrame = CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
+        
+        _cellHeight += _centerPictureViweFrame.size.height + CWMargin;
+    }
+    
+    // 有最热评论
+    if (self.top_cmt.count) {
+        // 最热评论的高度
+        CGFloat topCmtTitleH = 20;
+        NSString *text = [NSString stringWithFormat:@"%@: %@", self.top_cmt.firstObject.user.username, self.top_cmt.firstObject.content];
+        
+        CGFloat topCmtTextH = [text boundingRectWithSize:CGSizeMake(textMaxW, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:13]} context:nil].size.height;
+        
+        _cellHeight += topCmtTitleH + topCmtTextH + CWMargin;
+    }
+    
+    // 底部工具条
+    CGFloat toolBarH = 35;
+    _cellHeight += toolBarH + CWMargin;
+    
+    return _cellHeight;
 }
 @end

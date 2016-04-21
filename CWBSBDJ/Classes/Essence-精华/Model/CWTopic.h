@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+@class CWComment;
 
 /** 枚举：帖子类型 */
-//enum CWTopicType {
+//typedef enum CWTopicType {
 //    CWTopicTypeAllTopic,
 //    CWTopicTypeVideo,
 //    CWTopicTypeVoice,
@@ -52,10 +53,10 @@ typedef NS_ENUM(NSInteger, CWTopicType){
 /** 评论数量 */
 @property (nonatomic, assign) NSInteger comment;
 /** 最热评论 */
-@property (copy, nonatomic) NSArray *top_cmt;
+@property (copy, nonatomic) NSArray<CWComment *> *top_cmt;
 /** 帖子类型 */
 //@property (assign, nonatomic) enum CWTopicType topicType;
-@property (assign, nonatomic) CWTopicType topicType;
+@property (assign, nonatomic) CWTopicType type;
 
 /** 图片的宽度 */
 @property (nonatomic, assign) CGFloat width;
@@ -78,3 +79,4 @@ typedef NS_ENUM(NSInteger, CWTopicType){
 /** 是否是大图 */
 @property (assign, nonatomic) BOOL isBigPicture;
 
+@end

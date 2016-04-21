@@ -49,7 +49,6 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
 - (void)setupTableView {
     self.view.backgroundColor = CWCommonBgColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight = 200;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"CWAllTopicCell" bundle:nil] forCellReuseIdentifier:CWAllTopicCellReuseID];
 }
@@ -141,19 +140,25 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
 }
 
 #pragma mark - Table view data source
-
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
     return self.allTopics.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CWAllTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:CWAllTopicCellReuseID forIndexPath:indexPath];
+    
+    CWAllTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:CWAllTopicCellReuseID];
     
     // 传递模型
     cell.topic = self.allTopics[indexPath.row];
     
     return cell;
+}
+
+/** cell的高度 */
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.allTopics[indexPath.row].cellHeight;
+
 }
 
 @end
