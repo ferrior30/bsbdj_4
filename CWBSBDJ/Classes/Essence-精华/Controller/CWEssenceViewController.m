@@ -25,6 +25,7 @@
 @property (weak, nonatomic) UIView *indicateView;
 /** 存放所有的子控制器的view */
 @property (weak, nonatomic) UIScrollView *scrollView;
+
 @end
 
 @implementation CWEssenceViewController
@@ -235,5 +236,6 @@
     NSInteger index = (NSInteger)scrollView.contentOffset.x / scrollView.width;
     [self buttonDidClick:self.titleView.subviews[index]];
 }
+
 
 @end

@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-CWBSBDJ/AFNetworking.framework"
+  install_framework "Pods-CWBSBDJ/DACircularProgress.framework"
   install_framework "Pods-CWBSBDJ/MJExtension.framework"
   install_framework "Pods-CWBSBDJ/MJRefresh.framework"
   install_framework "Pods-CWBSBDJ/SDWebImage.framework"
@@ -92,6 +93,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-CWBSBDJ/AFNetworking.framework"
+  install_framework "Pods-CWBSBDJ/DACircularProgress.framework"
   install_framework "Pods-CWBSBDJ/MJExtension.framework"
   install_framework "Pods-CWBSBDJ/MJRefresh.framework"
   install_framework "Pods-CWBSBDJ/SDWebImage.framework"

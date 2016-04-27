@@ -18,7 +18,8 @@
 
 - (void)cw_setCircleIconWithURL:(NSURL *)url {
     
-    [self sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+    UIImage *placeholderImage = [UIImage circleImageNamed:@"defaultUserIcon"];
+    [self sd_setImageWithURL:url placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         if (image == nil) return ;
         
         self.image = [image circleImage];

@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'CWBSBDJ' do
@@ -7,4 +7,5 @@ pod 'MJExtension'
 pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'MJRefresh'
+pod 'DACircularProgress'
 end

@@ -135,7 +135,7 @@
          // 中间内容的frame
         _centerPictureViweFrame = CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
         
-        _cellHeight += _centerPictureViweFrame.size.height + CWMargin;
+        _cellHeight += centerViewH + CWMargin;
     }
     
     // 有最热评论

@@ -1,19 +1,21 @@
 //
-//  CWAllTopicCell.m
+//  CWTopicCell.m
 //  CWBSBDJ
 //
 //  Created by ChenWei on 16/4/11.
 //  Copyright © 2016年 CW. All rights reserved.
 //
 
-#import "CWAllTopicCell.h"
+#import "CWTopicCell.h"
 #import "CWTopic.h"
 #import "UIImageView+CWExtension.h"
 #import "CWComment.h"
 #import "CWUser.h"
 #import "CWTopicPictureView.h"
+#import "CWTopicVideoView.h"
+#import "CWTopicVoiceView.h"
 
-@interface CWAllTopicCell()
+@interface CWTopicCell()
 /** 用户头像imageView */
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 /** 昵称label */
@@ -36,22 +38,44 @@
 /** 最热评论内容 */
 @property (weak, nonatomic) IBOutlet UILabel *hotCommentLabel;
 
-/** 中间控件 */
+/* 中间控件 */
 /** 图片控件 */
-@property (weak, nonatomic) CWTopicPictureView *centerPictureView;
+@property (nonatomic, weak) CWTopicPictureView *pictureView;
+/** 声音控件 */
+@property (nonatomic, weak) CWTopicVoiceView *voiceView;
+/** 视频控件 */
+@property (nonatomic, weak) CWTopicVideoView *videoView;
 
 @end
 
-@implementation CWAllTopicCell
+@implementation CWTopicCell
 
 #pragma mark - 懒加载
 /** 图片控件 */
-- (CWTopicPictureView *)centerPictureView {
-    if (_centerPictureView == nil) {
-        _centerPictureView = [CWTopicPictureView picture];
-        [self.contentView addSubview:_centerPictureView];
+- (CWTopicPictureView *)pictureView {
+    if (_pictureView == nil) {
+        _pictureView = [CWTopicPictureView pictureView];
+        [self.contentView addSubview:_pictureView];
     }
-    return _centerPictureView;
+    return _pictureView;
+}
+
+/** 声音控件 */
+- (CWTopicVoiceView *)voiceView {
+    if (_voiceView == nil) {
+        _voiceView = [CWTopicVoiceView voiceView];
+        [self.contentView addSubview:_voiceView];
+    }
+    return _voiceView;
+}
+
+/** 视频控件 */
+- (CWTopicVideoView *)videoView {
+    if (_videoView == nil) {
+        _videoView = [CWTopicVideoView videoView];
+        [self.contentView addSubview:_videoView];
+    }
+    return _videoView;
 }
 
 - (void)awakeFromNib {
@@ -105,17 +129,17 @@
     
     // 7. 中间控件
     if (topic.type == CWTopicTypePicture) { // 图片控件
-        self.centerPictureView.hidden = NO;
-        self.centerPictureView.frame = topic.centerPictureViweFrame;
-        self.centerPictureView.topic = topic;
-        
-//        self.centerPictureView.topic = topic;
+        self.pictureView.hidden = NO;
+        self.pictureView.frame = topic.centerPictureViweFrame;
+        self.pictureView.topic = topic;
+
     }else if (topic.type == CWTopicTypeVideo) { // 视频
-        self.centerPictureView.hidden = YES;
+        self.pictureView.hidden = YES;
+//        self.
     }else if (topic.type == CWTopicTypeVoice){
-        self.centerPictureView.hidden = YES;
+        self.pictureView.hidden = YES;
     }else { // 文字
-        self.centerPictureView.hidden = YES;
+        self.pictureView.hidden = YES;
     }
 }
 
@@ -164,5 +188,6 @@
     
     [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
 }
+
 
 @end

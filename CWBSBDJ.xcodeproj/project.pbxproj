@@ -13,8 +13,8 @@
 		C00A881F1CBB6BF4008B6465 /* CWVoiceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A881E1CBB6BF4008B6465 /* CWVoiceTableViewController.m */; };
 		C00A88221CBB6C24008B6465 /* CWPictureTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88211CBB6C24008B6465 /* CWPictureTableViewController.m */; };
 		C00A88251CBB6C4C008B6465 /* CWWordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88241CBB6C4C008B6465 /* CWWordTableViewController.m */; };
-		C00A882B1CBBBA53008B6465 /* CWAllTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A882A1CBBBA53008B6465 /* CWAllTopicCell.m */; };
-		C00A882D1CBBD42A008B6465 /* CWAllTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00A882C1CBBD42A008B6465 /* CWAllTopicCell.xib */; };
+		C00A882B1CBBBA53008B6465 /* CWTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A882A1CBBBA53008B6465 /* CWTopicCell.m */; };
+		C00A882D1CBBD42A008B6465 /* CWTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00A882C1CBBD42A008B6465 /* CWTopicCell.xib */; };
 		C00A88321CBBDB74008B6465 /* CWTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88311CBBDB74008B6465 /* CWTopic.m */; };
 		C00A88351CBC992F008B6465 /* NSDate+CWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C00A88341CBC992F008B6465 /* NSDate+CWExtension.m */; };
 		C010D4621C8DA04D00441E94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D4611C8DA04D00441E94 /* main.m */; };
@@ -22,6 +22,8 @@
 		C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C010D46C1C8DA04D00441E94 /* Assets.xcassets */; };
 		C010D47B1C8DA04D00441E94 /* CWBSBDJTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D47A1C8DA04D00441E94 /* CWBSBDJTests.m */; };
 		C010D4861C8DA04D00441E94 /* CWBSBDJUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C010D4851C8DA04D00441E94 /* CWBSBDJUITests.m */; };
+		C01B540E1CCEF56B0061B7B3 /* CWSeeBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01B540D1CCEF56B0061B7B3 /* CWSeeBigViewController.m */; };
+		C01B54101CCEF5CD0061B7B3 /* CWSeeBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01B540F1CCEF5CD0061B7B3 /* CWSeeBigViewController.xib */; };
 		C0226A8A1CBF5CB100B85BAC /* CWUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0226A891CBF5CB100B85BAC /* CWUser.m */; };
 		C0226A8D1CBF5D1000B85BAC /* CWComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C0226A8C1CBF5D1000B85BAC /* CWComment.m */; };
 		C04917301CAA31EE00BC6600 /* CWRecommandTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C049172E1CAA31EE00BC6600 /* CWRecommandTagViewController.m */; };
@@ -60,6 +62,10 @@
 		C0B19E571CB88EB800839D0B /* CWClearCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B19E561CB88EB800839D0B /* CWClearCacheCell.m */; };
 		C0B19E591CB88F2800839D0B /* CWClearCacheCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0B19E581CB88F2800839D0B /* CWClearCacheCell.xib */; };
 		C0B19E5C1CB8926B00839D0B /* CWSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B19E5B1CB8926B00839D0B /* CWSettingCell.m */; };
+		C0C179891CD027920026C5B5 /* CWTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C179881CD027920026C5B5 /* CWTopicVideoView.m */; };
+		C0C1798B1CD027AE0026C5B5 /* CWTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C1798A1CD027AE0026C5B5 /* CWTopicVideoView.xib */; };
+		C0C1798E1CD02CFD0026C5B5 /* CWTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C1798D1CD02CFD0026C5B5 /* CWTopicVoiceView.m */; };
+		C0C179901CD02D880026C5B5 /* CWTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C1798F1CD02D880026C5B5 /* CWTopicVoiceView.xib */; };
 		D75CE4EB6E415AA8635CE8FC /* Pods_CWBSBDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1EFD93FFC2B0456990BD89 /* Pods_CWBSBDJ.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,18 +86,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C00A88381CBCAE55008B6465 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		4062D9BA8BC7BD0837FFCB89 /* Pods-CWBSBDJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWBSBDJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWBSBDJ/Pods-CWBSBDJ.debug.xcconfig"; sourceTree = "<group>"; };
 		71C039388C31243C86E03200 /* Pods-CWBSBDJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWBSBDJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWBSBDJ/Pods-CWBSBDJ.release.xcconfig"; sourceTree = "<group>"; };
@@ -108,14 +102,13 @@
 		C00A88211CBB6C24008B6465 /* CWPictureTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPictureTableViewController.m; sourceTree = "<group>"; };
 		C00A88231CBB6C4C008B6465 /* CWWordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWWordTableViewController.h; sourceTree = "<group>"; };
 		C00A88241CBB6C4C008B6465 /* CWWordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWWordTableViewController.m; sourceTree = "<group>"; };
-		C00A88291CBBBA53008B6465 /* CWAllTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWAllTopicCell.h; sourceTree = "<group>"; };
-		C00A882A1CBBBA53008B6465 /* CWAllTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWAllTopicCell.m; sourceTree = "<group>"; };
-		C00A882C1CBBD42A008B6465 /* CWAllTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWAllTopicCell.xib; sourceTree = "<group>"; };
+		C00A88291CBBBA53008B6465 /* CWTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopicCell.h; sourceTree = "<group>"; };
+		C00A882A1CBBBA53008B6465 /* CWTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopicCell.m; sourceTree = "<group>"; };
+		C00A882C1CBBD42A008B6465 /* CWTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWTopicCell.xib; sourceTree = "<group>"; };
 		C00A88301CBBDB74008B6465 /* CWTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopic.h; sourceTree = "<group>"; };
 		C00A88311CBBDB74008B6465 /* CWTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopic.m; sourceTree = "<group>"; };
 		C00A88331CBC992F008B6465 /* NSDate+CWExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CWExtension.h"; sourceTree = "<group>"; };
 		C00A88341CBC992F008B6465 /* NSDate+CWExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CWExtension.m"; sourceTree = "<group>"; };
-		C00A883A1CBCAE55008B6465 /* NSDate */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NSDate; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010D45D1C8DA04D00441E94 /* CWBSBDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWBSBDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010D4611C8DA04D00441E94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C010D4631C8DA04D00441E94 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +121,9 @@
 		C010D4811C8DA04D00441E94 /* CWBSBDJUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWBSBDJUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C010D4851C8DA04D00441E94 /* CWBSBDJUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CWBSBDJUITests.m; sourceTree = "<group>"; };
 		C010D4871C8DA04D00441E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C01B540C1CCEF56B0061B7B3 /* CWSeeBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWSeeBigViewController.h; sourceTree = "<group>"; };
+		C01B540D1CCEF56B0061B7B3 /* CWSeeBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWSeeBigViewController.m; sourceTree = "<group>"; };
+		C01B540F1CCEF5CD0061B7B3 /* CWSeeBigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWSeeBigViewController.xib; sourceTree = "<group>"; };
 		C0226A881CBF5CB100B85BAC /* CWUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWUser.h; sourceTree = "<group>"; };
 		C0226A891CBF5CB100B85BAC /* CWUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUser.m; sourceTree = "<group>"; };
 		C0226A8B1CBF5D1000B85BAC /* CWComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWComment.h; sourceTree = "<group>"; };
@@ -199,16 +195,15 @@
 		C0B19E581CB88F2800839D0B /* CWClearCacheCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWClearCacheCell.xib; sourceTree = "<group>"; };
 		C0B19E5A1CB8926B00839D0B /* CWSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWSettingCell.h; sourceTree = "<group>"; };
 		C0B19E5B1CB8926B00839D0B /* CWSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWSettingCell.m; sourceTree = "<group>"; };
+		C0C179871CD027920026C5B5 /* CWTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopicVideoView.h; sourceTree = "<group>"; };
+		C0C179881CD027920026C5B5 /* CWTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopicVideoView.m; sourceTree = "<group>"; };
+		C0C1798A1CD027AE0026C5B5 /* CWTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWTopicVideoView.xib; sourceTree = "<group>"; };
+		C0C1798C1CD02CFD0026C5B5 /* CWTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopicVoiceView.h; sourceTree = "<group>"; };
+		C0C1798D1CD02CFD0026C5B5 /* CWTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopicVoiceView.m; sourceTree = "<group>"; };
+		C0C1798F1CD02D880026C5B5 /* CWTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWTopicVoiceView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C00A88371CBCAE55008B6465 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C010D45A1C8DA04D00441E94 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,7 +281,6 @@
 				C010D45D1C8DA04D00441E94 /* CWBSBDJ.app */,
 				C010D4761C8DA04D00441E94 /* CWBSBDJTests.xctest */,
 				C010D4811C8DA04D00441E94 /* CWBSBDJUITests.xctest */,
-				C00A883A1CBCAE55008B6465 /* NSDate */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -361,6 +355,9 @@
 				C00A88161CBB56F9008B6465 /* TopicController */,
 				C049172D1CAA31EE00BC6600 /* CWRecommandTagViewController.h */,
 				C049172E1CAA31EE00BC6600 /* CWRecommandTagViewController.m */,
+				C01B540C1CCEF56B0061B7B3 /* CWSeeBigViewController.h */,
+				C01B540D1CCEF56B0061B7B3 /* CWSeeBigViewController.m */,
+				C01B540F1CCEF5CD0061B7B3 /* CWSeeBigViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -388,12 +385,18 @@
 				C04917341CAA32EF00BC6600 /* CWRecommandTagCell.xib */,
 				C00A88131CBB2A38008B6465 /* CWTitleButton.h */,
 				C00A88141CBB2A38008B6465 /* CWTitleButton.m */,
-				C00A88291CBBBA53008B6465 /* CWAllTopicCell.h */,
-				C00A882A1CBBBA53008B6465 /* CWAllTopicCell.m */,
-				C00A882C1CBBD42A008B6465 /* CWAllTopicCell.xib */,
+				C00A88291CBBBA53008B6465 /* CWTopicCell.h */,
+				C00A882A1CBBBA53008B6465 /* CWTopicCell.m */,
+				C00A882C1CBBD42A008B6465 /* CWTopicCell.xib */,
 				C04F6C661CBF73E4005F10F1 /* CWTopicPictureView.h */,
 				C04F6C671CBF73E4005F10F1 /* CWTopicPictureView.m */,
 				C04F6C691CBF73F4005F10F1 /* CWTopicPictureView.xib */,
+				C0C179871CD027920026C5B5 /* CWTopicVideoView.h */,
+				C0C179881CD027920026C5B5 /* CWTopicVideoView.m */,
+				C0C1798A1CD027AE0026C5B5 /* CWTopicVideoView.xib */,
+				C0C1798C1CD02CFD0026C5B5 /* CWTopicVoiceView.h */,
+				C0C1798D1CD02CFD0026C5B5 /* CWTopicVoiceView.m */,
+				C0C1798F1CD02D880026C5B5 /* CWTopicVoiceView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -621,23 +624,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C00A88391CBCAE55008B6465 /* NSDate */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C00A883E1CBCAE55008B6465 /* Build configuration list for PBXNativeTarget "NSDate" */;
-			buildPhases = (
-				C00A88361CBCAE55008B6465 /* Sources */,
-				C00A88371CBCAE55008B6465 /* Frameworks */,
-				C00A88381CBCAE55008B6465 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = NSDate;
-			productName = NSDate;
-			productReference = C00A883A1CBCAE55008B6465 /* NSDate */;
-			productType = "com.apple.product-type.tool";
-		};
 		C010D45C1C8DA04D00441E94 /* CWBSBDJ */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C010D48A1C8DA04D00441E94 /* Build configuration list for PBXNativeTarget "CWBSBDJ" */;
@@ -704,9 +690,6 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CW;
 				TargetAttributes = {
-					C00A88391CBCAE55008B6465 = {
-						CreatedOnToolsVersion = 7.3;
-					};
 					C010D45C1C8DA04D00441E94 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 6K9K557VQC;
@@ -739,7 +722,6 @@
 				C010D45C1C8DA04D00441E94 /* CWBSBDJ */,
 				C010D4751C8DA04D00441E94 /* CWBSBDJTests */,
 				C010D4801C8DA04D00441E94 /* CWBSBDJUITests */,
-				C00A88391CBCAE55008B6465 /* NSDate */,
 			);
 		};
 /* End PBXProject section */
@@ -749,13 +731,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C1798B1CD027AE0026C5B5 /* CWTopicVideoView.xib in Resources */,
 				C04917361CAA32EF00BC6600 /* CWRecommandTagCell.xib in Resources */,
 				C099A3FE1CA80FE6003F06A0 /* CWFriendTrendViewController.xib in Resources */,
+				C01B54101CCEF5CD0061B7B3 /* CWSeeBigViewController.xib in Resources */,
 				C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */,
 				C04F6C6A1CBF73F4005F10F1 /* CWTopicPictureView.xib in Resources */,
 				C099A3FC1CA80EC2003F06A0 /* CWLoginRegisterViewController.xib in Resources */,
 				C0B19E591CB88F2800839D0B /* CWClearCacheCell.xib in Resources */,
-				C00A882D1CBBD42A008B6465 /* CWAllTopicCell.xib in Resources */,
+				C00A882D1CBBD42A008B6465 /* CWTopicCell.xib in Resources */,
+				C0C179901CD02D880026C5B5 /* CWTopicVoiceView.xib in Resources */,
 				C0A76B891CB7604800BA7C98 /* CWWebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -825,13 +810,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C00A88361CBCAE55008B6465 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C010D4591C8DA04D00441E94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -839,7 +817,7 @@
 				C04F6C681CBF73E4005F10F1 /* CWTopicPictureView.m in Sources */,
 				C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */,
 				C07FF7AC1CB5EF01004CE729 /* CWMeSquareButton.m in Sources */,
-				C00A882B1CBBBA53008B6465 /* CWAllTopicCell.m in Sources */,
+				C00A882B1CBBBA53008B6465 /* CWTopicCell.m in Sources */,
 				C00A88151CBB2A38008B6465 /* CWTitleButton.m in Sources */,
 				C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */,
 				C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */,
@@ -857,12 +835,15 @@
 				C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */,
 				C07FF7B21CB5FF96004CE729 /* CWHTTPSessionManager.m in Sources */,
 				C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */,
+				C0C1798E1CD02CFD0026C5B5 /* CWTopicVoiceView.m in Sources */,
 				C099A40D1CA95314003F06A0 /* CWTextField.m in Sources */,
 				C07FF79D1CB4B365004CE729 /* CWConst.m in Sources */,
+				C0C179891CD027920026C5B5 /* CWTopicVideoView.m in Sources */,
 				C07FF7A91CB5EDDF004CE729 /* CWMeSquare.m in Sources */,
 				C00A881F1CBB6BF4008B6465 /* CWVoiceTableViewController.m in Sources */,
 				C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */,
 				C07FF7A61CB50953004CE729 /* CWMeCell.m in Sources */,
+				C01B540E1CCEF56B0061B7B3 /* CWSeeBigViewController.m in Sources */,
 				C00A881C1CBB6B76008B6465 /* CWVideoTableViewController.m in Sources */,
 				C099A3F11CA7D373003F06A0 /* CWNewViewController.m in Sources */,
 				C0B19E571CB88EB800839D0B /* CWClearCacheCell.m in Sources */,
@@ -914,28 +895,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		C00A883F1CBCAE55008B6465 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_IDENTITY = "-";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		C00A88401CBCAE55008B6465 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CODE_SIGN_IDENTITY = "-";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 		C010D4881C8DA04D00441E94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -972,7 +931,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1009,7 +968,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1025,6 +984,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "/Users/cw/Desktop/笔记整理及练习/百思不得姐-四期/CWBSBDJ/CWBSBDJ/Classes/Other-其它/PrefixHeader.pch";
 				INFOPLIST_FILE = CWBSBDJ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chenwei.CWBSBDJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1040,6 +1000,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "/Users/cw/Desktop/笔记整理及练习/百思不得姐-四期/CWBSBDJ/CWBSBDJ/Classes/Other-其它/PrefixHeader.pch";
 				INFOPLIST_FILE = CWBSBDJ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = chenwei.CWBSBDJ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1097,15 +1058,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C00A883E1CBCAE55008B6465 /* Build configuration list for PBXNativeTarget "NSDate" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C00A883F1CBCAE55008B6465 /* Debug */,
-				C00A88401CBCAE55008B6465 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C010D4581C8DA04D00441E94 /* Build configuration list for PBXProject "CWBSBDJ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -7,12 +7,20 @@
 //
 
 #import "CWVideoTableViewController.h"
-
+#import "CWHTTPSessionManager.h"
 @interface CWVideoTableViewController ()
-
+/** 网络请求管理者 */
+@property (weak, nonatomic) CWHTTPSessionManager *manager;
 @end
 
 @implementation CWVideoTableViewController
+/** 懒加载网络请求管理者 */
+- (CWHTTPSessionManager *)manager {
+    if (_manager == nil) {
+        _manager = [CWHTTPSessionManager manager];
+    }
+    return _manager;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +32,8 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     
     CWLog(@"%s",__func__);
+    
+    CWLog(@"video%@", self.manager);
 }
 
 

@@ -11,10 +11,11 @@
 #import "SVProgressHUD.h"
 #import "CWTopic.h"
 #import "MJExtension.h"
-#import "CWAllTopicCell.h"
+#import "CWTopicCell.h"
 #import "MJRefresh.h"
+#import "CWTopicPictureView.h"
 
-static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
+static NSString * const CWTopicCellReuseID = @"CWTopicCellReuseID";
 
 @interface CWAllTopicTableViewController ()
 /** 存放【所有帖子】的模型数组 */
@@ -43,6 +44,13 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
     // 添加刷新控件
     [self setupRefreshControl];
     
+    CWLog(@"all%@", self.manager);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.manager invalidateSessionCancelingTasks:YES];
 }
 
 /** 设置tableView */
@@ -50,7 +58,7 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
     self.view.backgroundColor = CWCommonBgColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"CWAllTopicCell" bundle:nil] forCellReuseIdentifier:CWAllTopicCellReuseID];
+    [self.tableView registerNib:[UINib nibWithNibName:@"CWTopicCell" bundle:nil] forCellReuseIdentifier:CWTopicCellReuseID];
 }
 
 /** 添加刷新控件 */
@@ -147,7 +155,7 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CWAllTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:CWAllTopicCellReuseID];
+    CWTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:CWTopicCellReuseID];
     
     // 传递模型
     cell.topic = self.allTopics[indexPath.row];
@@ -160,5 +168,10 @@ static NSString * const CWAllTopicCellReuseID = @"CWAllTopicCellReuseID";
     return self.allTopics[indexPath.row].cellHeight;
 
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CWTopicCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+}
+
 
 @end

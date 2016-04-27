@@ -71,6 +71,13 @@ typedef NS_ENUM(NSInteger, CWTopicType){
 /** 是否为动态图 */
 @property (nonatomic, assign) BOOL is_gif;
 
+/** 播放数量 */
+@property (nonatomic, assign) NSInteger playcount;
+/** 声音文件的长度 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 视频文件的长度 */
+@property (nonatomic, assign) NSInteger videotime;
+
 /* 辅助属性 */
 /** 中间控件的frame */
 @property (assign, nonatomic) CGRect centerPictureViweFrame;
