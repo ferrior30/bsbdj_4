@@ -51,22 +51,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/TopicController/CWAllTopicTableViewController.m"
-            timestampString = "483322650.156124"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "-viewWillDisappear:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/CWEssenceViewController.m"
             timestampString = "483332142.48272"
             startingColumnNumber = "9223372036854775807"
@@ -85,6 +69,85 @@
             continueAfterRunningActions = "No"
             scope = "0"
             stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/TopicController/CWTopicViewController.m"
+            timestampString = "483459664.941177"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "-loadMoreTopic"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
+            timestampString = "483460518.271856"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "767"
+            endingLineNumber = "767"
+            landmarkName = "-dataTaskWithRequest:uploadProgress:downloadProgress:completionHandler:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__93-[AFURLSessionManager dataTaskWithRequest:uploadProgress:downloadProgress:completionHandler:]_block_invoke"
+                  moduleName = "AFNetworking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cw/Desktop/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E5%8F%8A%E7%BB%83%E4%B9%A0/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E5%9B%9B%E6%9C%9F/CWBSBDJ/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
+                  timestampString = "483460600.738473"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "767"
+                  endingLineNumber = "767"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.504"
+                  moduleName = "AFNetworking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cw/Desktop/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E5%8F%8A%E7%BB%83%E4%B9%A0/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E5%9B%9B%E6%9C%9F/CWBSBDJ/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
+                  timestampString = "483460600.738592"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "767"
+                  endingLineNumber = "767"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.505"
+                  moduleName = "AFNetworking"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cw/Desktop/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E5%8F%8A%E7%BB%83%E4%B9%A0/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E5%9B%9B%E6%9C%9F/CWBSBDJ/Pods/AFNetworking/AFNetworking/AFURLSessionManager.m"
+                  timestampString = "483460600.738726"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "767"
+                  endingLineNumber = "767"
+                  offsetFromSymbolStart = "75">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

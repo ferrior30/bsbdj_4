@@ -106,7 +106,7 @@
     
     [self.window.rootViewController presentViewController:bigVC animated:YES completion:nil];
 }
-/** 监听图片的点击：弹出大图控制器 */
+/** 监听：图片的点击手势 */
 - (void)imageClickWithGestureRecognizer:(UITapGestureRecognizer *)tap {
     if (tap.state == UIGestureRecognizerStateEnded) {
         [self seeBigPictureButtonClick:self.seeBigPictureButton];

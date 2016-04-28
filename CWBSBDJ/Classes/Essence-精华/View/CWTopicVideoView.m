@@ -31,6 +31,10 @@
     
     self.autoresizingMask = UIViewAutoresizingNone;
     
+    // imageView 添加手势
+    self.imageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageClickWithGestureRecognizer:)];
+    [self.imageView addGestureRecognizer:tap];
     
 }
 
@@ -51,14 +55,16 @@
 }
 
 #pragma mark - 监听
-/** 监听【查看大图按钮】的点击：弹出大图控制器 */
-- (IBAction)seeBigPictureButtonClick:(UIButton *)sender {
-    if (self.imageView.image == nil) return;
-    
-    CWSeeBigViewController *bigVC = [[CWSeeBigViewController alloc] init];
-    bigVC.topic = self.topic;
-    
-    [self.window.rootViewController presentViewController:bigVC animated:YES completion:nil];
+/** 监听：点击手势 */
+- (void)imageClickWithGestureRecognizer:(UIGestureRecognizer *)recognizer {
+    if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if (self.imageView.image == nil) return;
+        
+        CWSeeBigViewController *bigVC = [[CWSeeBigViewController alloc] init];
+        bigVC.topic = self.topic;
+        
+        [self.window.rootViewController presentViewController:bigVC animated:YES completion:nil];
+    }
 }
 
 @end
