@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CWRecommendFollowViewController">
+            <connections>
+                <outlet property="categoryTableView" destination="hg4-LD-Zyl" id="IOp-8Y-Yuk"/>
+                <outlet property="usersTableView" destination="8fN-Bk-sYT" id="JH2-hy-68q"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hg4-LD-Zyl" userLabel="left table View">
+                    <rect key="frame" x="0.0" y="0.0" width="70" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="eg8-5C-spa"/>
+                    </constraints>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8fN-Bk-sYT" userLabel="right table View">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8fN-Bk-sYT" secondAttribute="bottom" id="0f0-r1-Rn3"/>
+                <constraint firstItem="8fN-Bk-sYT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8sO-RN-mw1"/>
+                <constraint firstItem="hg4-LD-Zyl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="A6r-s5-iV0"/>
+                <constraint firstAttribute="trailing" secondItem="8fN-Bk-sYT" secondAttribute="trailing" id="Ek8-wU-9vE"/>
+                <constraint firstItem="8fN-Bk-sYT" firstAttribute="leading" secondItem="hg4-LD-Zyl" secondAttribute="trailing" id="Nav-Z3-5Zh"/>
+                <constraint firstItem="hg4-LD-Zyl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bGf-5H-pfM"/>
+                <constraint firstAttribute="bottom" secondItem="hg4-LD-Zyl" secondAttribute="bottom" id="f6Y-Lk-rVl"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="200.5" y="302.5"/>
+        </view>
+    </objects>
+</document>

@@ -9,6 +9,7 @@
 #import "CWFriendTrendViewController.h"
 #import "UIBarButtonItem+CWExtention.h"
 #import "CWLoginRegisterViewController.h"
+#import "CWRecommendFollowViewController.h"
 
 @interface CWFriendTrendViewController ()
 
@@ -31,23 +32,19 @@
     self.navigationItem.title = @"我的关注";
     
     // 2.设置左边图标
-//    UIButton *btn = [[UIButton alloc] init];
-//    [btn sizeToFit];
-//    [btn setImage:[UIImage imageNamed:@"friendsRecommentIcon"] forState:UIControlStateNormal];
-//    [btn setImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] forState:UIControlStateHighlighted];
-//    [btn addTarget:self action:@selector(friendsRecommentIconClick) forControlEvents:UIControlEventTouchUpInside];
-//    UIBarButtonItem *btnItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    
-   UIBarButtonItem *item = [UIBarButtonItem barButtonItemWithImageName:@"friendsRecommentIcon" highlightedImageName:@"friendsRecommentIcon-click" target:self action:@selector(friendsRecommentIconClick)];
+    UIBarButtonItem *item = [UIBarButtonItem barButtonItemWithImageName:@"friendsRecommentIcon" highlightedImageName:@"friendsRecommentIcon-click" target:self action:@selector(friendsRecommentIconClick)];
     
     [self.navigationItem setLeftBarButtonItem:item];
 }
 
 /**
- *  监听：导航栏左边按钮的点击
+ *  监听：导航栏左边按钮的点击,弹出推荐关注界面
  */
 - (void)friendsRecommentIconClick {
-    CWLogFunc;
+    
+    CWRecommendFollowViewController *followVC = [[CWRecommendFollowViewController alloc] init];
+    
+    [self.navigationController pushViewController:followVC animated:YES];
 }
 /** 监听：【登陆和注册】按钮点击 */
 - (IBAction)loginRegister {

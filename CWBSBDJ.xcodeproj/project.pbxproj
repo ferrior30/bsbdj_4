@@ -67,6 +67,11 @@
 		C0C1798B1CD027AE0026C5B5 /* CWTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C1798A1CD027AE0026C5B5 /* CWTopicVideoView.xib */; };
 		C0C1798E1CD02CFD0026C5B5 /* CWTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C1798D1CD02CFD0026C5B5 /* CWTopicVoiceView.m */; };
 		C0C179901CD02D880026C5B5 /* CWTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C1798F1CD02D880026C5B5 /* CWTopicVoiceView.xib */; };
+		C0E202251CD1DD9D00CD954C /* CWRecommendFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E202231CD1DD9D00CD954C /* CWRecommendFollowViewController.m */; };
+		C0E202261CD1DD9D00CD954C /* CWRecommendFollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E202241CD1DD9D00CD954C /* CWRecommendFollowViewController.xib */; };
+		C0E2022A1CD1EA8300CD954C /* CWRecommendFollowCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E202281CD1EA8300CD954C /* CWRecommendFollowCategoryCell.m */; };
+		C0E2022B1CD1EA8300CD954C /* CWRecommendFollowCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E202291CD1EA8300CD954C /* CWRecommendFollowCategoryCell.xib */; };
+		C0E2022E1CD1F33600CD954C /* CWRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E2022D1CD1F33600CD954C /* CWRecommendCategory.m */; };
 		D75CE4EB6E415AA8635CE8FC /* Pods_CWBSBDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1EFD93FFC2B0456990BD89 /* Pods_CWBSBDJ.framework */; };
 /* End PBXBuildFile section */
 
@@ -204,6 +209,15 @@
 		C0C1798C1CD02CFD0026C5B5 /* CWTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopicVoiceView.h; sourceTree = "<group>"; };
 		C0C1798D1CD02CFD0026C5B5 /* CWTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopicVoiceView.m; sourceTree = "<group>"; };
 		C0C1798F1CD02D880026C5B5 /* CWTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWTopicVoiceView.xib; sourceTree = "<group>"; };
+		C0E202221CD1DD9D00CD954C /* CWRecommendFollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommendFollowViewController.h; sourceTree = "<group>"; };
+		C0E202231CD1DD9D00CD954C /* CWRecommendFollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRecommendFollowViewController.m; sourceTree = "<group>"; };
+		C0E202241CD1DD9D00CD954C /* CWRecommendFollowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWRecommendFollowViewController.xib; sourceTree = "<group>"; };
+		C0E202271CD1EA8300CD954C /* CWRecommendFollowCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommendFollowCategoryCell.h; sourceTree = "<group>"; };
+		C0E202281CD1EA8300CD954C /* CWRecommendFollowCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRecommendFollowCategoryCell.m; sourceTree = "<group>"; };
+		C0E202291CD1EA8300CD954C /* CWRecommendFollowCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWRecommendFollowCategoryCell.xib; sourceTree = "<group>"; };
+		C0E2022C1CD1F33600CD954C /* CWRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommendCategory.h; sourceTree = "<group>"; };
+		C0E2022D1CD1F33600CD954C /* CWRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRecommendCategory.m; sourceTree = "<group>"; };
+		C0E2022F1CD2119A00CD954C /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CWBSBDJ-ftazarfgnpscpzaubjmjfkzhohcd/Build/Products/Debug-iphonesimulator/AFNetworking.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +258,7 @@
 		7FAF459E6EF2E029B155153F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0E2022F1CD2119A00CD954C /* AFNetworking.framework */,
 				7B1EFD93FFC2B0456990BD89 /* Pods_CWBSBDJ.framework */,
 			);
 			name = Frameworks;
@@ -425,6 +440,9 @@
 				C099A3F81CA80EC2003F06A0 /* CWLoginRegisterViewController.h */,
 				C099A3F91CA80EC2003F06A0 /* CWLoginRegisterViewController.m */,
 				C099A3FA1CA80EC2003F06A0 /* CWLoginRegisterViewController.xib */,
+				C0E202221CD1DD9D00CD954C /* CWRecommendFollowViewController.h */,
+				C0E202231CD1DD9D00CD954C /* CWRecommendFollowViewController.m */,
+				C0E202241CD1DD9D00CD954C /* CWRecommendFollowViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -432,6 +450,8 @@
 		C099A3D01CA7D373003F06A0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C0E2022C1CD1F33600CD954C /* CWRecommendCategory.h */,
+				C0E2022D1CD1F33600CD954C /* CWRecommendCategory.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,6 +463,9 @@
 				C099A4061CA914B6003F06A0 /* CWFastLoginRegisterButton.m */,
 				C099A40B1CA95314003F06A0 /* CWTextField.h */,
 				C099A40C1CA95314003F06A0 /* CWTextField.m */,
+				C0E202271CD1EA8300CD954C /* CWRecommendFollowCategoryCell.h */,
+				C0E202281CD1EA8300CD954C /* CWRecommendFollowCategoryCell.m */,
+				C0E202291CD1EA8300CD954C /* CWRecommendFollowCategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -738,8 +761,10 @@
 			files = (
 				C0C1798B1CD027AE0026C5B5 /* CWTopicVideoView.xib in Resources */,
 				C04917361CAA32EF00BC6600 /* CWRecommandTagCell.xib in Resources */,
+				C0E202261CD1DD9D00CD954C /* CWRecommendFollowViewController.xib in Resources */,
 				C099A3FE1CA80FE6003F06A0 /* CWFriendTrendViewController.xib in Resources */,
 				C01B54101CCEF5CD0061B7B3 /* CWSeeBigViewController.xib in Resources */,
+				C0E2022B1CD1EA8300CD954C /* CWRecommendFollowCategoryCell.xib in Resources */,
 				C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */,
 				C04F6C6A1CBF73F4005F10F1 /* CWTopicPictureView.xib in Resources */,
 				C099A3FC1CA80EC2003F06A0 /* CWLoginRegisterViewController.xib in Resources */,
@@ -829,6 +854,7 @@
 				C0226A8A1CBF5CB100B85BAC /* CWUser.m in Sources */,
 				C0226A8D1CBF5D1000B85BAC /* CWComment.m in Sources */,
 				C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */,
+				C0E2022E1CD1F33600CD954C /* CWRecommendCategory.m in Sources */,
 				C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */,
 				C00A88351CBC992F008B6465 /* NSDate+CWExtension.m in Sources */,
 				C099A4011CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m in Sources */,
@@ -841,12 +867,14 @@
 				C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */,
 				C07FF7B21CB5FF96004CE729 /* CWHTTPSessionManager.m in Sources */,
 				C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */,
+				C0E202251CD1DD9D00CD954C /* CWRecommendFollowViewController.m in Sources */,
 				C0C1798E1CD02CFD0026C5B5 /* CWTopicVoiceView.m in Sources */,
 				C099A40D1CA95314003F06A0 /* CWTextField.m in Sources */,
 				C07FF79D1CB4B365004CE729 /* CWConst.m in Sources */,
 				C0C179891CD027920026C5B5 /* CWTopicVideoView.m in Sources */,
 				C07FF7A91CB5EDDF004CE729 /* CWMeSquare.m in Sources */,
 				C00A881F1CBB6BF4008B6465 /* CWVoiceTableViewController.m in Sources */,
+				C0E2022A1CD1EA8300CD954C /* CWRecommendFollowCategoryCell.m in Sources */,
 				C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */,
 				C07FF7A61CB50953004CE729 /* CWMeCell.m in Sources */,
 				C01B540E1CCEF56B0061B7B3 /* CWSeeBigViewController.m in Sources */,
