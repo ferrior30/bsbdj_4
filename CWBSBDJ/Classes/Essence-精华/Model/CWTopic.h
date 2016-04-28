@@ -80,7 +80,7 @@ typedef NS_ENUM(NSInteger, CWTopicType){
 
 /* 辅助属性 */
 /** 中间控件的frame */
-@property (assign, nonatomic) CGRect centerPictureViweFrame;
+@property (assign, nonatomic) CGRect centerViweFrame;
 /** cell的高度 */
 @property (assign, nonatomic) CGFloat cellHeight;
 /** 是否是大图 */

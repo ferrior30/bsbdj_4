@@ -6,7 +6,7 @@
 //  Copyright © 2016年 cw. All rights reserved.
 //
 
-#import <AFNetworking/AFNetworking.h>
+#import "AFHTTPSessionManager.h"
 
 @interface CWHTTPSessionManager : AFHTTPSessionManager
 @end

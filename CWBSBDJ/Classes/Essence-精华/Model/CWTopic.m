@@ -68,7 +68,7 @@
     }
 }
 
-//- (CGRect)centerPictureViweFrame {
+//- (CGRect)centerViweFrame {
 //    // 中间控件的x值
 //    CGFloat centerViewX = CWMargin;
 //    
@@ -133,7 +133,7 @@
         }
         
          // 中间内容的frame
-        _centerPictureViweFrame = CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
+        _centerViweFrame = CGRectMake(centerViewX, centerViewY, centerViewW, centerViewH);
         
         _cellHeight += centerViewH + CWMargin;
     }
