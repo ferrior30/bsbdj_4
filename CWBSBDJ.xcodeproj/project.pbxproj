@@ -41,7 +41,6 @@
 		C07FF7AC1CB5EF01004CE729 /* CWMeSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7AB1CB5EF01004CE729 /* CWMeSquareButton.m */; };
 		C07FF7AF1CB5F00F004CE729 /* CWMeFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7AE1CB5F00F004CE729 /* CWMeFootView.m */; };
 		C07FF7B21CB5FF96004CE729 /* CWHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7B11CB5FF96004CE729 /* CWHTTPSessionManager.m */; };
-		C097C7121CD0EC5E00FADD21 /* CWTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C097C7101CD0EC5E00FADD21 /* CWTopicViewController.m */; };
 		C099A3EC1CA7D373003F06A0 /* CWEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3C91CA7D373003F06A0 /* CWEssenceViewController.m */; };
 		C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3CF1CA7D373003F06A0 /* CWFriendTrendViewController.m */; };
 		C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C099A3D51CA7D373003F06A0 /* CWTabBarController.m */; };
@@ -157,8 +156,6 @@
 		C07FF7AE1CB5F00F004CE729 /* CWMeFootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWMeFootView.m; sourceTree = "<group>"; };
 		C07FF7B01CB5FF96004CE729 /* CWHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWHTTPSessionManager.h; sourceTree = "<group>"; };
 		C07FF7B11CB5FF96004CE729 /* CWHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWHTTPSessionManager.m; sourceTree = "<group>"; };
-		C097C70F1CD0EC5E00FADD21 /* CWTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopicViewController.h; sourceTree = "<group>"; };
-		C097C7101CD0EC5E00FADD21 /* CWTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopicViewController.m; sourceTree = "<group>"; };
 		C099A3C81CA7D373003F06A0 /* CWEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWEssenceViewController.h; sourceTree = "<group>"; };
 		C099A3C91CA7D373003F06A0 /* CWEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWEssenceViewController.m; sourceTree = "<group>"; };
 		C099A3CE1CA7D373003F06A0 /* CWFriendTrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFriendTrendViewController.h; sourceTree = "<group>"; };
@@ -262,8 +259,6 @@
 				C00A88211CBB6C24008B6465 /* CWPictureTableViewController.m */,
 				C00A88231CBB6C4C008B6465 /* CWWordTableViewController.h */,
 				C00A88241CBB6C4C008B6465 /* CWWordTableViewController.m */,
-				C097C70F1CD0EC5E00FADD21 /* CWTopicViewController.h */,
-				C097C7101CD0EC5E00FADD21 /* CWTopicViewController.m */,
 			);
 			path = TopicController;
 			sourceTree = "<group>";
@@ -836,7 +831,6 @@
 				C099A3F01CA7D373003F06A0 /* CWMeViewController.m in Sources */,
 				C07FF7AF1CB5F00F004CE729 /* CWMeFootView.m in Sources */,
 				C099A4071CA914B6003F06A0 /* CWFastLoginRegisterButton.m in Sources */,
-				C097C7121CD0EC5E00FADD21 /* CWTopicViewController.m in Sources */,
 				C0B19E5C1CB8926B00839D0B /* CWSettingCell.m in Sources */,
 				C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */,
 				C07FF7B21CB5FF96004CE729 /* CWHTTPSessionManager.m in Sources */,

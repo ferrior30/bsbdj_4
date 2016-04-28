@@ -130,31 +130,16 @@
     // 7. 中间控件
     if (topic.type == CWTopicTypePicture) { // 图片控件
         self.pictureView.hidden = NO;
-        self.pictureView.frame = topic.centerViweFrame;
+        self.pictureView.frame = topic.centerPictureViweFrame;
         self.pictureView.topic = topic;
-        
-        self.videoView.hidden = YES;
-        self.voiceView.hidden = YES;
 
     }else if (topic.type == CWTopicTypeVideo) { // 视频
-        self.videoView.hidden = NO;
-        self.videoView.frame = topic.centerViweFrame;
-        self.videoView.topic = topic;
-        
         self.pictureView.hidden = YES;
-        self.voiceView.hidden = YES;
-        
-    }else if (topic.type == CWTopicTypeVoice){ // 声音
-        self.voiceView.hidden = NO;
-        self.voiceView.frame = topic.centerViweFrame;
-        self.voiceView.topic = topic;
-        
+//        self.
+    }else if (topic.type == CWTopicTypeVoice){
         self.pictureView.hidden = YES;
-        self.videoView.hidden = YES;
     }else { // 文字
         self.pictureView.hidden = YES;
-        self.videoView.hidden = YES;
-        self.voiceView.hidden = YES;
     }
 }
 

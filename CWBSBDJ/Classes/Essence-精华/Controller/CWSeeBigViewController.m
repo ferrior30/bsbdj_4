@@ -150,17 +150,16 @@ static NSString * const CWCollectionTitle = @"百思不得姐";
 - (void)saveImage {
     // 保存图片到相机胶卷
 //    UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-
     __block NSString *assetID = nil;
     [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
         // // 新建一个PHAssetCreationRequest对象, 保存图片到"相机胶卷"
       assetID = [PHAssetCreationRequest creationRequestForAssetFromImage:self.imageView.image].placeholderForCreatedAsset.localIdentifier;
     } completionHandler:^(BOOL success, NSError * _Nullable error) {
         if (error) {
-            CWLog(@"保存到相机胶卷失败");
+            CWLog(@"保存到相册失败");
         }
         
-         CWLog(@"保存到相机胶卷成功");
+         CWLog(@"保存到相册成功");
         
         // 获得相册对象
         PHAssetCollection *collection = [self collection];
@@ -186,6 +185,15 @@ static NSString * const CWCollectionTitle = @"百思不得姐";
         }];
         
     }];
+}
+
+/** 保存后的回调 */
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    if (error) {
+        [SVProgressHUD showErrorWithStatus:@"保存失败"];
+    }else {
+        [SVProgressHUD showSuccessWithStatus:@"保存成功"];
+    }
 }
 
 #pragma mark - UIScrollViewDelegate

@@ -227,9 +227,9 @@
     [self.navigationController pushViewController:RecommandTagVC animated:YES];
 }
 
-//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-//    CWLog(@"%@", NSStringFromCGRect(self.childViewControllers.firstObject.view.frame) );
-//}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CWLog(@"%@", NSStringFromCGRect(self.childViewControllers.firstObject.view.frame) );
+}
 
 #pragma mark - UISrollerViewDelegate
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {

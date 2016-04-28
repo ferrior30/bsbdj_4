@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CWTopicViewController.h"
 
-@interface CWAllTopicTableViewController : CWTopicViewController
+@interface CWAllTopicTableViewController : UITableViewController
 
 @end

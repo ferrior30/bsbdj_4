@@ -10,17 +10,16 @@
 
 @implementation CWHTTPSessionManager
 + (instancetype)manager {
-//    static CWHTTPSessionManager *instance ;
-//    
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//        if (instance == nil) {
-//            instance = [super manager];
-//        }
-//    });
-    CWHTTPSessionManager *mgr = [super manager];
+    static CWHTTPSessionManager *instance ;
     
-    return mgr;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (instance == nil) {
+            instance = [super manager];
+        }
+    });
+    
+    return instance;
     
 //    CWHTTPSessionManager *manager = [super manager];
 //    
