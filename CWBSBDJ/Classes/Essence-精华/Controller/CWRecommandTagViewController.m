@@ -88,6 +88,9 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
     [self.manager GET:CWRequestURL parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) { // 请求成功
+        
+        CWWriteToPlist(responseObject, @"recommendTag");
+        
         // 字典数组转模型数组
         weakSelf.recommandTags = [CWRecommandTag mj_objectArrayWithKeyValuesArray:responseObject];
         
@@ -126,6 +129,7 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
     [self.manager GET:CWRequestURL parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) { // 请求成功
+        
         // 字典数组转模型数组
         weakSelf.recommandTags = [CWRecommandTag mj_objectArrayWithKeyValuesArray:responseObject];
         

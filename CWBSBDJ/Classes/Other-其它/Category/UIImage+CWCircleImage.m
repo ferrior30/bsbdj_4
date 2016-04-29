@@ -9,21 +9,14 @@
 #import "UIImage+CWCircleImage.h"
 
 @implementation UIImage (CWCircleImage)
-//+ (instancetype)circleImage:(NSString *)imageName {
-//    CGContextRef ctf = UIGraphicsGetCurrentContext();
-//    
-////    UIBezierPath *path = [uibe]
-//    
-//}
+
 - (instancetype)circleImage {
     // 开启一个图形上下文
-    UIGraphicsBeginImageContext(self.size);
-    
-    // 获取上下文
-//    CGContextRef ctf = UIGraphicsGetCurrentContext();
+//    UIGraphicsBeginImageContext(self.size);
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, 2.0);
     
     // 绘制路径
-    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    CGRect rect = CGRectMake(0, 0, self.size.width , self.size.height);
     UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, self.size.width, self.size.height)];
     
     [path addClip];
@@ -31,6 +24,7 @@
     [self drawInRect:rect];
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
     
     // 关闭上下文
     UIGraphicsEndImageContext();

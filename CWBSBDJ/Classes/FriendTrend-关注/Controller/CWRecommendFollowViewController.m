@@ -13,9 +13,13 @@
 #import "CWHTTPSessionManager.h"
 #import "CWRecommendFollowCategoryCell.h"
 #import "CWRecommendCategory.h"
+#import "CWRecommendUser.h"
+#import "CWRecommendFollowUserCell.h"
 
-/** categoryCell的重用标识*/
+/** Cell的重用标识*/
 static NSString * const CWRecommendFollowCategoryCellID = @"CWRecommendFollowCategoryCellID";
+/** cell重用 */
+static NSString * const CWRecommendFollowUserCellID = @"CWRecommendFollowUserCellID";
 
 @interface CWRecommendFollowViewController ()<UITableViewDelegate, UITableViewDataSource>
 /** 分类 */
@@ -27,7 +31,7 @@ static NSString * const CWRecommendFollowCategoryCellID = @"CWRecommendFollowCat
 /** 【分类】数组 */
 @property (strong, nonatomic) NSArray<CWRecommendCategory *> *categoryArr;
 /** 【关注用户】数组 */
-@property (strong, nonatomic) NSArray *userArr;
+@property (strong, nonatomic) NSArray<CWRecommendUser *> *userArr;
 
 
 @end
@@ -57,18 +61,21 @@ static NSString * const CWRecommendFollowCategoryCellID = @"CWRecommendFollowCat
     
     self.usersTableView.dataSource = self;
     self.usersTableView.delegate = self;
+    self.usersTableView.rowHeight = 60;
     
     // contenInset
     self.usersTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     
-    // 注册categoryCell
+    // 注册Cell
     [self.categoryTableView registerNib:[UINib nibWithNibName:@"CWRecommendFollowCategoryCell" bundle:nil] forCellReuseIdentifier:@"CWRecommendFollowCategoryCellID"];
     
+    [self.usersTableView registerNib:[UINib nibWithNibName:@"CWRecommendFollowUserCell" bundle:nil] forCellReuseIdentifier:CWRecommendFollowUserCellID];
+    
     // 加载数据
-    [self loadNewData];
+    [self loadCategory];
 }
 
-- (void)loadNewData {
+- (void)loadCategory {
     NSDictionary *parameters = @{@"a": @"category", @"c": @"subscribe"};
     
     __block  typeof(self) weakSelf = self;
@@ -80,47 +87,94 @@ static NSString * const CWRecommendFollowCategoryCellID = @"CWRecommendFollowCat
         // 重载数据
         [weakSelf.categoryTableView reloadData];
         
-        // 默认选中第一行
+        // 默认选中第一行,
         NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
         [weakSelf.categoryTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+        // 请求第一行的右侧数据
+        [self tableView:self.categoryTableView didSelectRowAtIndexPath:indexPath];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"失败"];
     }];
-    
-    
-    
 }
 
 #pragma mark - 数据源方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == self.categoryTableView) {
         return self.categoryArr.count;
-//        return 4;
     }else {
-        return 30;
+        return self.userArr.count;
+//        return 20;
     }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-     static NSString * const CWRecommnedFollowUsersCellID = @"CWRecommnedFollowUsersCellID";
-    if (tableView == self.categoryTableView) { // 分类
+    if (tableView == self.categoryTableView) { // 创建【左边分类cell】
         CWRecommendFollowCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:CWRecommendFollowCategoryCellID];
-        
-        
+
         cell.category = self.categoryArr[indexPath.row];
         
         return cell;
-    }else { // 具体用户
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CWRecommnedFollowUsersCellID];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CWRecommnedFollowUsersCellID];
-        }
+    }else { // 创建具体用户cell
+        CWRecommendFollowUserCell *cell = [tableView dequeueReusableCellWithIdentifier:CWRecommendFollowUserCellID];
         
-        cell.textLabel.text = [NSString stringWithFormat:@"User=%zd",indexPath.row];
+        cell.recommendUser = self.userArr[indexPath.row];
         
         return cell;
     }
+}
+
+#pragma mark - 代理方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // 请求前一次的请求
+    [self.manager.tasks.firstObject cancel];
+
+    //
+//    if (self.manager.tasks.count) {
+//    
+//        [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+//    }
+    
+//    // 不能这样设置会出问题）因为此方法task为空会出问题
+//    [self.manager invalidateSessionCancelingTasks:YES];
+    
+    if (tableView == self.categoryTableView) { // 选中左边分类cell，请求数据
+        CWRecommendCategory *category = self.categoryArr[indexPath.row];
+       
+         // 显示“正在加载”指示器
+         [SVProgressHUD showWithStatus:@"正在请求数据"];
+        
+        __weak typeof(self) weakSelf = self;
+        
+         // 请求参数
+        NSDictionary *parameters = @{@"a": @"list", @"c": @"subscribe", @"category_id": @(category.id.intValue)};
+        
+        [self.manager GET:CWRequestURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            CWWriteToPlist(responseObject, @"recommendFocusUsers");
+            
+            // 字典转模型
+            weakSelf.userArr = [CWRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+            
+            // 隐藏指示器
+            [SVProgressHUD dismiss];
+           
+            // 刷新右侧用户数据
+            [weakSelf.usersTableView reloadData];
+            
+            
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+           // 显示错误信息
+            [SVProgressHUD showErrorWithStatus:@"user=请求数据错误"];
+        }];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [SVProgressHUD dismiss];
+    
+    [self.manager invalidateSessionCancelingTasks:YES];
 }
 
 @end

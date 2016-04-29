@@ -22,6 +22,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+//    self.contentView.backgroundColor = CWCommonBgColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -31,9 +33,15 @@
     if (selected) {
         self.selectedIndicateView.hidden = NO;
         self.categoryLabel.textColor = [UIColor redColor];
+        
+        self.categoryLabel.backgroundColor = [UIColor whiteColor];
+        
     }else {
         self.selectedIndicateView.hidden = YES;
         self.categoryLabel.textColor = [UIColor lightGrayColor];
+        
+        self.categoryLabel.backgroundColor = CWCommonBgColor;
+        
     }
 }
 

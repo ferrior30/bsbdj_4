@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/CWRecommandTagViewController.m"
-            timestampString = "482293362.963591"
+            timestampString = "483609000.919479"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "184"
-            endingLineNumber = "184"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "@implementation CWRecommandTagViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -57,8 +57,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "-viewWillDisappear:"
-            landmarkType = "5">
+            landmarkName = "@implementation CWAllTopicTableViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -93,13 +93,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CWBSBDJ/Classes/FriendTrend-&#x5173;&#x6ce8;/Controller/CWRecommendFollowViewController.m"
-            timestampString = "483534749.338909"
+            filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/CWRecommandTagViewController.m"
+            timestampString = "483609041.040779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "-loadNewData"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "-loadNewRecommendTag"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -109,13 +109,140 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CWBSBDJ/Classes/FriendTrend-&#x5173;&#x6ce8;/Controller/CWRecommendFollowViewController.m"
-            timestampString = "483534765.456534"
+            filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/CWRecommandTagViewController.m"
+            timestampString = "483609113.931912"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-tableView:numberOfRowsInSection:"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "-loadNewRecommendTag"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CWRecommandTagViewController loadNewRecommendTag]"
+                  moduleName = "CWBSBDJ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cw/Desktop/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E5%8F%8A%E7%BB%83%E4%B9%A0/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E5%9B%9B%E6%9C%9F/CWBSBDJ/CWBSBDJ/Classes/Essence-%E7%B2%BE%E5%8D%8E/Controller/CWRecommandTagViewController.m"
+                  timestampString = "483609113.935506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "248">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[CWRecommandTagViewController loadNewRecommendTag]_block_invoke"
+                  moduleName = "CWBSBDJ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cw/Desktop/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E5%8F%8A%E7%BB%83%E4%B9%A0/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E5%9B%9B%E6%9C%9F/CWBSBDJ/CWBSBDJ/Classes/Essence-%E7%B2%BE%E5%8D%8E/Controller/CWRecommandTagViewController.m"
+                  timestampString = "483609113.93566"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/CWRecommandTagViewController.m"
+            timestampString = "483609114.854365"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-loadNewRecommendTag"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CWRecommandTagViewController loadNewRecommendTag]"
+                  moduleName = "CWBSBDJ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cw/Desktop/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E5%8F%8A%E7%BB%83%E4%B9%A0/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E5%9B%9B%E6%9C%9F/CWBSBDJ/CWBSBDJ/Classes/Essence-%E7%B2%BE%E5%8D%8E/Controller/CWRecommandTagViewController.m"
+                  timestampString = "483609114.858743"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "340">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[CWRecommandTagViewController loadNewRecommendTag]_block_invoke"
+                  moduleName = "CWBSBDJ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cw/Desktop/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E5%8F%8A%E7%BB%83%E4%B9%A0/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E5%9B%9B%E6%9C%9F/CWBSBDJ/CWBSBDJ/Classes/Essence-%E7%B2%BE%E5%8D%8E/Controller/CWRecommandTagViewController.m"
+                  timestampString = "483609114.85892"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__51-[CWRecommandTagViewController loadNewRecommendTag]_block_invoke_2"
+                  moduleName = "CWBSBDJ"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cw/Desktop/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%E5%8F%8A%E7%BB%83%E4%B9%A0/%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90-%E5%9B%9B%E6%9C%9F/CWBSBDJ/CWBSBDJ/Classes/Essence-%E7%B2%BE%E5%8D%8E/Controller/CWRecommandTagViewController.m"
+                  timestampString = "483609114.859028"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/CWRecommandTagViewController.m"
+            timestampString = "483609128.107199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "-loadNewRecommendTag"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/CWRecommandTagViewController.m"
+            timestampString = "483609198.455328"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-loadNewRecommendTag"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

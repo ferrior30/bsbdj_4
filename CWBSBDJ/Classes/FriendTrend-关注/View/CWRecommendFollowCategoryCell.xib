@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,33 +13,34 @@
                 <rect key="frame" x="0.0" y="0.0" width="70" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分类" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBp-qd-HdH">
+                        <rect key="frame" x="0.0" y="0.0" width="69" height="43"/>
+                        <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKZ-jq-w7H" userLabel="分隔线">
                         <rect key="frame" x="0.0" y="43" width="70" height="1"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="czB-lT-aIp"/>
                         </constraints>
                     </view>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-hv-1dc" userLabel="指示器">
-                        <rect key="frame" x="0.0" y="0.0" width="5" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="3" height="44"/>
                         <color key="backgroundColor" red="1" green="0.28065669920000003" blue="0.51704833139999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="5" id="kJm-bM-XLm"/>
+                            <constraint firstAttribute="width" constant="3" id="kJm-bM-XLm"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分类" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBp-qd-HdH">
-                        <rect key="frame" x="5" y="0.0" width="65" height="43"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="KKZ-jq-w7H" secondAttribute="bottom" id="22c-kB-gKz"/>
                     <constraint firstAttribute="bottom" secondItem="yRN-hv-1dc" secondAttribute="bottom" id="AFn-p0-yix"/>
                     <constraint firstItem="SBp-qd-HdH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="S79-GX-8Zf"/>
-                    <constraint firstItem="SBp-qd-HdH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-3" id="T6g-q6-qO2"/>
-                    <constraint firstAttribute="trailing" secondItem="SBp-qd-HdH" secondAttribute="trailing" id="afF-DS-6zF"/>
+                    <constraint firstItem="SBp-qd-HdH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="T6g-q6-qO2"/>
+                    <constraint firstAttribute="trailing" secondItem="SBp-qd-HdH" secondAttribute="trailing" constant="1" id="afF-DS-6zF"/>
                     <constraint firstAttribute="leading" secondItem="KKZ-jq-w7H" secondAttribute="leading" id="bjK-vJ-Scm"/>
                     <constraint firstAttribute="bottom" secondItem="SBp-qd-HdH" secondAttribute="bottom" id="goP-yY-jpX"/>
                     <constraint firstItem="yRN-hv-1dc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="m1e-kK-WvQ"/>
@@ -48,6 +48,7 @@
                     <constraint firstAttribute="trailing" secondItem="KKZ-jq-w7H" secondAttribute="trailing" id="omx-MN-IOc"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="categoryLabel" destination="SBp-qd-HdH" id="SIG-Jm-Qpy"/>
                 <outlet property="selectedIndicateView" destination="yRN-hv-1dc" id="9gP-3I-nbh"/>
