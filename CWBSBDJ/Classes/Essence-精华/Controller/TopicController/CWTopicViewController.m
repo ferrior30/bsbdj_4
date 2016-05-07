@@ -18,6 +18,9 @@
 
 static NSString * const CWTopicCellReuseID = @"CWTopicCellReuseID";
 
+UIKIT_EXTERN NSString * const CWTarBarButtonDidRepeatClicked;
+UIKIT_EXTERN NSString * const CWTitleButtonDidRepeatClicked;
+
 @interface CWTopicViewController ()
 
 /** 存放【所有帖子】的模型数组 */
@@ -59,12 +62,36 @@ static NSString * const CWTopicCellReuseID = @"CWTopicCellReuseID";
     // 添加刷新控件
     [self setupRefreshControl];
     
+    // 监听通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonDidRepeatClicked) name:CWTarBarButtonDidRepeatClicked object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonDidRepeatClicked) name:CWTitleButtonDidRepeatClicked object:nil];
+    
+}
+
+- (void)tabBarButtonDidRepeatClicked {
+    
+    // 1.控制器的view不在窗口上直接返回
+    if (self.view.window == nil) return;
+    
+    // 2.// 控制器的view在窗口上
+    CGRect rect = [self.view convertRect:self.view.bounds toView:self.view.window];
+    if (CGRectContainsRect(rect, self.view.window.bounds)) { // 2.1 view在window显示范围内
+        [self.tableView.mj_header beginRefreshing];
+    }else return; // 2.2 view在window显示范围内
+}
+
+- (void)titleButtonDidRepeatClicked {
+    [self tabBarButtonDidRepeatClicked];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
     [self.manager invalidateSessionCancelingTasks:YES];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /** 设置tableView */
@@ -199,9 +226,4 @@ static NSString * const CWTopicCellReuseID = @"CWTopicCellReuseID";
     [self.navigationController pushViewController:commentVC animated:YES];
     
 }
-
-
-
-
-
 @end

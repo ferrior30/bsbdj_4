@@ -14,6 +14,9 @@
 #import "CWTabar.h"
 #import "CWNavigationController.h"
 
+/** TarBarButton重复点击通知 */
+NSString * const CWTarBarButtonDidRepeatClicked = @"tabBarDidRepeatClicked";
+
 @interface CWTabBarController ()
 
 @end
@@ -89,5 +92,15 @@
     dict[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
     // 用vc不行，要用tabBar的直接子控制器才行。
     [nav.tabBarItem setTitleTextAttributes:dict forState:UIControlStateSelected];
+}
+
+
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    NSUInteger preIndex = [self.childViewControllers indexOfObject:self.selectedViewController];
+   NSUInteger currentIndex = [tabBar.items indexOfObject:item];
+    
+    if (preIndex == currentIndex) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:CWTarBarButtonDidRepeatClicked object:nil];
+    }
 }
 @end

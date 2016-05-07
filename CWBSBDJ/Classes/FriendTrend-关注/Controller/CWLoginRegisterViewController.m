@@ -43,6 +43,7 @@
 }
 
 // 交给自定义的状态栏去控制了
+// 自定义的状态栏是个所属的控制器也有状态栏的。
 ///** 设置状态栏样式 */ 
 //- (UIStatusBarStyle)preferredStatusBarStyle {
 //    return UIStatusBarStyleLightContent;

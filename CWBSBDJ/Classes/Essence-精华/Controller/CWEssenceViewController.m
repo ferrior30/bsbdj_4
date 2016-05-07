@@ -16,6 +16,8 @@
 #import "CWPictureTableViewController.h"
 #import "CWWordTableViewController.h"
 
+NSString * const CWTitleButtonDidRepeatClicked = @"CWTitleButtonDidRepeatClicked";
+
 @interface CWEssenceViewController () <UIScrollViewDelegate>
 /** 记录当前选中的title按钮 */
 @property (weak, nonatomic) UIButton *selectTitleBtn;
@@ -189,7 +191,12 @@
 #pragma mark - 监听事件
 /** 监听标题button的点击: 1.滚动indicateView 2.添加scrollView的子控制器的view,并滚动到界面上 */
 - (void)buttonDidClick:(UIButton *)button {
-    if (self.selectTitleBtn == button) return;
+    if (self.selectTitleBtn == button){ // 重复点击
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:CWTitleButtonDidRepeatClicked object:nil];
+       
+        return;
+    }
     
     // 切换按钮的选中状态
     button.selected =  YES;
