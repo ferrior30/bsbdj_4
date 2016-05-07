@@ -17,7 +17,7 @@
 /** TarBarButton重复点击通知 */
 NSString * const CWTarBarButtonDidRepeatClicked = @"tabBarDidRepeatClicked";
 
-@interface CWTabBarController ()
+@interface CWTabBarController () //<UITabBarControllerDelegate>
 
 @end
 
@@ -31,6 +31,9 @@ NSString * const CWTarBarButtonDidRepeatClicked = @"tabBarDidRepeatClicked";
     
     // 2.设置tabBar
     [self setupTabBar];
+    
+    // 设置代理（实现重复点击时上拉刷新通知发送的实现方法二）
+//    self.delegate = self;
 
 }
 
@@ -93,8 +96,7 @@ NSString * const CWTarBarButtonDidRepeatClicked = @"tabBarDidRepeatClicked";
     // 用vc不行，要用tabBar的直接子控制器才行。
     [nav.tabBarItem setTitleTextAttributes:dict forState:UIControlStateSelected];
 }
-
-
+/** 重写：重复点击时发通知 */
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     NSUInteger preIndex = [self.childViewControllers indexOfObject:self.selectedViewController];
    NSUInteger currentIndex = [tabBar.items indexOfObject:item];
@@ -103,4 +105,13 @@ NSString * const CWTarBarButtonDidRepeatClicked = @"tabBarDidRepeatClicked";
         [[NSNotificationCenter defaultCenter] postNotificationName:CWTarBarButtonDidRepeatClicked object:nil];
     }
 }
+
+
+#pragma mark - UITabBarControllerDelegeta:重复点击时发通知（方法二，上面有另一种实现方法。 注意要设置代理 ）
+//- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+//    if (self.selectedViewController == viewController) {
+//        [[NSNotificationCenter defaultCenter] postNotificationName:CWTarBarButtonDidRepeatClicked object:nil];
+//    }
+//    return YES;
+//}
 @end
