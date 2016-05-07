@@ -26,6 +26,9 @@
 		C01B54101CCEF5CD0061B7B3 /* CWSeeBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01B540F1CCEF5CD0061B7B3 /* CWSeeBigViewController.xib */; };
 		C0226A8A1CBF5CB100B85BAC /* CWUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0226A891CBF5CB100B85BAC /* CWUser.m */; };
 		C0226A8D1CBF5D1000B85BAC /* CWComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C0226A8C1CBF5D1000B85BAC /* CWComment.m */; };
+		C0334A8F1CDD977B006B70AA /* CWProfileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C0334A8E1CDD977B006B70AA /* CWProfileButton.m */; };
+		C0334A921CDD9BBA006B70AA /* CWCommentHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0334A911CDD9BBA006B70AA /* CWCommentHeaderCell.m */; };
+		C0334A951CDDB14B006B70AA /* CWStatusBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0334A941CDDB14B006B70AA /* CWStatusBarViewController.m */; };
 		C04917301CAA31EE00BC6600 /* CWRecommandTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C049172E1CAA31EE00BC6600 /* CWRecommandTagViewController.m */; };
 		C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C04917331CAA32EF00BC6600 /* CWRecommandTagCell.m */; };
 		C04917361CAA32EF00BC6600 /* CWRecommandTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04917341CAA32EF00BC6600 /* CWRecommandTagCell.xib */; };
@@ -33,6 +36,8 @@
 		C049173F1CACD86D00BC6600 /* UIImage+CWCircleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C049173E1CACD86D00BC6600 /* UIImage+CWCircleImage.m */; };
 		C04F6C681CBF73E4005F10F1 /* CWTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = C04F6C671CBF73E4005F10F1 /* CWTopicPictureView.m */; };
 		C04F6C6A1CBF73F4005F10F1 /* CWTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04F6C691CBF73F4005F10F1 /* CWTopicPictureView.xib */; };
+		C05074A91CD48D2A000EA4B4 /* CWCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C05074A71CD48D2A000EA4B4 /* CWCommentViewController.m */; };
+		C05074AA1CD48D2A000EA4B4 /* CWCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C05074A81CD48D2A000EA4B4 /* CWCommentViewController.xib */; };
 		C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7991CB4AD5A004CE729 /* NSObject+CWRuntime.m */; };
 		C07FF79D1CB4B365004CE729 /* CWConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF79C1CB4B365004CE729 /* CWConst.m */; };
 		C07FF7A31CB4F751004CE729 /* UIImageView+CWExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C07FF7A21CB4F751004CE729 /* UIImageView+CWExtension.m */; };
@@ -75,6 +80,8 @@
 		C0E202331CD2F73900CD954C /* CWRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E202321CD2F73900CD954C /* CWRecommendUser.m */; };
 		C0E202371CD33CE100CD954C /* CWRecommendFollowUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E202351CD33CE100CD954C /* CWRecommendFollowUserCell.m */; };
 		C0E202381CD33CE100CD954C /* CWRecommendFollowUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E202361CD33CE100CD954C /* CWRecommendFollowUserCell.xib */; };
+		C0FAA9361CDADBD7004CF34B /* CWCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FAA9341CDADBD7004CF34B /* CWCommentCell.m */; };
+		C0FAA9371CDADBD7004CF34B /* CWCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FAA9351CDADBD7004CF34B /* CWCommentCell.xib */; };
 		D75CE4EB6E415AA8635CE8FC /* Pods_CWBSBDJ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B1EFD93FFC2B0456990BD89 /* Pods_CWBSBDJ.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +144,12 @@
 		C0226A891CBF5CB100B85BAC /* CWUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUser.m; sourceTree = "<group>"; };
 		C0226A8B1CBF5D1000B85BAC /* CWComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWComment.h; sourceTree = "<group>"; };
 		C0226A8C1CBF5D1000B85BAC /* CWComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWComment.m; sourceTree = "<group>"; };
+		C0334A8D1CDD977B006B70AA /* CWProfileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWProfileButton.h; sourceTree = "<group>"; };
+		C0334A8E1CDD977B006B70AA /* CWProfileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWProfileButton.m; sourceTree = "<group>"; };
+		C0334A901CDD9BBA006B70AA /* CWCommentHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCommentHeaderCell.h; sourceTree = "<group>"; };
+		C0334A911CDD9BBA006B70AA /* CWCommentHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCommentHeaderCell.m; sourceTree = "<group>"; };
+		C0334A931CDDB14B006B70AA /* CWStatusBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStatusBarViewController.h; sourceTree = "<group>"; };
+		C0334A941CDDB14B006B70AA /* CWStatusBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStatusBarViewController.m; sourceTree = "<group>"; };
 		C049172D1CAA31EE00BC6600 /* CWRecommandTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommandTagViewController.h; sourceTree = "<group>"; };
 		C049172E1CAA31EE00BC6600 /* CWRecommandTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRecommandTagViewController.m; sourceTree = "<group>"; };
 		C04917321CAA32EF00BC6600 /* CWRecommandTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommandTagCell.h; sourceTree = "<group>"; };
@@ -149,6 +162,14 @@
 		C04F6C661CBF73E4005F10F1 /* CWTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWTopicPictureView.h; sourceTree = "<group>"; };
 		C04F6C671CBF73E4005F10F1 /* CWTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWTopicPictureView.m; sourceTree = "<group>"; };
 		C04F6C691CBF73F4005F10F1 /* CWTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWTopicPictureView.xib; sourceTree = "<group>"; };
+		C05074A61CD48D2A000EA4B4 /* CWCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCommentViewController.h; sourceTree = "<group>"; };
+		C05074A71CD48D2A000EA4B4 /* CWCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCommentViewController.m; sourceTree = "<group>"; };
+		C05074A81CD48D2A000EA4B4 /* CWCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWCommentViewController.xib; sourceTree = "<group>"; };
+		C05074B11CD5973F000EA4B4 /* DACircularProgress.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DACircularProgress.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CWBSBDJ-ftazarfgnpscpzaubjmjfkzhohcd/Build/Products/Debug-iphonesimulator/DACircularProgress.framework"; sourceTree = "<group>"; };
+		C05074B21CD5973F000EA4B4 /* MJExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJExtension.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CWBSBDJ-ftazarfgnpscpzaubjmjfkzhohcd/Build/Products/Debug-iphonesimulator/MJExtension.framework"; sourceTree = "<group>"; };
+		C05074B31CD5973F000EA4B4 /* MJRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MJRefresh.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CWBSBDJ-ftazarfgnpscpzaubjmjfkzhohcd/Build/Products/Debug-iphonesimulator/MJRefresh.framework"; sourceTree = "<group>"; };
+		C05074B41CD5973F000EA4B4 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CWBSBDJ-ftazarfgnpscpzaubjmjfkzhohcd/Build/Products/Debug-iphonesimulator/SDWebImage.framework"; sourceTree = "<group>"; };
+		C05074B51CD5973F000EA4B4 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "../../../../Library/Developer/Xcode/DerivedData/CWBSBDJ-ftazarfgnpscpzaubjmjfkzhohcd/Build/Products/Debug-iphonesimulator/SVProgressHUD.framework"; sourceTree = "<group>"; };
 		C07FF7981CB4AD5A004CE729 /* NSObject+CWRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CWRuntime.h"; sourceTree = "<group>"; };
 		C07FF7991CB4AD5A004CE729 /* NSObject+CWRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CWRuntime.m"; sourceTree = "<group>"; };
 		C07FF79B1CB4B365004CE729 /* CWConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWConst.h; sourceTree = "<group>"; };
@@ -226,6 +247,9 @@
 		C0E202341CD33CE100CD954C /* CWRecommendFollowUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommendFollowUserCell.h; sourceTree = "<group>"; };
 		C0E202351CD33CE100CD954C /* CWRecommendFollowUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRecommendFollowUserCell.m; sourceTree = "<group>"; };
 		C0E202361CD33CE100CD954C /* CWRecommendFollowUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWRecommendFollowUserCell.xib; sourceTree = "<group>"; };
+		C0FAA9331CDADBD7004CF34B /* CWCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCommentCell.h; sourceTree = "<group>"; };
+		C0FAA9341CDADBD7004CF34B /* CWCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCommentCell.m; sourceTree = "<group>"; };
+		C0FAA9351CDADBD7004CF34B /* CWCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWCommentCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +290,11 @@
 		7FAF459E6EF2E029B155153F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C05074B11CD5973F000EA4B4 /* DACircularProgress.framework */,
+				C05074B21CD5973F000EA4B4 /* MJExtension.framework */,
+				C05074B31CD5973F000EA4B4 /* MJRefresh.framework */,
+				C05074B41CD5973F000EA4B4 /* SDWebImage.framework */,
+				C05074B51CD5973F000EA4B4 /* SVProgressHUD.framework */,
 				C0E2022F1CD2119A00CD954C /* AFNetworking.framework */,
 				7B1EFD93FFC2B0456990BD89 /* Pods_CWBSBDJ.framework */,
 			);
@@ -386,6 +415,9 @@
 				C01B540C1CCEF56B0061B7B3 /* CWSeeBigViewController.h */,
 				C01B540D1CCEF56B0061B7B3 /* CWSeeBigViewController.m */,
 				C01B540F1CCEF5CD0061B7B3 /* CWSeeBigViewController.xib */,
+				C05074A61CD48D2A000EA4B4 /* CWCommentViewController.h */,
+				C05074A71CD48D2A000EA4B4 /* CWCommentViewController.m */,
+				C05074A81CD48D2A000EA4B4 /* CWCommentViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -425,6 +457,13 @@
 				C0C1798C1CD02CFD0026C5B5 /* CWTopicVoiceView.h */,
 				C0C1798D1CD02CFD0026C5B5 /* CWTopicVoiceView.m */,
 				C0C1798F1CD02D880026C5B5 /* CWTopicVoiceView.xib */,
+				C0FAA9331CDADBD7004CF34B /* CWCommentCell.h */,
+				C0FAA9341CDADBD7004CF34B /* CWCommentCell.m */,
+				C0FAA9351CDADBD7004CF34B /* CWCommentCell.xib */,
+				C0334A901CDD9BBA006B70AA /* CWCommentHeaderCell.h */,
+				C0334A911CDD9BBA006B70AA /* CWCommentHeaderCell.m */,
+				C0334A8D1CDD977B006B70AA /* CWProfileButton.h */,
+				C0334A8E1CDD977B006B70AA /* CWProfileButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -616,6 +655,8 @@
 				C07FF79C1CB4B365004CE729 /* CWConst.m */,
 				C07FF7B01CB5FF96004CE729 /* CWHTTPSessionManager.h */,
 				C07FF7B11CB5FF96004CE729 /* CWHTTPSessionManager.m */,
+				C0334A931CDDB14B006B70AA /* CWStatusBarViewController.h */,
+				C0334A941CDDB14B006B70AA /* CWStatusBarViewController.m */,
 			);
 			path = "Other-其它";
 			sourceTree = "<group>";
@@ -786,6 +827,8 @@
 				C0C179901CD02D880026C5B5 /* CWTopicVoiceView.xib in Resources */,
 				C0E202381CD33CE100CD954C /* CWRecommendFollowUserCell.xib in Resources */,
 				C0A76B891CB7604800BA7C98 /* CWWebViewController.xib in Resources */,
+				C05074AA1CD48D2A000EA4B4 /* CWCommentViewController.xib in Resources */,
+				C0FAA9371CDADBD7004CF34B /* CWCommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,6 +907,7 @@
 				C00A882B1CBBBA53008B6465 /* CWTopicCell.m in Sources */,
 				C00A88151CBB2A38008B6465 /* CWTitleButton.m in Sources */,
 				C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */,
+				C0334A921CDD9BBA006B70AA /* CWCommentHeaderCell.m in Sources */,
 				C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */,
 				C0E202331CD2F73900CD954C /* CWRecommendUser.m in Sources */,
 				C0226A8A1CBF5CB100B85BAC /* CWUser.m in Sources */,
@@ -879,6 +923,7 @@
 				C099A4071CA914B6003F06A0 /* CWFastLoginRegisterButton.m in Sources */,
 				C097C7121CD0EC5E00FADD21 /* CWTopicViewController.m in Sources */,
 				C0B19E5C1CB8926B00839D0B /* CWSettingCell.m in Sources */,
+				C0FAA9361CDADBD7004CF34B /* CWCommentCell.m in Sources */,
 				C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */,
 				C07FF7B21CB5FF96004CE729 /* CWHTTPSessionManager.m in Sources */,
 				C099A3EE1CA7D373003F06A0 /* CWTabBarController.m in Sources */,
@@ -898,6 +943,7 @@
 				C099A3F11CA7D373003F06A0 /* CWNewViewController.m in Sources */,
 				C0B19E571CB88EB800839D0B /* CWClearCacheCell.m in Sources */,
 				C00A88321CBBDB74008B6465 /* CWTopic.m in Sources */,
+				C05074A91CD48D2A000EA4B4 /* CWCommentViewController.m in Sources */,
 				C099A3F71CA7EBA0003F06A0 /* CWNavigationController.m in Sources */,
 				C00A88251CBB6C4C008B6465 /* CWWordTableViewController.m in Sources */,
 				C099A3F41CA7D676003F06A0 /* CWSettingViewController.m in Sources */,
@@ -910,6 +956,8 @@
 				C0B19E541CB88B3C00839D0B /* NSString+FileSize.m in Sources */,
 				C099A3EC1CA7D373003F06A0 /* CWEssenceViewController.m in Sources */,
 				C04917391CAA372D00BC6600 /* CWRecommandTag.m in Sources */,
+				C0334A951CDDB14B006B70AA /* CWStatusBarViewController.m in Sources */,
+				C0334A8F1CDD977B006B70AA /* CWProfileButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

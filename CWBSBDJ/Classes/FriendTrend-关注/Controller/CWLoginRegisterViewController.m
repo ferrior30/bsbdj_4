@@ -9,6 +9,8 @@
 #import "CWLoginRegisterViewController.h"
 #import "CWFastLoginRegisterButton.h"
 
+#import "CWStatusBarViewController.h"
+
 @interface CWLoginRegisterViewController ()
 /** 根据是否有帐号切换界面的button */
 
@@ -28,10 +30,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/** 设置状态栏样式 */
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [CWStatusBarViewController shareInstance].statusBarStyle = UIStatusBarStyleLightContent;
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [CWStatusBarViewController shareInstance].statusBarStyle = UIStatusBarStyleDefault;
+}
+
+// 交给自定义的状态栏去控制了
+///** 设置状态栏样式 */ 
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    return UIStatusBarStyleLightContent;
+//}
 
 #pragma mark - 监听
 /** 退出当前界面 */

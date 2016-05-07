@@ -11,4 +11,6 @@
 
 @interface CWTopicCell : UITableViewCell
 @property (strong, nonatomic) CWTopic *topic;
+
++ (instancetype)topicCell;
 @end

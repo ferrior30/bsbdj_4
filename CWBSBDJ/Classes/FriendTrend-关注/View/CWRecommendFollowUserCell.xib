@@ -15,13 +15,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkv-ap-7c8" userLabel="screen_name">
-                        <rect key="frame" x="68" y="15" width="37.5" height="18"/>
+                        <rect key="frame" x="78" y="10" width="37.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0b9-ge-Gzz" userLabel="fans_count Label">
-                        <rect key="frame" x="68" y="39" width="33" height="16"/>
+                        <rect key="frame" x="78" y="44" width="33" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -33,10 +33,10 @@
                         </state>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CUK-WR-qVT" userLabel="headerImageView">
-                        <rect key="frame" x="18" y="15" width="40" height="40"/>
+                        <rect key="frame" x="18" y="10" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="mZh-aL-cmc"/>
-                            <constraint firstAttribute="width" constant="40" id="tjc-2c-gtG"/>
+                            <constraint firstAttribute="height" constant="50" id="mZh-aL-cmc"/>
+                            <constraint firstAttribute="width" constant="50" id="tjc-2c-gtG"/>
                         </constraints>
                     </imageView>
                 </subviews>

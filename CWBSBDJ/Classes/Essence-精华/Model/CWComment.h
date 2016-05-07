@@ -14,4 +14,9 @@
 @property (strong, nonatomic) CWUser *user;
 /** 评论内容 */
 @property (copy, nonatomic) NSString *content;
+/** 评论id */
+@property (copy, nonatomic) NSString *id;
+/** 被点赞数 */
+@property (nonatomic, assign) NSInteger like_count;
+
 @end

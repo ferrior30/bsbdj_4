@@ -40,6 +40,8 @@ typedef NS_ENUM(NSInteger, CWTopicType){
 @property (nonatomic, copy) NSString *name;
 /** 用户的头像 */
 @property (nonatomic, copy) NSString *profile_image;
+/** 帖子id */
+@property (copy, nonatomic) NSString *id;
 /** 帖子的文字内容 */
 @property (nonatomic, copy) NSString *text;
 /** 帖子审核通过的时间 */

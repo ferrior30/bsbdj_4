@@ -20,13 +20,6 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKZ-jq-w7H" userLabel="分隔线">
-                        <rect key="frame" x="0.0" y="43" width="70" height="1"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="1" id="czB-lT-aIp"/>
-                        </constraints>
-                    </view>
                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yRN-hv-1dc" userLabel="指示器">
                         <rect key="frame" x="0.0" y="0.0" width="3" height="44"/>
                         <color key="backgroundColor" red="1" green="0.28065669920000003" blue="0.51704833139999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,7 +27,15 @@
                             <constraint firstAttribute="width" constant="3" id="kJm-bM-XLm"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKZ-jq-w7H" userLabel="分隔线">
+                        <rect key="frame" x="0.0" y="43" width="70" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="czB-lT-aIp"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="KKZ-jq-w7H" secondAttribute="bottom" id="22c-kB-gKz"/>
                     <constraint firstAttribute="bottom" secondItem="yRN-hv-1dc" secondAttribute="bottom" id="AFn-p0-yix"/>

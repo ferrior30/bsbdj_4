@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CWTabBarController.h"
+#import "CWStatusBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,6 +29,9 @@
     
     // 3.显示窗口
     [self.window makeKeyAndVisible];
+    
+    // 4.添加状态栏 // 添加后系统的statusBar就不起作用了。
+    [CWStatusBarViewController show];
     
     return YES;
 }

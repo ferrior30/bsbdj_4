@@ -61,7 +61,7 @@ static NSString * const CWRecommendFollowUserCellID = @"CWRecommendFollowUserCel
     
     self.usersTableView.dataSource = self;
     self.usersTableView.delegate = self;
-    self.usersTableView.rowHeight = 60;
+    self.usersTableView.rowHeight = 70;
     
     // contenInset
     self.usersTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);

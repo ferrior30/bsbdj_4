@@ -49,8 +49,12 @@
 @end
 
 @implementation CWTopicCell
-
+/** 自定义类方法 */
++ (instancetype)topicCell {
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([CWTopicCell class]) owner:nil options:nil].firstObject;
+}
 #pragma mark - 懒加载
+
 /** 图片控件 */
 - (CWTopicPictureView *)pictureView {
     if (_pictureView == nil) {
@@ -177,7 +181,10 @@
 
 - (void)setFrame:(CGRect)frame {
     
+    // 头部间距
     frame.origin.y += CWMargin;
+    
+    // 尾部间距
     frame.size.height -= CWMargin;
     
     [super setFrame:frame];

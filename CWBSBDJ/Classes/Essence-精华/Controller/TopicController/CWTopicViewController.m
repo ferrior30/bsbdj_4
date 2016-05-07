@@ -14,6 +14,7 @@
 #import "CWTopicCell.h"
 #import "SVProgressHUD.H"
 #import "CWNewViewController.h"
+#import "CWCommentViewController.h"
 
 static NSString * const CWTopicCellReuseID = @"CWTopicCellReuseID";
 
@@ -181,9 +182,26 @@ static NSString * const CWTopicCellReuseID = @"CWTopicCellReuseID";
     
 }
 
+
+#pragma  mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //    CWTopicCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    // 弹出评论控制器
+    CWCommentViewController *commentVC = [[CWCommentViewController alloc]
+                                          init];
+    
+    // 传递帖子id（用来请求评论数据）
+    commentVC.data_id = self.allTopics[indexPath.row].id;
+    
+    // 传递cell,设置tableHeaderView
+    CWTopic *topic = self.allTopics[indexPath.row];
+    commentVC.topic = topic;
+    
+    [self.navigationController pushViewController:commentVC animated:YES];
+    
 }
+
+
+
 
 
 @end
