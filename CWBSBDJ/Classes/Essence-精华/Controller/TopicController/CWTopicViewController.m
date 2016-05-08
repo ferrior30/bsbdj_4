@@ -16,6 +16,8 @@
 #import "CWNewViewController.h"
 #import "CWCommentViewController.h"
 
+#import "UIView+CWFrame.h"
+
 static NSString * const CWTopicCellReuseID = @"CWTopicCellReuseID";
 
 UIKIT_EXTERN NSString * const CWTarBarButtonDidRepeatClicked;
@@ -129,8 +131,24 @@ UIKIT_EXTERN NSString * const CWTitleButtonDidRepeatClicked;
     [self.manager GET:CWRequestURL parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        // 记录maxtime
-        weakSelf.maxtime = responseObject[@"info"][@"maxtime"];
+       
+        // 0.获取返回的maxtime
+        NSString *maxtime = responseObject[@"info"][@"maxtime"];
+        
+        // 1.没有最新数据
+        if ([maxtime isEqualToString:weakSelf.maxtime]) {
+            // 结束上拉刷新
+            [weakSelf.tableView.mj_header endRefreshing];
+            
+            // 开始数据返回提示器的动画
+            [self startDataRetrieveIndicateLabelAnimalWithMessage:@"没有最新数据"];
+      
+            return ;
+        }
+        
+        // 2.有最新数据
+        // 保存maxtime
+        weakSelf.maxtime = maxtime;
         
         // 将JSON字典数组转成Topic模型数组
         weakSelf.allTopics = [CWTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
@@ -140,6 +158,9 @@ UIKIT_EXTERN NSString * const CWTitleButtonDidRepeatClicked;
         
         // 结束上拉刷新
         [weakSelf.tableView.mj_header endRefreshing];
+        
+        // 数据返回提示器的显示和隐藏动画
+        [self startDataRetrieveIndicateLabelAnimalWithMessage:[NSString stringWithFormat:@"获取到%zd条最新数据", weakSelf.allTopics.count]];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载数据出错"];
@@ -184,6 +205,30 @@ UIKIT_EXTERN NSString * const CWTitleButtonDidRepeatClicked;
         
         [SVProgressHUD showErrorWithStatus:@"加载数据出错"];
         [weakSelf.tableView.mj_footer endRefreshing];
+    }];
+}
+
+- (void)startDataRetrieveIndicateLabelAnimalWithMessage:(NSString *)message {
+    /** 动画开始前显示的初始 */
+    CGFloat initialY = CGRectGetMaxY(self.navigationController.navigationBar.frame);
+    
+    CWEssenceViewController *parentVc =  (CWEssenceViewController *)self.parentViewController;
+    parentVc.dataRetrieveIndicateLabel.hidden = NO;
+    parentVc.dataRetrieveIndicateLabel.text = message;
+    
+    // 数据返回提示器的显示和隐藏动画
+    parentVc.dataRetrieveIndicateLabel.y = initialY;
+    [UIView animateWithDuration:0.5 animations:^{
+        parentVc.dataRetrieveIndicateLabel.y += 40;
+    } completion:^(BOOL finished) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            [UIView animateWithDuration:0.25 animations:^{
+                parentVc.dataRetrieveIndicateLabel.y = initialY - parentVc.dataRetrieveIndicateLabel.height;
+            } completion:^(BOOL finished) {
+                parentVc.dataRetrieveIndicateLabel.hidden = YES;
+            }];
+        });
     }];
 }
 

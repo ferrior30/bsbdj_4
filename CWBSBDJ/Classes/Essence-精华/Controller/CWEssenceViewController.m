@@ -28,6 +28,7 @@ NSString * const CWTitleButtonDidRepeatClicked = @"CWTitleButtonDidRepeatClicked
 /** 存放所有的子控制器的view */
 @property (weak, nonatomic) UIScrollView *scrollView;
 
+
 @end
 
 @implementation CWEssenceViewController
@@ -48,6 +49,26 @@ NSString * const CWTitleButtonDidRepeatClicked = @"CWTitleButtonDidRepeatClicked
     
     // 4.添加标题titleView
     [self setupTitleView];
+    
+    // 5.添加数据指示器
+    [self setupdataRetrieveIndicateLabel];
+}
+
+- (void)setupdataRetrieveIndicateLabel {
+    UILabel *label = [[UILabel alloc] init];
+    label.width = self.scrollView.width - 2 * CWMargin;
+    label.height = 20;
+    label.x = CWMargin;
+    
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor blueColor];
+    
+    label.textAlignment = NSTextAlignmentCenter;
+   
+    label.hidden = YES;
+    
+    [self.view addSubview:label];
+    self.dataRetrieveIndicateLabel = label;
 }
 
 /** 添加scrollView及选中默认选中的控制器的view */

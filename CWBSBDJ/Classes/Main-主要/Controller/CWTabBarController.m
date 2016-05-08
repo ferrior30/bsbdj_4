@@ -93,7 +93,7 @@ NSString * const CWTarBarButtonDidRepeatClicked = @"tabBarDidRepeatClicked";
     // 4.设置【tabBar选中状态】文字颜色
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-    // 用vc不行，要用tabBar的直接子控制器才行。
+    // 用vc不行，要用tabBar的直接子控制器才行(tabBarVC->nav-<vc)。
     [nav.tabBarItem setTitleTextAttributes:dict forState:UIControlStateSelected];
 }
 /** 重写：重复点击时发通知 */

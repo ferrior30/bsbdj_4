@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CWBSBDJ/Classes/Essence-&#x7cbe;&#x534e;/Controller/CWEssenceViewController.m"
-            timestampString = "484330998.920008"
+            timestampString = "484375621.934144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "-buttonDidClick:"
             landmarkType = "5">
          </BreakpointContent>
