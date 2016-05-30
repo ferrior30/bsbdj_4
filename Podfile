@@ -8,4 +8,5 @@ pod 'SDWebImage'
 pod 'SVProgressHUD'
 pod 'MJRefresh'
 pod 'DACircularProgress'
+pod 'FMDB', '~> 2.6.2'
 end

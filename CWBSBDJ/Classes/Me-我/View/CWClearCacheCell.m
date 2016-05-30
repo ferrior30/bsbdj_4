@@ -86,7 +86,7 @@
     if (self.accessoryView) return;
     
     /// 2.显示弹框
-    [SVProgressHUD showWithStatus:@"正在清理缓存"];
+//    [SVProgressHUD showWithStatus:@"正在清理缓存"];
     
     // 3.清理缓存
     [[[NSOperationQueue alloc] init] addOperationWithBlock:^{
@@ -96,7 +96,7 @@
         // 回到主线程重置文字
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             // 隐藏弹框
-            [SVProgressHUD dismiss];
+//            [SVProgressHUD dismiss];
             self.textLabel.text = [NSString stringWithFormat:@"清理缓存(0KB)"];
         }];
     }];

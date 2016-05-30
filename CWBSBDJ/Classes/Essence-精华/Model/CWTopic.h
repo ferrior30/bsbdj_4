@@ -79,6 +79,8 @@ typedef NS_ENUM(NSInteger, CWTopicType){
 @property (nonatomic, assign) NSInteger voicetime;
 /** 视频文件的长度 */
 @property (nonatomic, assign) NSInteger videotime;
+/** 视频文件的url */
+@property (copy, nonatomic) NSString *videouri;
 
 /* 辅助属性 */
 /** 中间控件的frame */

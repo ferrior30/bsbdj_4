@@ -78,7 +78,7 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
     __weak typeof(self) weakSelf = self;
     
     // 弹框
-    [SVProgressHUD show];
+//    [SVProgressHUD show];
     
     // 请求参数
     NSDictionary *params = @{@"a": @"tag_recommend",
@@ -95,7 +95,7 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
         weakSelf.recommandTags = [CWRecommandTag mj_objectArrayWithKeyValuesArray:responseObject];
         
         // 隐藏弹框
-        [SVProgressHUD dismiss];
+//        [SVProgressHUD dismiss];
         
         // 刷新表格
         [weakSelf.tableView reloadData];
@@ -113,7 +113,6 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
 }
 
 /** 下拉加载更多标签数据 */
-#warning  不知道请求参数
  - (void)loadMoreRecommendTag {
     // 弱引用
     __weak typeof(self) weakSelf = self;
@@ -154,8 +153,6 @@ static NSString * const CWRecommandTagCellID = @"CWRecommandTagCellID";
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    // 隐藏弹框
-    [SVProgressHUD dismiss];
     
     // 取消网络请求
     [self.manager invalidateSessionCancelingTasks:YES];

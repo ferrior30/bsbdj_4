@@ -82,7 +82,7 @@
 #pragma mark - 网络请求
 - (void)loadMeSquares {
     // 显示弹框
-    [SVProgressHUD show];
+//    [SVProgressHUD show];
     
     // 请求参数;
     NSDictionary *dict = @{@"a": @"square", @"c": @"topic"};
@@ -92,14 +92,14 @@
     [[CWHTTPSessionManager manager] GET:CWRequestURL parameters:dict progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         weakSelf.meSquares = [CWMeSquare mj_objectArrayWithKeyValuesArray:responseObject[@"square_list"]];
        // 隐藏弹框
-        [SVProgressHUD dismiss];
+//        [SVProgressHUD dismiss];
         
         [responseObject writeToFile:@"/Users/cw/Desktop/a.plist" atomically:YES];
         
         // 添加子控件
         [weakSelf addSquarBtn];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"加载信息失败"];
+//        [SVProgressHUD showErrorWithStatus:@"加载信息失败"];
     }];
 }
 

@@ -26,9 +26,16 @@
 		C01B54101CCEF5CD0061B7B3 /* CWSeeBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01B540F1CCEF5CD0061B7B3 /* CWSeeBigViewController.xib */; };
 		C0226A8A1CBF5CB100B85BAC /* CWUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0226A891CBF5CB100B85BAC /* CWUser.m */; };
 		C0226A8D1CBF5D1000B85BAC /* CWComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C0226A8C1CBF5D1000B85BAC /* CWComment.m */; };
+		C02D95421CFBC4A2002BCAB0 /* SqliteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C02D95411CFBC4A2002BCAB0 /* SqliteManager.m */; };
+		C02D95441CFBC4CA002BCAB0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C02D95431CFBC4CA002BCAB0 /* libsqlite3.0.tbd */; };
 		C0334A8F1CDD977B006B70AA /* CWProfileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C0334A8E1CDD977B006B70AA /* CWProfileButton.m */; };
 		C0334A921CDD9BBA006B70AA /* CWCommentHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0334A911CDD9BBA006B70AA /* CWCommentHeaderCell.m */; };
 		C0334A951CDDB14B006B70AA /* CWStatusBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0334A941CDDB14B006B70AA /* CWStatusBarViewController.m */; };
+		C045376B1CE84F4A005A31F7 /* CWPlayBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04537651CE84F4A005A31F7 /* CWPlayBackViewController.m */; };
+		C045376C1CE84F4A005A31F7 /* CWPlayBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04537661CE84F4A005A31F7 /* CWPlayBackViewController.xib */; };
+		C045376D1CE84F4A005A31F7 /* CWPlayerLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C04537681CE84F4A005A31F7 /* CWPlayerLayer.m */; };
+		C045376E1CE84F4A005A31F7 /* CWSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = C045376A1CE84F4A005A31F7 /* CWSlider.m */; };
+		C04537711CE85FA7005A31F7 /* CWPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C04537701CE85FA7005A31F7 /* CWPresentationController.m */; };
 		C04917301CAA31EE00BC6600 /* CWRecommandTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C049172E1CAA31EE00BC6600 /* CWRecommandTagViewController.m */; };
 		C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C04917331CAA32EF00BC6600 /* CWRecommandTagCell.m */; };
 		C04917361CAA32EF00BC6600 /* CWRecommandTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C04917341CAA32EF00BC6600 /* CWRecommandTagCell.xib */; };
@@ -144,12 +151,24 @@
 		C0226A891CBF5CB100B85BAC /* CWUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWUser.m; sourceTree = "<group>"; };
 		C0226A8B1CBF5D1000B85BAC /* CWComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWComment.h; sourceTree = "<group>"; };
 		C0226A8C1CBF5D1000B85BAC /* CWComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWComment.m; sourceTree = "<group>"; };
+		C02D95401CFBC4A2002BCAB0 /* SqliteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteManager.h; sourceTree = "<group>"; };
+		C02D95411CFBC4A2002BCAB0 /* SqliteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteManager.m; sourceTree = "<group>"; };
+		C02D95431CFBC4CA002BCAB0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		C0334A8D1CDD977B006B70AA /* CWProfileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWProfileButton.h; sourceTree = "<group>"; };
 		C0334A8E1CDD977B006B70AA /* CWProfileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWProfileButton.m; sourceTree = "<group>"; };
 		C0334A901CDD9BBA006B70AA /* CWCommentHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCommentHeaderCell.h; sourceTree = "<group>"; };
 		C0334A911CDD9BBA006B70AA /* CWCommentHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCommentHeaderCell.m; sourceTree = "<group>"; };
 		C0334A931CDDB14B006B70AA /* CWStatusBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWStatusBarViewController.h; sourceTree = "<group>"; };
 		C0334A941CDDB14B006B70AA /* CWStatusBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWStatusBarViewController.m; sourceTree = "<group>"; };
+		C04537641CE84F4A005A31F7 /* CWPlayBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPlayBackViewController.h; sourceTree = "<group>"; };
+		C04537651CE84F4A005A31F7 /* CWPlayBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPlayBackViewController.m; sourceTree = "<group>"; };
+		C04537661CE84F4A005A31F7 /* CWPlayBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWPlayBackViewController.xib; sourceTree = "<group>"; };
+		C04537671CE84F4A005A31F7 /* CWPlayerLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPlayerLayer.h; sourceTree = "<group>"; };
+		C04537681CE84F4A005A31F7 /* CWPlayerLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPlayerLayer.m; sourceTree = "<group>"; };
+		C04537691CE84F4A005A31F7 /* CWSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWSlider.h; sourceTree = "<group>"; };
+		C045376A1CE84F4A005A31F7 /* CWSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWSlider.m; sourceTree = "<group>"; };
+		C045376F1CE85FA7005A31F7 /* CWPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPresentationController.h; sourceTree = "<group>"; };
+		C04537701CE85FA7005A31F7 /* CWPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPresentationController.m; sourceTree = "<group>"; };
 		C049172D1CAA31EE00BC6600 /* CWRecommandTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommandTagViewController.h; sourceTree = "<group>"; };
 		C049172E1CAA31EE00BC6600 /* CWRecommandTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWRecommandTagViewController.m; sourceTree = "<group>"; };
 		C04917321CAA32EF00BC6600 /* CWRecommandTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWRecommandTagCell.h; sourceTree = "<group>"; };
@@ -257,6 +276,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02D95441CFBC4CA002BCAB0 /* libsqlite3.0.tbd in Frameworks */,
 				D75CE4EB6E415AA8635CE8FC /* Pods_CWBSBDJ.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +310,7 @@
 		7FAF459E6EF2E029B155153F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C02D95431CFBC4CA002BCAB0 /* libsqlite3.0.tbd */,
 				C05074B11CD5973F000EA4B4 /* DACircularProgress.framework */,
 				C05074B21CD5973F000EA4B4 /* MJExtension.framework */,
 				C05074B31CD5973F000EA4B4 /* MJRefresh.framework */,
@@ -379,6 +400,22 @@
 				C010D4871C8DA04D00441E94 /* Info.plist */,
 			);
 			path = CWBSBDJUITests;
+			sourceTree = "<group>";
+		};
+		C04537631CE84F4A005A31F7 /* PlayBackViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C04537641CE84F4A005A31F7 /* CWPlayBackViewController.h */,
+				C04537651CE84F4A005A31F7 /* CWPlayBackViewController.m */,
+				C04537661CE84F4A005A31F7 /* CWPlayBackViewController.xib */,
+				C045376F1CE85FA7005A31F7 /* CWPresentationController.h */,
+				C04537701CE85FA7005A31F7 /* CWPresentationController.m */,
+				C04537671CE84F4A005A31F7 /* CWPlayerLayer.h */,
+				C04537681CE84F4A005A31F7 /* CWPlayerLayer.m */,
+				C04537691CE84F4A005A31F7 /* CWSlider.h */,
+				C045376A1CE84F4A005A31F7 /* CWSlider.m */,
+			);
+			path = PlayBackViewController;
 			sourceTree = "<group>";
 		};
 		C099A3C51CA7D373003F06A0 /* Classes */ = {
@@ -648,6 +685,7 @@
 			children = (
 				C099A3E71CA7D373003F06A0 /* Category */,
 				C099A3E81CA7D373003F06A0 /* Controller */,
+				C04537631CE84F4A005A31F7 /* PlayBackViewController */,
 				C099A3E91CA7D373003F06A0 /* Model */,
 				C099A3EB1CA7D373003F06A0 /* View */,
 				C099A3EA1CA7D373003F06A0 /* PrefixHeader.pch */,
@@ -657,6 +695,8 @@
 				C07FF7B11CB5FF96004CE729 /* CWHTTPSessionManager.m */,
 				C0334A931CDDB14B006B70AA /* CWStatusBarViewController.h */,
 				C0334A941CDDB14B006B70AA /* CWStatusBarViewController.m */,
+				C02D95401CFBC4A2002BCAB0 /* SqliteManager.h */,
+				C02D95411CFBC4A2002BCAB0 /* SqliteManager.m */,
 			);
 			path = "Other-其它";
 			sourceTree = "<group>";
@@ -710,12 +750,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C010D48A1C8DA04D00441E94 /* Build configuration list for PBXNativeTarget "CWBSBDJ" */;
 			buildPhases = (
-				538D5C6F45F3639EA4852463 /* Check Pods Manifest.lock */,
+				538D5C6F45F3639EA4852463 /* 📦 Check Pods Manifest.lock */,
 				C010D4591C8DA04D00441E94 /* Sources */,
 				C010D45A1C8DA04D00441E94 /* Frameworks */,
 				C010D45B1C8DA04D00441E94 /* Resources */,
-				3D2EEA9FEC8B2AA774E64520 /* Embed Pods Frameworks */,
-				A63DF2195DB11BF157BD05C1 /* Copy Pods Resources */,
+				3D2EEA9FEC8B2AA774E64520 /* 📦 Embed Pods Frameworks */,
+				A63DF2195DB11BF157BD05C1 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -819,6 +859,7 @@
 				C099A3FE1CA80FE6003F06A0 /* CWFriendTrendViewController.xib in Resources */,
 				C01B54101CCEF5CD0061B7B3 /* CWSeeBigViewController.xib in Resources */,
 				C0E2022B1CD1EA8300CD954C /* CWRecommendFollowCategoryCell.xib in Resources */,
+				C045376C1CE84F4A005A31F7 /* CWPlayBackViewController.xib in Resources */,
 				C010D46D1C8DA04D00441E94 /* Assets.xcassets in Resources */,
 				C04F6C6A1CBF73F4005F10F1 /* CWTopicPictureView.xib in Resources */,
 				C099A3FC1CA80EC2003F06A0 /* CWLoginRegisterViewController.xib in Resources */,
@@ -849,14 +890,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3D2EEA9FEC8B2AA774E64520 /* Embed Pods Frameworks */ = {
+		3D2EEA9FEC8B2AA774E64520 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -864,14 +905,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CWBSBDJ/Pods-CWBSBDJ-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		538D5C6F45F3639EA4852463 /* Check Pods Manifest.lock */ = {
+		538D5C6F45F3639EA4852463 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -879,14 +920,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		A63DF2195DB11BF157BD05C1 /* Copy Pods Resources */ = {
+		A63DF2195DB11BF157BD05C1 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -903,18 +944,22 @@
 			files = (
 				C04F6C681CBF73E4005F10F1 /* CWTopicPictureView.m in Sources */,
 				C07FF79A1CB4AD5A004CE729 /* NSObject+CWRuntime.m in Sources */,
+				C045376E1CE84F4A005A31F7 /* CWSlider.m in Sources */,
 				C07FF7AC1CB5EF01004CE729 /* CWMeSquareButton.m in Sources */,
 				C00A882B1CBBBA53008B6465 /* CWTopicCell.m in Sources */,
 				C00A88151CBB2A38008B6465 /* CWTitleButton.m in Sources */,
 				C010D4651C8DA04D00441E94 /* AppDelegate.m in Sources */,
+				C04537711CE85FA7005A31F7 /* CWPresentationController.m in Sources */,
 				C0334A921CDD9BBA006B70AA /* CWCommentHeaderCell.m in Sources */,
 				C0A76B871CB75FEA00BA7C98 /* CWWebViewController.m in Sources */,
 				C0E202331CD2F73900CD954C /* CWRecommendUser.m in Sources */,
 				C0226A8A1CBF5CB100B85BAC /* CWUser.m in Sources */,
 				C0226A8D1CBF5D1000B85BAC /* CWComment.m in Sources */,
+				C02D95421CFBC4A2002BCAB0 /* SqliteManager.m in Sources */,
 				C04917351CAA32EF00BC6600 /* CWRecommandTagCell.m in Sources */,
 				C0E2022E1CD1F33600CD954C /* CWRecommendCategory.m in Sources */,
 				C099A4041CA8BFC1003F06A0 /* UIView+CWFrame.m in Sources */,
+				C045376D1CE84F4A005A31F7 /* CWPlayerLayer.m in Sources */,
 				C00A88351CBC992F008B6465 /* NSDate+CWExtension.m in Sources */,
 				C099A4011CA8BAF9003F06A0 /* UIBarButtonItem+CWExtention.m in Sources */,
 				C04917301CAA31EE00BC6600 /* CWRecommandTagViewController.m in Sources */,
@@ -922,6 +967,7 @@
 				C07FF7AF1CB5F00F004CE729 /* CWMeFootView.m in Sources */,
 				C099A4071CA914B6003F06A0 /* CWFastLoginRegisterButton.m in Sources */,
 				C097C7121CD0EC5E00FADD21 /* CWTopicViewController.m in Sources */,
+				C045376B1CE84F4A005A31F7 /* CWPlayBackViewController.m in Sources */,
 				C0B19E5C1CB8926B00839D0B /* CWSettingCell.m in Sources */,
 				C0FAA9361CDADBD7004CF34B /* CWCommentCell.m in Sources */,
 				C099A3ED1CA7D373003F06A0 /* CWFriendTrendViewController.m in Sources */,

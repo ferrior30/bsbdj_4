@@ -7,15 +7,23 @@
 //
 
 #import "CWTopicVideoView.h"
-#import "UIImageView+WebCache.h"
+//#import "UIImageView+WebCache.h"
+@import SDWebImage;
 #import "CWTopic.h"
 #import "CWSeeBigViewController.h"
+
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
+
+/** 播放按钮点击通知 */
+NSString * const CWVideoButtonDidClicked = @"CWVideoButtonDidClicked";
 
 @interface CWTopicVideoView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *videoTimeLabel;
+
 
 @end
 
@@ -66,5 +74,12 @@
         [self.window.rootViewController presentViewController:bigVC animated:YES completion:nil];
     }
 }
+
+/** 监听：播放按钮的点击 */
+- (IBAction)videoButtonDidClicked {
+    NSDictionary *userInfo = @{@"topic": self.topic};
+    [[NSNotificationCenter defaultCenter] postNotificationName:CWVideoButtonDidClicked object:nil userInfo:userInfo];
+}
+
 
 @end
